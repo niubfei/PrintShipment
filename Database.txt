@@ -1,0 +1,5 @@
+	SFC\LabelPrint\database.xml
+
+	SFC\LabelPrint\app.config
+
+	SFC\OUT\App.config

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<language>
+  <static>
+    <item key="BT_UNPACK" zh-cn="拆包" jp="拆包" en="拆包" />
+    <item key="BT_SEARCH_DATA" zh-cn="数据检索" jp="数据检索" en="数据检索" />
+    <item key="BT_REPRINT" zh-cn="重新打印" jp="重新打印" en="重新打印" />
+    <item key="BT_CONFIG" zh-cn="参数设定" jp="参数设定" en="参数设定" />
+    <item key="PACK_NAME" zh-cn="捆包" jp="捆包" en="捆包" />
+    <item key="CARTON_NAME" zh-cn="装箱" jp="装箱" en="装箱" />
+    <item key="PALLET_NAME" zh-cn="装板" jp="装板" en="装板" />
+    
+    <item key="PACK_PNO" zh-cn="Pack No." jp="Pack No." en="Pack No." />
+    <item key="PACK_CNO" zh-cn="Tray No." jp="Tray No." en="Tray No." />
+    <item key="PACK_PACK_DATE" zh-cn="捆包日" jp="捆包日" en="捆包日" />
+    <item key="PACK_PACK_QTY" zh-cn="捆包数量" jp="捆包数量" en="捆包数量" />
+
+    <item key="CARTON_PNO" zh-cn="Carton No." jp="Carton No." en="Carton No." />
+    <item key="CARTON_CNO" zh-cn="Pack No." jp="Pack No." en="Pack No." />
+    <item key="CARTON_PACK_DATE" zh-cn="装箱日" jp="装箱日" en="装箱日" />
+    <item key="CARTON_PACK_QTY" zh-cn="装箱数量" jp="装箱数量" en="装箱数量" />
+
+    <item key="PALLET_PNO" zh-cn="Pallet No." jp="Pallet No." en="Pallet No." />
+    <item key="PALLET_CNO" zh-cn="Carton No." jp="Carton No." en="Carton No." />
+    <item key="PALLET_PACK_DATE" zh-cn="装板日" jp="装板日" en="装板日" />
+    <item key="PALLET_PACK_QTY" zh-cn="装板数量" jp="装板数量" en="装板数量" />
+    
+    <item key="ITEM_COL_NO" zh-cn="序号" jp="序号" en="序号" />
+    <item key="ITEM_COL_BARCODE" zh-cn="条码编码" jp="条码编码" en="条码编码" />
+    <item key="ITEM_COL_TIME" zh-cn="扫描时间" jp="扫描时间" en="扫描时间" />
+    <item key="BT_PRINT" zh-cn="打印PEGA" jp="打印PEGA" en="打印PEGA" />
+    <!--修正时间20180517-->
+    <item key="BT_PRINT_NEW" zh-cn="打印FXZZ" jp="打印FXZZ" en="打印FXZZ" />
+    <!--end-->
+
+    <!-- 拆包画面 -->
+    <item key="UNPACK_CODE" zh-cn="Code:" jp="Code:" en="Code:" />
+    <item key="UNPACK_CHILD_CODE" zh-cn="Item Code:" jp="Item Code:" en="Item Code:" />
+    <item key="UNPACK_QTY" zh-cn="打包数量" jp="打包数量" en="打包数量" />
+    <item key="UNPACK_SINGLE" zh-cn="单层拆包" jp="单层拆包" en="单层拆包" />
+    <item key="UNPACK_DEEP" zh-cn="深度拆包" jp="深度拆包" en="深度拆包" />
+
+    <item key="UNPACK_ITEM_NO" zh-cn="No." jp="No." en="No." />
+    <item key="UNPACK_ITEM_CODE" zh-cn="Code" jp="Code" en="Code" />
+    <item key="UNPACK_ITEM_DATE" zh-cn="Date" jp="Date" en="Date" />
+    <item key="UNPACK_ITEM_STATUS" zh-cn="Status" jp="Status" en="Status" />
+    <item key="UNPACK_BT_ALL" zh-cn="全部选择" jp="全部选择" en="全部选择" />
+    <item key="UNPACK_BT_COMMIT" zh-cn="确定" jp="确定" en="确定" />
+    <item key="UNPACK_BT_CLOSE" zh-cn="关闭" jp="关闭" en="关闭" />
+    
+    <!-- 重新打印画面 -->
+    <item key="REPRINT_CODE" zh-cn="标签条码" jp="标签条码" en="标签条码" />
+    <item key="REPRINT_DATE" zh-cn="捆包日" jp="捆包日" en="捆包日" />
+    <item key="REPRINT_QTY" zh-cn="捆包数量" jp="捆包数量" en="捆包数量" />
+    <item key="REPRINT_ITEM_NO" zh-cn="No." jp="No." en="No." />
+    <item key="REPRINT_ITEM_CODE" zh-cn="Code" jp="Code" en="Code" />
+    <item key="REPRINT_ITEM_DATE" zh-cn="Date" jp="Date" en="Date" />
+    <item key="REPRINT_BT_PRINT" zh-cn="打印PEGA" jp="打印PEGA" en="打印PEGA" />
+    <item key="REPRINT_BT_CLOSE" zh-cn="关闭" jp="关闭" en="关闭" />
+    <!--修正时间20180517-->
+    <item key="REPRINT_BT_PRINT_NEW" zh-cn="打印FXZZ" jp="打印FXZZ" en="打印FXZZ" />
+    <!--end--> 
+    
+  </static>
+  <dynamic>
+    <item key="" zh-cn="" jp="" en="" />
+  </dynamic>
+  <warnning>
+    <item key="CONFIG_FILE_ERROR" zh-cn="找不到基础配置文件." jp="" en="Not found the configuration file." />
+    <item key="TRAY_CODE_ERROR" zh-cn="扫描的条码不正确，请检查是否是捆包的Tray。" jp="" en="The code of tray is error.\r\nPlease check the tray code." />
+    <item key="PACK_CODE_ERROR" zh-cn="扫描的条码不正确，请检查是否是装箱的Pack。" jp="" en="The code of pack is error.\r\nPlease check the pack code." />
+    <item key="CARTON_CODE_ERROR" zh-cn="扫描的条码不正确，请检查是否是装板的Carton。" jp="" en="The code of carton is error.\r\nPlease check the carton code." />
+    <item key="NO_ITEM_UNPACK_ERROR" zh-cn="没有需要拆包的对象。" jp="" en="Not anything to be unpacked." />
+    <item key="COMPLETED_UNPACK_INFO" zh-cn="完成拆包处理。" jp="" en="Completed unpack." />
+    <item key="QUANTITY_FULL_ERROR" zh-cn="数量已满，请打印标签。" jp="" en="The quantity is full. Please print label." />
+    <item key="LABEL_PRINT_INIT_ERROR" zh-cn="标签打印模块初始化失败。" jp="" en="Initialize label print module failed." />
+    <item key="NOT_FULL_QUANTITY_ERROR" zh-cn="打包数量不足，请继续打包。" jp="" en="Not enough quantity.Please go on packing." />
+    <item key="TOTAL_NUMBER_ERROR" zh-cn="输入捆包总数错误，请重新输入。" jp="" en="The number of total is error.Please input the number again." />
+    <item key="TOTAL_NUMBER_LESS_THEN_DETAIL" zh-cn="输入捆包总数小于明细数量，请重新输入。" jp="" en="The number of total is less then detail count.Please input the number again." />
+    <item key="APPLY_ID_ERROR" zh-cn="还有工作未完成，请完成并打印标签后再申请新号." jp="" en="A work not complete. Please apply new id after completed the work and printed the label." />
+    <item key="REPACK_ERROR" zh-cn="当前捆包还未结束，确定要重装么？" jp="" en="Current work not complete.Do you confirm repacking?" />
+    <item key="EXIT_ERROR" zh-cn="当前捆包还未结束，确定要退出么？" jp="" en="Current work not complete.Do you confirm to exit?" />
+    <item key="DEEP_CANCELED_WARNNING" zh-cn="现在是深度拆包模式，是否确定拆包？" jp="" en="Now is deep cancel mode,Do you confirm cancel?" />
+    <item key="REPACK_NOT_PRINT" zh-cn="该标签已经打印过了，需要再次打印请进入重新打印画面打印" jp="" en="This label has been print. And please enter [reprint dialog] to print it again." />
+    <item key="UNCOMPLETED_CLOSE_WARN" zh-cn="目前还有未完成工作，确定关闭程序么？" jp="" en="There is not completed work, Do you confirm close window?" />
+    <item key="UNPACK_NO_ITEM_ERROR" zh-cn="没有选择拆包项目，请选择拆包项目！" jp="" en="Nothing has been selected, Please choose anyone to unpack." />
+    <item key="NO_PARENT_SCAN_ERROR" zh-cn="没有预约编号．不可以扫描．" jp="" en="Can't scan barcode for not apply parent no." />
+  </warnning>
+</language>

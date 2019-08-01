@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<databases>
+  <system_database name="NIDEC" />
+  <database name="NIDEC" connection="Server=172.27.32.231;Port=5432;Database=barcodeprint_kk08;User Id=pqm;Password=dbuser;Encoding=UNICODE;" category="PostgreSQL" />
+</databases>

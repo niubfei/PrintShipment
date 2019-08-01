@@ -1,0 +1,320 @@
+C:\Users\YANG YU - NSTD\Desktop\SFC\bin\Release\LabelPrint.exe.config
+C:\Users\YANG YU - NSTD\Desktop\SFC\bin\Release\example.config
+C:\Users\YANG YU - NSTD\Desktop\SFC\bin\Release\Label.xml
+C:\Users\YANG YU - NSTD\Desktop\SFC\bin\Release\config.xml
+C:\Users\YANG YU - NSTD\Desktop\SFC\bin\Release\database.xml
+C:\Users\YANG YU - NSTD\Desktop\SFC\bin\Release\language.xml
+C:\Users\YANG YU - NSTD\Desktop\SFC\bin\Release\LabelPrint.exe.manifest
+C:\Users\YANG YU - NSTD\Desktop\SFC\bin\Release\LabelPrint.application
+C:\Users\YANG YU - NSTD\Desktop\SFC\bin\Release\LabelPrint.exe
+C:\Users\YANG YU - NSTD\Desktop\SFC\bin\Release\LabelPrint.pdb
+C:\Users\YANG YU - NSTD\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.csprojResolveAssemblyReference.cache
+C:\Users\YANG YU - NSTD\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.ConfigForm.resources
+C:\Users\YANG YU - NSTD\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.LoginForm.resources
+C:\Users\YANG YU - NSTD\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.MainForm.resources
+C:\Users\YANG YU - NSTD\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.PackingForm.resources
+C:\Users\YANG YU - NSTD\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.Properties.Resources.resources
+C:\Users\YANG YU - NSTD\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.ReprintForm.resources
+C:\Users\YANG YU - NSTD\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.UnpackForm.resources
+C:\Users\YANG YU - NSTD\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.GenerateResource.Cache
+C:\Users\YANG YU - NSTD\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.TrustInfo.xml
+C:\Users\YANG YU - NSTD\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.exe.manifest
+C:\Users\YANG YU - NSTD\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.application
+C:\Users\YANG YU - NSTD\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.exe
+C:\Users\YANG YU - NSTD\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.pdb
+C:\Users\Administrator\Desktop\SFC\bin\Release\LabelPrint.exe.config
+C:\Users\Administrator\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.exe
+C:\Users\Administrator\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.pdb
+C:\Users\Administrator\Desktop\SFC\bin\Release\example.config
+C:\Users\Administrator\Desktop\SFC\bin\Release\Label.xml
+C:\Users\Administrator\Desktop\SFC\bin\Release\config.xml
+C:\Users\Administrator\Desktop\SFC\bin\Release\database.xml
+C:\Users\Administrator\Desktop\SFC\bin\Release\language.xml
+C:\Users\Administrator\Desktop\SFC\bin\Release\LabelPrint.exe.manifest
+C:\Users\Administrator\Desktop\SFC\bin\Release\LabelPrint.application
+C:\Users\Administrator\Desktop\SFC\bin\Release\LabelPrint.exe
+C:\Users\Administrator\Desktop\SFC\bin\Release\LabelPrint.pdb
+C:\Users\Administrator\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.ConfigForm.resources
+C:\Users\Administrator\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.LoginForm.resources
+C:\Users\Administrator\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.MainForm.resources
+C:\Users\Administrator\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.PackingForm.resources
+C:\Users\Administrator\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.Properties.Resources.resources
+C:\Users\Administrator\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.ReprintForm.resources
+C:\Users\Administrator\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.UnpackForm.resources
+C:\Users\Administrator\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.TrustInfo.xml
+C:\Users\Administrator\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.exe.manifest
+C:\Users\Administrator\Desktop\SFC\LabelPrint\obj\x86\Release\LabelPrint.application
+D:\FYH-2018-05-31\NewV\SFC\bin\Release\LabelPrint.exe.config
+D:\FYH-2018-05-31\NewV\SFC\LabelPrint\obj\x86\Release\LabelPrint.exe
+D:\FYH-2018-05-31\NewV\SFC\LabelPrint\obj\x86\Release\LabelPrint.pdb
+D:\FYH-2018-05-31\NewV\SFC\bin\Release\example.config
+D:\FYH-2018-05-31\NewV\SFC\bin\Release\Label.xml
+D:\FYH-2018-05-31\NewV\SFC\bin\Release\config.xml
+D:\FYH-2018-05-31\NewV\SFC\bin\Release\database.xml
+D:\FYH-2018-05-31\NewV\SFC\bin\Release\language.xml
+D:\FYH-2018-05-31\NewV\SFC\bin\Release\LabelPrint.exe.manifest
+D:\FYH-2018-05-31\NewV\SFC\bin\Release\LabelPrint.application
+D:\FYH-2018-05-31\NewV\SFC\bin\Release\LabelPrint.exe
+D:\FYH-2018-05-31\NewV\SFC\bin\Release\LabelPrint.pdb
+D:\FYH-2018-05-31\NewV\SFC\LabelPrint\obj\x86\Release\LabelPrint.csprojResolveAssemblyReference.cache
+D:\FYH-2018-05-31\NewV\SFC\LabelPrint\obj\x86\Release\LabelPrint.ConfigForm.resources
+D:\FYH-2018-05-31\NewV\SFC\LabelPrint\obj\x86\Release\LabelPrint.LoginForm.resources
+D:\FYH-2018-05-31\NewV\SFC\LabelPrint\obj\x86\Release\LabelPrint.MainForm.resources
+D:\FYH-2018-05-31\NewV\SFC\LabelPrint\obj\x86\Release\LabelPrint.PackingForm.resources
+D:\FYH-2018-05-31\NewV\SFC\LabelPrint\obj\x86\Release\LabelPrint.Properties.Resources.resources
+D:\FYH-2018-05-31\NewV\SFC\LabelPrint\obj\x86\Release\LabelPrint.ReprintForm.resources
+D:\FYH-2018-05-31\NewV\SFC\LabelPrint\obj\x86\Release\LabelPrint.UnpackForm.resources
+D:\FYH-2018-05-31\NewV\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.GenerateResource.Cache
+D:\FYH-2018-05-31\NewV\SFC\LabelPrint\obj\x86\Release\LabelPrint.TrustInfo.xml
+D:\FYH-2018-05-31\NewV\SFC\LabelPrint\obj\x86\Release\LabelPrint.exe.manifest
+D:\FYH-2018-05-31\NewV\SFC\LabelPrint\obj\x86\Release\LabelPrint.application
+D:\FYH-2018-05-31\Project\SFC\bin\Release\LabelPrint.exe.config
+D:\FYH-2018-05-31\Project\SFC\LabelPrint\obj\x86\Release\LabelPrint.exe
+D:\FYH-2018-05-31\Project\SFC\LabelPrint\obj\x86\Release\LabelPrint.pdb
+C:\Users\yyx19\Desktop\data\SFC\LabelPrint\obj\x86\Release\LabelPrint.csprojAssemblyReference.cache
+C:\Users\yyx19\Desktop\data\SFC\LabelPrint\obj\x86\Release\LabelPrint.ConfigForm.resources
+C:\Users\yyx19\Desktop\data\SFC\LabelPrint\obj\x86\Release\LabelPrint.LoginForm.resources
+C:\Users\yyx19\Desktop\data\SFC\LabelPrint\obj\x86\Release\LabelPrint.MainForm.resources
+C:\Users\yyx19\Desktop\data\SFC\LabelPrint\obj\x86\Release\LabelPrint.NewFXZZConfig.resources
+C:\Users\yyx19\Desktop\data\SFC\LabelPrint\obj\x86\Release\LabelPrint.PackingForm.resources
+C:\Users\yyx19\Desktop\data\SFC\LabelPrint\obj\x86\Release\LabelPrint.Print3.resources
+C:\Users\yyx19\Desktop\data\SFC\LabelPrint\obj\x86\Release\LabelPrint.Print1.resources
+C:\Users\yyx19\Desktop\data\SFC\LabelPrint\obj\x86\Release\LabelPrint.Print2.resources
+C:\Users\yyx19\Desktop\data\SFC\LabelPrint\obj\x86\Release\LabelPrint.Properties.Resources.resources
+C:\Users\yyx19\Desktop\data\SFC\LabelPrint\obj\x86\Release\LabelPrint.NewFXZZ.resources
+C:\Users\yyx19\Desktop\data\SFC\LabelPrint\obj\x86\Release\LabelPrint.ReprintForm.resources
+C:\Users\yyx19\Desktop\data\SFC\LabelPrint\obj\x86\Release\LabelPrint.UnpackForm.resources
+C:\Users\yyx19\Desktop\data\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.GenerateResource.cache
+C:\Users\yyx19\Desktop\data\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.CoreCompileInputs.cache
+C:\Users\yyx19\Desktop\data\SFC\LabelPrint\obj\x86\Release\LabelPrint.exe
+C:\Users\yyx19\Desktop\data\SFC\LabelPrint\obj\x86\Release\LabelPrint.pdb
+C:\Users\yyx19\Desktop\data\SFC\bin\Release\example.config
+C:\Users\yyx19\Desktop\data\SFC\bin\Release\Label.xml
+C:\Users\yyx19\Desktop\data\SFC\bin\Release\language.xml
+C:\Users\yyx19\Desktop\data\SFC\bin\Release\config.xml
+C:\Users\yyx19\Desktop\data\SFC\bin\Release\database.xml
+C:\Users\yyx19\Desktop\data\SFC\bin\Release\LabelPrint.exe.config
+C:\Users\yyx19\Desktop\data\SFC\bin\Release\LabelPrint.exe.manifest
+C:\Users\yyx19\Desktop\data\SFC\bin\Release\LabelPrint.application
+C:\Users\yyx19\Desktop\data\SFC\bin\Release\LabelPrint.exe
+C:\Users\yyx19\Desktop\data\SFC\bin\Release\LabelPrint.pdb
+C:\Users\yyx19\Desktop\data\SFC\LabelPrint\obj\x86\Release\LabelPrint.TrustInfo.xml
+C:\Users\yyx19\Desktop\data\SFC\LabelPrint\obj\x86\Release\LabelPrint.exe.manifest
+C:\Users\yyx19\Desktop\data\SFC\LabelPrint\obj\x86\Release\LabelPrint.application
+C:\Users\yyx19\Desktop\data\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.CopyComplete
+D:\code\SFC\20190523\SFC\bin\Release\example.config
+D:\code\SFC\20190523\SFC\bin\Release\Label.xml
+D:\code\SFC\20190523\SFC\bin\Release\language.xml
+D:\code\SFC\20190523\SFC\bin\Release\config.xml
+D:\code\SFC\20190523\SFC\bin\Release\database.xml
+D:\code\SFC\20190523\SFC\bin\Release\LabelPrint.exe.config
+D:\code\SFC\20190523\SFC\bin\Release\LabelPrint.exe.manifest
+D:\code\SFC\20190523\SFC\bin\Release\LabelPrint.application
+D:\code\SFC\20190523\SFC\bin\Release\LabelPrint.exe
+D:\code\SFC\20190523\SFC\bin\Release\LabelPrint.pdb
+D:\code\SFC\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.csprojAssemblyReference.cache
+D:\code\SFC\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.ConfigForm.resources
+D:\code\SFC\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.LoginForm.resources
+D:\code\SFC\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.MainForm.resources
+D:\code\SFC\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.NewFXZZConfig.resources
+D:\code\SFC\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.PackingForm.resources
+D:\code\SFC\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.Print3.resources
+D:\code\SFC\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.Print1.resources
+D:\code\SFC\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.Print2.resources
+D:\code\SFC\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.Properties.Resources.resources
+D:\code\SFC\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.NewFXZZ.resources
+D:\code\SFC\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.ReprintForm.resources
+D:\code\SFC\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.UnpackForm.resources
+D:\code\SFC\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.GenerateResource.cache
+D:\code\SFC\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.CoreCompileInputs.cache
+D:\code\SFC\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.TrustInfo.xml
+D:\code\SFC\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.exe.manifest
+D:\code\SFC\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.application
+D:\code\SFC\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.CopyComplete
+D:\code\SFC\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.exe
+D:\code\SFC\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.pdb
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\bin\Release\example.config
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\bin\Release\Label.xml
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\bin\Release\config.xml
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\bin\Release\database.xml
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\bin\Release\language.xml
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\bin\Release\LabelPrint.exe.config
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\bin\Release\LabelPrint.exe.manifest
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\bin\Release\LabelPrint.application
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\bin\Release\LabelPrint.exe
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\bin\Release\LabelPrint.pdb
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.csprojAssemblyReference.cache
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.ConfigForm.resources
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.LoginForm.resources
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.MainForm.resources
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.NewFXZZConfig.resources
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.PackingForm.resources
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.Print3.resources
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.Print1.resources
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.Print2.resources
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.Properties.Resources.resources
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.NewFXZZ.resources
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.ReprintForm.resources
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.UnpackForm.resources
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.GenerateResource.cache
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.CoreCompileInputs.cache
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.TrustInfo.xml
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.exe.manifest
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.application
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.CopyComplete
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.exe
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\LabelPrint\obj\x86\Release\LabelPrint.pdb
+D:\code\SFC\SFC\bin\Release\example.config
+D:\code\SFC\SFC\bin\Release\Label.xml
+D:\code\SFC\SFC\bin\Release\config.xml
+D:\code\SFC\SFC\bin\Release\language.xml
+D:\code\SFC\SFC\bin\Release\database.xml
+D:\code\SFC\SFC\bin\Release\LabelPrint.exe.config
+D:\code\SFC\SFC\bin\Release\LabelPrint.exe.manifest
+D:\code\SFC\SFC\bin\Release\LabelPrint.application
+D:\code\SFC\SFC\bin\Release\LabelPrint.exe
+D:\code\SFC\SFC\bin\Release\LabelPrint.pdb
+D:\code\SFC\SFC\LabelPrint\obj\x86\Release\LabelPrint.csprojAssemblyReference.cache
+D:\code\SFC\SFC\LabelPrint\obj\x86\Release\LabelPrint.ConfigForm.resources
+D:\code\SFC\SFC\LabelPrint\obj\x86\Release\LabelPrint.LoginForm.resources
+D:\code\SFC\SFC\LabelPrint\obj\x86\Release\LabelPrint.MainForm.resources
+D:\code\SFC\SFC\LabelPrint\obj\x86\Release\LabelPrint.NewFXZZConfig.resources
+D:\code\SFC\SFC\LabelPrint\obj\x86\Release\LabelPrint.PackingForm.resources
+D:\code\SFC\SFC\LabelPrint\obj\x86\Release\LabelPrint.Print3.resources
+D:\code\SFC\SFC\LabelPrint\obj\x86\Release\LabelPrint.Print1.resources
+D:\code\SFC\SFC\LabelPrint\obj\x86\Release\LabelPrint.Print2.resources
+D:\code\SFC\SFC\LabelPrint\obj\x86\Release\LabelPrint.Properties.Resources.resources
+D:\code\SFC\SFC\LabelPrint\obj\x86\Release\LabelPrint.NewFXZZ.resources
+D:\code\SFC\SFC\LabelPrint\obj\x86\Release\LabelPrint.ReprintForm.resources
+D:\code\SFC\SFC\LabelPrint\obj\x86\Release\LabelPrint.UnpackForm.resources
+D:\code\SFC\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.GenerateResource.cache
+D:\code\SFC\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.CoreCompileInputs.cache
+D:\code\SFC\SFC\LabelPrint\obj\x86\Release\LabelPrint.TrustInfo.xml
+D:\code\SFC\SFC\LabelPrint\obj\x86\Release\LabelPrint.exe.manifest
+D:\code\SFC\SFC\LabelPrint\obj\x86\Release\LabelPrint.application
+D:\code\SFC\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.CopyComplete
+D:\code\SFC\SFC\LabelPrint\obj\x86\Release\LabelPrint.exe
+D:\code\SFC\SFC\LabelPrint\obj\x86\Release\LabelPrint.pdb
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\bin\Release\example.config
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\bin\Release\Label.xml
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\bin\Release\config.xml
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\bin\Release\language.xml
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\bin\Release\database.xml
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\bin\Release\LabelPrint.exe.config
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\bin\Release\LabelPrint.exe.manifest
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\bin\Release\LabelPrint.application
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\bin\Release\LabelPrint.exe
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\bin\Release\LabelPrint.pdb
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\LabelPrint\obj\x86\Release\LabelPrint.csprojAssemblyReference.cache
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\LabelPrint\obj\x86\Release\LabelPrint.ConfigForm.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\LabelPrint\obj\x86\Release\LabelPrint.LoginForm.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\LabelPrint\obj\x86\Release\LabelPrint.MainForm.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\LabelPrint\obj\x86\Release\LabelPrint.NewFXZZConfig.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\LabelPrint\obj\x86\Release\LabelPrint.PackingForm.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\LabelPrint\obj\x86\Release\LabelPrint.Print3.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\LabelPrint\obj\x86\Release\LabelPrint.Print1.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\LabelPrint\obj\x86\Release\LabelPrint.Print2.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\LabelPrint\obj\x86\Release\LabelPrint.Properties.Resources.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\LabelPrint\obj\x86\Release\LabelPrint.NewFXZZ.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\LabelPrint\obj\x86\Release\LabelPrint.ReprintForm.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\LabelPrint\obj\x86\Release\LabelPrint.UnpackForm.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.GenerateResource.cache
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.CoreCompileInputs.cache
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\LabelPrint\obj\x86\Release\LabelPrint.TrustInfo.xml
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\LabelPrint\obj\x86\Release\LabelPrint.exe.manifest
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\LabelPrint\obj\x86\Release\LabelPrint.application
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.CopyComplete
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\LabelPrint\obj\x86\Release\LabelPrint.exe
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\LabelPrint\obj\x86\Release\LabelPrint.pdb
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\bin\Release\config.xml
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\bin\Release\database.xml
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\bin\Release\Label.xml
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\bin\Release\language.xml
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\bin\Release\LabelPrint.exe.config
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\bin\Release\LabelPrint.exe.manifest
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\bin\Release\LabelPrint.application
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\bin\Release\LabelPrint.exe
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\bin\Release\LabelPrint.pdb
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.csprojAssemblyReference.cache
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.ConfigForm.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.LoginForm.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.MainForm.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.NewFXZZConfig.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.PackingForm.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.Print3.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.Print1.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.Print2.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.Properties.Resources.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.NewFXZZ.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.ReprintForm.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.UnpackForm.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.GenerateResource.cache
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.CoreCompileInputs.cache
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.TrustInfo.xml
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.exe.manifest
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.application
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.CopyComplete
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.exe
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.pdb
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\bin\Release\Label.xml
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\bin\Release\config.xml
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\bin\Release\database.xml
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\bin\Release\language.xml
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\bin\Release\LabelPrint.exe.config
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\bin\Release\LabelPrint.exe.manifest
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\bin\Release\LabelPrint.application
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\bin\Release\LabelPrint.exe
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\bin\Release\LabelPrint.pdb
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.csprojAssemblyReference.cache
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.ConfigForm.resources
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.LoginForm.resources
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.MainForm.resources
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.NewFXZZConfig.resources
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.PackingForm.resources
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.Print3.resources
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.Print1.resources
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.Print2.resources
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.Properties.Resources.resources
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.NewFXZZ.resources
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.ReprintForm.resources
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.UnpackForm.resources
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.GenerateResource.cache
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.CoreCompileInputs.cache
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.TrustInfo.xml
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.exe.manifest
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.application
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.CopyComplete
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.exe
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\LabelPrint\obj\x86\Release\LabelPrint.pdb
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\LabelPrint\obj\x86\Release\LabelPrint.csprojAssemblyReference.cache
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\LabelPrint\obj\x86\Release\LabelPrint.ConfigForm.resources
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\LabelPrint\obj\x86\Release\LabelPrint.LoginForm.resources
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\LabelPrint\obj\x86\Release\LabelPrint.MainForm.resources
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\LabelPrint\obj\x86\Release\LabelPrint.NewFXZZConfig.resources
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\LabelPrint\obj\x86\Release\LabelPrint.PackingForm.resources
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\LabelPrint\obj\x86\Release\LabelPrint.Print3.resources
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\LabelPrint\obj\x86\Release\LabelPrint.Print1.resources
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\LabelPrint\obj\x86\Release\LabelPrint.Print2.resources
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\LabelPrint\obj\x86\Release\LabelPrint.Properties.Resources.resources
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\LabelPrint\obj\x86\Release\LabelPrint.NewFXZZ.resources
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\LabelPrint\obj\x86\Release\LabelPrint.ReprintForm.resources
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\LabelPrint\obj\x86\Release\LabelPrint.UnpackForm.resources
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.GenerateResource.cache
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.CoreCompileInputs.cache
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\LabelPrint\obj\x86\Release\LabelPrint.exe
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\LabelPrint\obj\x86\Release\LabelPrint.pdb
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\bin\Release\Label.xml
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\bin\Release\config.xml
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\bin\Release\database.xml
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\bin\Release\language.xml
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\bin\Release\LabelPrint.exe.config
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\bin\Release\LabelPrint.exe.manifest
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\bin\Release\LabelPrint.application
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\bin\Release\LabelPrint.exe
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\bin\Release\LabelPrint.pdb
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\LabelPrint\obj\x86\Release\LabelPrint.TrustInfo.xml
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\LabelPrint\obj\x86\Release\LabelPrint.exe.manifest
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\LabelPrint\obj\x86\Release\LabelPrint.application
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\LabelPrint\obj\x86\Release\LabelPrint.csproj.CopyComplete

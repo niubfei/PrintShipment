@@ -1,0 +1,150 @@
+C:\Users\Administrator\Desktop\SFC\OUT\bin\Debug\OUT.exe.config
+C:\Users\Administrator\Desktop\SFC\OUT\obj\Debug\OUT.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\SFC\OUT\obj\Debug\OUT.Properties.Resources.resources
+C:\Users\Administrator\Desktop\SFC\OUT\obj\Debug\OUT.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\SFC\OUT\bin\Debug\OUT.exe
+C:\Users\Administrator\Desktop\SFC\OUT\bin\Debug\OUT.pdb
+C:\Users\Administrator\Desktop\SFC\OUT\bin\Debug\Npgsql.dll
+C:\Users\Administrator\Desktop\SFC\OUT\bin\Debug\Mono.Security.dll
+C:\Users\Administrator\Desktop\SFC\OUT\obj\Debug\OUT.exe
+C:\Users\Administrator\Desktop\SFC\OUT\obj\Debug\OUT.pdb
+C:\Users\Administrator\Desktop\SFC\OUT\obj\Debug\OUT.Form_Invoice.resources
+D:\FYH-2018-05-31\NewV\SFC\OUT\bin\Debug\OUT.exe.config
+D:\FYH-2018-05-31\NewV\SFC\OUT\obj\Debug\OUT.exe
+D:\FYH-2018-05-31\NewV\SFC\OUT\obj\Debug\OUT.pdb
+D:\FYH-2018-05-31\NewV\SFC\OUT\bin\Debug\OUT.exe
+D:\FYH-2018-05-31\NewV\SFC\OUT\bin\Debug\OUT.pdb
+D:\FYH-2018-05-31\NewV\SFC\OUT\bin\Debug\Npgsql.dll
+D:\FYH-2018-05-31\NewV\SFC\OUT\bin\Debug\Mono.Security.dll
+D:\FYH-2018-05-31\NewV\SFC\OUT\obj\Debug\OUT.csprojResolveAssemblyReference.cache
+D:\FYH-2018-05-31\NewV\SFC\OUT\obj\Debug\OUT.Form_Invoice.resources
+D:\FYH-2018-05-31\NewV\SFC\OUT\obj\Debug\OUT.Properties.Resources.resources
+D:\FYH-2018-05-31\NewV\SFC\OUT\obj\Debug\OUT.csproj.GenerateResource.Cache
+D:\code\客户富士康标签\SFC\OUT\bin\Debug\OUT.exe.config
+D:\code\客户富士康标签\SFC\OUT\bin\Debug\OUT.exe
+D:\code\客户富士康标签\SFC\OUT\bin\Debug\OUT.pdb
+D:\code\客户富士康标签\SFC\OUT\bin\Debug\Npgsql.dll
+D:\code\客户富士康标签\SFC\OUT\bin\Debug\Mono.Security.dll
+D:\code\客户富士康标签\SFC\OUT\obj\Debug\OUT.csprojAssemblyReference.cache
+D:\code\客户富士康标签\SFC\OUT\obj\Debug\OUT.Form_Invoice.resources
+D:\code\客户富士康标签\SFC\OUT\obj\Debug\OUT.Properties.Resources.resources
+D:\code\客户富士康标签\SFC\OUT\obj\Debug\OUT.csproj.GenerateResource.cache
+D:\code\客户富士康标签\SFC\OUT\obj\Debug\OUT.csproj.CoreCompileInputs.cache
+D:\code\客户富士康标签\SFC\OUT\obj\Debug\OUT.csproj.CopyComplete
+D:\code\客户富士康标签\SFC\OUT\obj\Debug\OUT.exe
+D:\code\客户富士康标签\SFC\OUT\obj\Debug\OUT.pdb
+D:\code\客户富士康标签\SFC20190419.02_加打印btn之前 - 副本\OUT\bin\Debug\OUT.exe.config
+D:\code\客户富士康标签\SFC20190419.02_加打印btn之前 - 副本\OUT\bin\Debug\OUT.exe
+D:\code\客户富士康标签\SFC20190419.02_加打印btn之前 - 副本\OUT\bin\Debug\OUT.pdb
+D:\code\客户富士康标签\SFC20190419.02_加打印btn之前 - 副本\OUT\bin\Debug\Npgsql.dll
+D:\code\客户富士康标签\SFC20190419.02_加打印btn之前 - 副本\OUT\bin\Debug\Mono.Security.dll
+D:\code\客户富士康标签\SFC20190419.02_加打印btn之前 - 副本\OUT\obj\Debug\OUT.csprojAssemblyReference.cache
+D:\code\客户富士康标签\SFC20190419.02_加打印btn之前 - 副本\OUT\obj\Debug\OUT.Form_Invoice.resources
+D:\code\客户富士康标签\SFC20190419.02_加打印btn之前 - 副本\OUT\obj\Debug\OUT.Properties.Resources.resources
+D:\code\客户富士康标签\SFC20190419.02_加打印btn之前 - 副本\OUT\obj\Debug\OUT.csproj.GenerateResource.cache
+D:\code\客户富士康标签\SFC20190419.02_加打印btn之前 - 副本\OUT\obj\Debug\OUT.csproj.CoreCompileInputs.cache
+D:\code\客户富士康标签\SFC20190419.02_加打印btn之前 - 副本\OUT\obj\Debug\OUT.csproj.CopyComplete
+D:\code\客户富士康标签\SFC20190419.02_加打印btn之前 - 副本\OUT\obj\Debug\OUT.exe
+D:\code\客户富士康标签\SFC20190419.02_加打印btn之前 - 副本\OUT\obj\Debug\OUT.pdb
+C:\Users\yyx19\Desktop\data\SFC\OUT\bin\Debug\OUT.exe.config
+C:\Users\yyx19\Desktop\data\SFC\OUT\bin\Debug\OUT.exe
+C:\Users\yyx19\Desktop\data\SFC\OUT\bin\Debug\OUT.pdb
+C:\Users\yyx19\Desktop\data\SFC\OUT\bin\Debug\Npgsql.dll
+C:\Users\yyx19\Desktop\data\SFC\OUT\bin\Debug\Mono.Security.dll
+C:\Users\yyx19\Desktop\data\SFC\OUT\obj\Debug\OUT.csprojAssemblyReference.cache
+C:\Users\yyx19\Desktop\data\SFC\OUT\obj\Debug\OUT.Form_Invoice.resources
+C:\Users\yyx19\Desktop\data\SFC\OUT\obj\Debug\OUT.Properties.Resources.resources
+C:\Users\yyx19\Desktop\data\SFC\OUT\obj\Debug\OUT.csproj.GenerateResource.cache
+C:\Users\yyx19\Desktop\data\SFC\OUT\obj\Debug\OUT.csproj.CoreCompileInputs.cache
+C:\Users\yyx19\Desktop\data\SFC\OUT\obj\Debug\OUT.csproj.CopyComplete
+C:\Users\yyx19\Desktop\data\SFC\OUT\obj\Debug\OUT.exe
+C:\Users\yyx19\Desktop\data\SFC\OUT\obj\Debug\OUT.pdb
+D:\code\SFC\20190522\SFC\OUT\bin\Debug\OUT.exe.config
+D:\code\SFC\20190522\SFC\OUT\bin\Debug\OUT.exe
+D:\code\SFC\20190522\SFC\OUT\bin\Debug\OUT.pdb
+D:\code\SFC\20190522\SFC\OUT\bin\Debug\Npgsql.dll
+D:\code\SFC\20190522\SFC\OUT\bin\Debug\Mono.Security.dll
+D:\code\SFC\20190522\SFC\OUT\obj\Debug\OUT.csprojAssemblyReference.cache
+D:\code\SFC\20190522\SFC\OUT\obj\Debug\OUT.Form_Invoice.resources
+D:\code\SFC\20190522\SFC\OUT\obj\Debug\OUT.Properties.Resources.resources
+D:\code\SFC\20190522\SFC\OUT\obj\Debug\OUT.csproj.GenerateResource.cache
+D:\code\SFC\20190522\SFC\OUT\obj\Debug\OUT.csproj.CoreCompileInputs.cache
+D:\code\SFC\20190522\SFC\OUT\obj\Debug\OUT.csproj.CopyComplete
+D:\code\SFC\20190522\SFC\OUT\obj\Debug\OUT.exe
+D:\code\SFC\20190522\SFC\OUT\obj\Debug\OUT.pdb
+D:\code\SFC\20190523\SFC\OUT\bin\Debug\OUT.exe.config
+D:\code\SFC\20190523\SFC\OUT\bin\Debug\OUT.exe
+D:\code\SFC\20190523\SFC\OUT\bin\Debug\OUT.pdb
+D:\code\SFC\20190523\SFC\OUT\bin\Debug\Npgsql.dll
+D:\code\SFC\20190523\SFC\OUT\bin\Debug\Mono.Security.dll
+D:\code\SFC\20190523\SFC\OUT\obj\Debug\OUT.csprojAssemblyReference.cache
+D:\code\SFC\20190523\SFC\OUT\obj\Debug\OUT.Form_Invoice.resources
+D:\code\SFC\20190523\SFC\OUT\obj\Debug\OUT.Properties.Resources.resources
+D:\code\SFC\20190523\SFC\OUT\obj\Debug\OUT.csproj.GenerateResource.cache
+D:\code\SFC\20190523\SFC\OUT\obj\Debug\OUT.csproj.CoreCompileInputs.cache
+D:\code\SFC\20190523\SFC\OUT\obj\Debug\OUT.csproj.CopyComplete
+D:\code\SFC\20190523\SFC\OUT\obj\Debug\OUT.exe
+D:\code\SFC\20190523\SFC\OUT\obj\Debug\OUT.pdb
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\OUT\bin\Debug\OUT.exe.config
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\OUT\bin\Debug\OUT.exe
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\OUT\bin\Debug\OUT.pdb
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\OUT\bin\Debug\Npgsql.dll
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\OUT\bin\Debug\Mono.Security.dll
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\OUT\obj\Debug\OUT.csprojAssemblyReference.cache
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\OUT\obj\Debug\OUT.Form_Invoice.resources
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\OUT\obj\Debug\OUT.Properties.Resources.resources
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\OUT\obj\Debug\OUT.csproj.GenerateResource.cache
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\OUT\obj\Debug\OUT.csproj.CoreCompileInputs.cache
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\OUT\obj\Debug\OUT.csproj.CopyComplete
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\OUT\obj\Debug\OUT.exe
+C:\Users\yyx19\Desktop\临时回收站\20190523\SFC\OUT\obj\Debug\OUT.pdb
+D:\code\SFC\SFC\OUT\bin\Debug\OUT.exe.config
+D:\code\SFC\SFC\OUT\bin\Debug\OUT.exe
+D:\code\SFC\SFC\OUT\bin\Debug\OUT.pdb
+D:\code\SFC\SFC\OUT\bin\Debug\Npgsql.dll
+D:\code\SFC\SFC\OUT\bin\Debug\Mono.Security.dll
+D:\code\SFC\SFC\OUT\obj\Debug\OUT.csprojAssemblyReference.cache
+D:\code\SFC\SFC\OUT\obj\Debug\OUT.Form_Invoice.resources
+D:\code\SFC\SFC\OUT\obj\Debug\OUT.Properties.Resources.resources
+D:\code\SFC\SFC\OUT\obj\Debug\OUT.csproj.GenerateResource.cache
+D:\code\SFC\SFC\OUT\obj\Debug\OUT.csproj.CoreCompileInputs.cache
+D:\code\SFC\SFC\OUT\obj\Debug\OUT.csproj.CopyComplete
+D:\code\SFC\SFC\OUT\obj\Debug\OUT.exe
+D:\code\SFC\SFC\OUT\obj\Debug\OUT.pdb
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\OUT\bin\Debug\OUT.exe.config
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\OUT\bin\Debug\OUT.exe
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\OUT\bin\Debug\OUT.pdb
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\OUT\bin\Debug\Npgsql.dll
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\OUT\bin\Debug\Mono.Security.dll
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\OUT\obj\Debug\OUT.csprojAssemblyReference.cache
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\OUT\obj\Debug\OUT.Form_Invoice.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\OUT\obj\Debug\OUT.Properties.Resources.resources
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\OUT\obj\Debug\OUT.csproj.GenerateResource.cache
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\OUT\obj\Debug\OUT.csproj.CoreCompileInputs.cache
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\OUT\obj\Debug\OUT.csproj.CopyComplete
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\OUT\obj\Debug\OUT.exe
+C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190530\SFC\OUT\obj\Debug\OUT.pdb
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\OUT\bin\Debug\OUT.exe.config
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\OUT\bin\Debug\OUT.exe
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\OUT\bin\Debug\OUT.pdb
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\OUT\bin\Debug\Npgsql.dll
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\OUT\bin\Debug\Mono.Security.dll
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\OUT\obj\Debug\OUT.Form_Invoice.resources
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\OUT\obj\Debug\OUT.Properties.Resources.resources
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\OUT\obj\Debug\OUT.csproj.GenerateResource.cache
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\OUT\obj\Debug\OUT.csproj.CoreCompileInputs.cache
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\OUT\obj\Debug\OUT.csproj.CopyComplete
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\OUT\obj\Debug\OUT.exe
+C:\Users\yyx19\Desktop\测试代码\20190618\SFC\OUT\obj\Debug\OUT.pdb
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\OUT\bin\Debug\OUT.exe.config
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\OUT\bin\Debug\OUT.exe
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\OUT\bin\Debug\OUT.pdb
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\OUT\bin\Debug\Npgsql.dll
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\OUT\bin\Debug\Mono.Security.dll
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\OUT\obj\Debug\OUT.Form_Invoice.resources
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\OUT\obj\Debug\OUT.Properties.Resources.resources
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\OUT\obj\Debug\OUT.csproj.GenerateResource.cache
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\OUT\obj\Debug\OUT.csproj.CoreCompileInputs.cache
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\OUT\obj\Debug\OUT.csproj.CopyComplete
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\OUT\obj\Debug\OUT.exe
+C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\OUT\obj\Debug\OUT.pdb

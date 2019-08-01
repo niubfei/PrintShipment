@@ -1,0 +1,6 @@
+C:\Users\YANG YU - NSTD\Desktop\SFC\bin\Release\example.config
+C:\Users\YANG YU - NSTD\Desktop\SFC\bin\Release\TPCBarcode.dll
+C:\Users\YANG YU - NSTD\Desktop\SFC\bin\Release\TPCBarcode.pdb
+C:\Users\YANG YU - NSTD\Desktop\SFC\TPCBarcode\obj\Release\TPCBarcode.csprojResolveAssemblyReference.cache
+C:\Users\YANG YU - NSTD\Desktop\SFC\TPCBarcode\obj\Release\TPCBarcode.dll
+C:\Users\YANG YU - NSTD\Desktop\SFC\TPCBarcode\obj\Release\TPCBarcode.pdb

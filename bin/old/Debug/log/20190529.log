@@ -1,0 +1,599 @@
+[INF] 2019-05-29 15:19:38 === Create database NIDEC category:PostgreSQL
+[INF] 2019-05-29 15:19:40 === Open database OK.
+[INF] 2019-05-29 15:19:40 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-05-29 15:19:40 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-05-29 15:19:43 === Open database OK.
+[INF] 2019-05-29 15:19:43 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-05-29 15:19:43 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:19:46 === Open database OK.
+[INF] 2019-05-29 15:19:46 === Execute SQL:select count(m.module_id) as qty from t_module m, pnt_pack p where p.tray_id = m.tray_id and p.pack_id = @code and p.status = 1
+[INF] 2019-05-29 15:19:46 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:19:46 === Open database OK.
+[INF] 2019-05-29 15:19:46 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pallet as aa
+left join pnt_carton as bb on aa.carton_id = bb.carton_id
+left join pnt_pack as cc on bb.pack_id = cc.pack_id
+left join t_module as dd on cc.tray_id = dd.tray_id
+where aa.pallet_id = @pcode
+and aa.status = '1'
+and bb.status = '1'
+and cc.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 15:19:46 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:19:57 === Open database OK.
+[INF] 2019-05-29 15:19:57 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pack as aa
+left join t_module as bb on aa.tray_id = bb.tray_id
+where aa.pack_id = @pcode
+and aa.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 15:19:57 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:BM004HK189165C0002. }
+[INF] 2019-05-29 15:20:24 === Create database NIDEC category:PostgreSQL
+[INF] 2019-05-29 15:20:25 === Open database OK.
+[INF] 2019-05-29 15:20:25 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-05-29 15:20:25 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-05-29 15:20:28 === Open database OK.
+[INF] 2019-05-29 15:20:28 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-05-29 15:20:28 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:21:09 === Open database OK.
+[INF] 2019-05-29 15:21:09 === Execute SQL:select count(m.module_id) as qty from t_module m, pnt_pack p where p.tray_id = m.tray_id and p.pack_id = @code and p.status = 1
+[INF] 2019-05-29 15:21:09 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:22:07 === Open database OK.
+[INF] 2019-05-29 15:22:07 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pallet as aa
+left join pnt_carton as bb on aa.carton_id = bb.carton_id
+left join pnt_pack as cc on bb.pack_id = cc.pack_id
+left join t_module as dd on cc.tray_id = dd.tray_id
+where aa.pallet_id = @pcode
+and aa.status = '1'
+and bb.status = '1'
+and cc.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 15:22:07 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:25:36 === Open database OK.
+[INF] 2019-05-29 15:25:36 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pack as aa
+left join t_module as bb on aa.tray_id = bb.tray_id
+where aa.pack_id = @pcode
+and aa.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 15:25:36 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:BM004HK189165C0002. }
+[INF] 2019-05-29 15:29:03 === Create database NIDEC category:PostgreSQL
+[INF] 2019-05-29 15:29:05 === Open database OK.
+[INF] 2019-05-29 15:29:05 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-05-29 15:29:05 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-05-29 15:29:10 === Open database OK.
+[INF] 2019-05-29 15:29:10 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-05-29 15:29:10 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:29:13 === Open database OK.
+[INF] 2019-05-29 15:29:13 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pallet as aa
+left join pnt_carton as bb on aa.carton_id = bb.carton_id
+left join pnt_pack as cc on bb.pack_id = cc.pack_id
+left join t_module as dd on cc.tray_id = dd.tray_id
+where aa.pallet_id = @pcode
+and aa.status = '1'
+and bb.status = '1'
+and cc.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 15:29:13 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:31:19 === Create database NIDEC category:PostgreSQL
+[INF] 2019-05-29 15:31:21 === Open database OK.
+[INF] 2019-05-29 15:31:21 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-05-29 15:31:21 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-05-29 15:31:32 === Open database OK.
+[INF] 2019-05-29 15:31:32 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-05-29 15:31:32 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:31:40 === Open database OK.
+[INF] 2019-05-29 15:31:40 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pallet as aa
+left join pnt_carton as bb on aa.carton_id = bb.carton_id
+left join pnt_pack as cc on bb.pack_id = cc.pack_id
+left join t_module as dd on cc.tray_id = dd.tray_id
+where aa.pallet_id = @pcode
+and aa.status = '1'
+and bb.status = '1'
+and cc.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 15:31:40 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:32:20 === Create database NIDEC category:PostgreSQL
+[INF] 2019-05-29 15:32:22 === Open database OK.
+[INF] 2019-05-29 15:32:22 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-05-29 15:32:22 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-05-29 15:32:25 === Open database OK.
+[INF] 2019-05-29 15:32:25 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-05-29 15:32:25 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:32:27 === Open database OK.
+[INF] 2019-05-29 15:32:27 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pallet as aa
+left join pnt_carton as bb on aa.carton_id = bb.carton_id
+left join pnt_pack as cc on bb.pack_id = cc.pack_id
+left join t_module as dd on cc.tray_id = dd.tray_id
+where aa.pallet_id = @pcode
+and aa.status = '1'
+and bb.status = '1'
+and cc.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 15:32:27 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:32:32 === Open database OK.
+[INF] 2019-05-29 15:32:32 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pack as aa
+left join t_module as bb on aa.tray_id = bb.tray_id
+where aa.pack_id = @pcode
+and aa.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 15:32:32 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:BM004HK189165C0002. }
+[INF] 2019-05-29 15:33:21 === Create database NIDEC category:PostgreSQL
+[INF] 2019-05-29 15:33:22 === Open database OK.
+[INF] 2019-05-29 15:33:22 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-05-29 15:33:22 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-05-29 15:33:26 === Open database OK.
+[INF] 2019-05-29 15:33:26 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-05-29 15:33:26 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:33:29 === Open database OK.
+[INF] 2019-05-29 15:33:29 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pallet as aa
+left join pnt_carton as bb on aa.carton_id = bb.carton_id
+left join pnt_pack as cc on bb.pack_id = cc.pack_id
+left join t_module as dd on cc.tray_id = dd.tray_id
+where aa.pallet_id = @pcode
+and aa.status = '1'
+and bb.status = '1'
+and cc.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 15:33:29 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:36:09 === Create database NIDEC category:PostgreSQL
+[INF] 2019-05-29 15:36:11 === Open database OK.
+[INF] 2019-05-29 15:36:11 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-05-29 15:36:11 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-05-29 15:36:22 === Open database OK.
+[INF] 2019-05-29 15:36:22 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-05-29 15:36:22 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:36:25 === Open database OK.
+[INF] 2019-05-29 15:36:25 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pallet as aa
+left join pnt_carton as bb on aa.carton_id = bb.carton_id
+left join pnt_pack as cc on bb.pack_id = cc.pack_id
+left join t_module as dd on cc.tray_id = dd.tray_id
+where aa.pallet_id = @pcode
+and aa.status = '1'
+and bb.status = '1'
+and cc.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 15:36:25 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:36:56 === Open database OK.
+[INF] 2019-05-29 15:36:56 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pack as aa
+left join t_module as bb on aa.tray_id = bb.tray_id
+where aa.pack_id = @pcode
+and aa.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 15:36:56 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:BM004HK189165C0002. }
+[INF] 2019-05-29 15:39:39 === Create database NIDEC category:PostgreSQL
+[INF] 2019-05-29 15:39:40 === Open database OK.
+[INF] 2019-05-29 15:39:40 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-05-29 15:39:40 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-05-29 15:39:43 === Open database OK.
+[INF] 2019-05-29 15:39:43 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-05-29 15:39:43 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:39:47 === Open database OK.
+[INF] 2019-05-29 15:39:47 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pallet as aa
+left join pnt_carton as bb on aa.carton_id = bb.carton_id
+left join pnt_pack as cc on bb.pack_id = cc.pack_id
+left join t_module as dd on cc.tray_id = dd.tray_id
+where aa.pallet_id = @pcode
+and aa.status = '1'
+and bb.status = '1'
+and cc.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 15:39:47 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:42:02 === Create database NIDEC category:PostgreSQL
+[INF] 2019-05-29 15:42:03 === Open database OK.
+[INF] 2019-05-29 15:42:03 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-05-29 15:42:03 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-05-29 15:42:17 === Open database OK.
+[INF] 2019-05-29 15:42:17 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-05-29 15:42:17 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:42:20 === Open database OK.
+[INF] 2019-05-29 15:42:20 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pallet as aa
+left join pnt_carton as bb on aa.carton_id = bb.carton_id
+left join pnt_pack as cc on bb.pack_id = cc.pack_id
+left join t_module as dd on cc.tray_id = dd.tray_id
+where aa.pallet_id = @pcode
+and aa.status = '1'
+and bb.status = '1'
+and cc.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 15:42:20 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:42:50 === Open database OK.
+[INF] 2019-05-29 15:42:50 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pallet as aa
+left join pnt_carton as bb on aa.carton_id = bb.carton_id
+left join pnt_pack as cc on bb.pack_id = cc.pack_id
+left join t_module as dd on cc.tray_id = dd.tray_id
+where aa.pallet_id = @pcode
+and aa.status = '1'
+and bb.status = '1'
+and cc.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 15:42:50 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:53:40 === Create database NIDEC category:PostgreSQL
+[INF] 2019-05-29 15:53:46 === Open database OK.
+[INF] 2019-05-29 15:53:47 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-05-29 15:53:47 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-05-29 15:53:49 === Open database OK.
+[INF] 2019-05-29 15:53:49 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-05-29 15:53:49 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:53:52 === Open database OK.
+[INF] 2019-05-29 15:53:52 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pallet as aa
+left join pnt_carton as bb on aa.carton_id = bb.carton_id
+left join pnt_pack as cc on bb.pack_id = cc.pack_id
+left join t_module as dd on cc.tray_id = dd.tray_id
+where aa.pallet_id = @pcode
+and aa.status = '1'
+and bb.status = '1'
+and cc.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 15:53:52 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:54:51 === Create database NIDEC category:PostgreSQL
+[INF] 2019-05-29 15:54:53 === Open database OK.
+[INF] 2019-05-29 15:54:53 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-05-29 15:54:53 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-05-29 15:54:56 === Open database OK.
+[INF] 2019-05-29 15:54:56 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-05-29 15:54:56 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:54:59 === Open database OK.
+[INF] 2019-05-29 15:54:59 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pallet as aa
+left join pnt_carton as bb on aa.carton_id = bb.carton_id
+left join pnt_pack as cc on bb.pack_id = cc.pack_id
+left join t_module as dd on cc.tray_id = dd.tray_id
+where aa.pallet_id = @pcode
+and aa.status = '1'
+and bb.status = '1'
+and cc.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 15:54:59 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:55:42 === Create database NIDEC category:PostgreSQL
+[INF] 2019-05-29 15:55:43 === Open database OK.
+[INF] 2019-05-29 15:55:43 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-05-29 15:55:43 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-05-29 15:55:45 === Open database OK.
+[INF] 2019-05-29 15:55:45 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-05-29 15:55:45 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:55:49 === Open database OK.
+[INF] 2019-05-29 15:55:49 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pallet as aa
+left join pnt_carton as bb on aa.carton_id = bb.carton_id
+left join pnt_pack as cc on bb.pack_id = cc.pack_id
+left join t_module as dd on cc.tray_id = dd.tray_id
+where aa.pallet_id = @pcode
+and aa.status = '1'
+and bb.status = '1'
+and cc.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 15:55:49 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:56:25 === Create database NIDEC category:PostgreSQL
+[INF] 2019-05-29 15:56:25 === Open database OK.
+[INF] 2019-05-29 15:56:25 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-05-29 15:56:25 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-05-29 15:56:29 === Open database OK.
+[INF] 2019-05-29 15:56:29 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-05-29 15:56:29 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:56:31 === Open database OK.
+[INF] 2019-05-29 15:56:31 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pallet as aa
+left join pnt_carton as bb on aa.carton_id = bb.carton_id
+left join pnt_pack as cc on bb.pack_id = cc.pack_id
+left join t_module as dd on cc.tray_id = dd.tray_id
+where aa.pallet_id = @pcode
+and aa.status = '1'
+and bb.status = '1'
+and cc.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 15:56:31 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:56:35 === Open database OK.
+[INF] 2019-05-29 15:56:35 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pack as aa
+left join t_module as bb on aa.tray_id = bb.tray_id
+where aa.pack_id = @pcode
+and aa.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 15:56:35 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:BM004HK189165C0002. }
+[INF] 2019-05-29 15:56:46 === Open database OK.
+[INF] 2019-05-29 15:56:46 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pallet as aa
+left join pnt_carton as bb on aa.carton_id = bb.carton_id
+left join pnt_pack as cc on bb.pack_id = cc.pack_id
+left join t_module as dd on cc.tray_id = dd.tray_id
+where aa.pallet_id = @pcode
+and aa.status = '1'
+and bb.status = '1'
+and cc.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 15:56:46 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:56:51 === Open database OK.
+[INF] 2019-05-29 15:56:51 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pack as aa
+left join t_module as bb on aa.tray_id = bb.tray_id
+where aa.pack_id = @pcode
+and aa.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 15:56:51 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:BM004HK189165C0002. }
+[INF] 2019-05-29 15:57:10 === Create database NIDEC category:PostgreSQL
+[INF] 2019-05-29 15:57:11 === Open database OK.
+[INF] 2019-05-29 15:57:11 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-05-29 15:57:11 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-05-29 15:57:14 === Open database OK.
+[INF] 2019-05-29 15:57:14 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-05-29 15:57:14 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:57:17 === Open database OK.
+[INF] 2019-05-29 15:57:17 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pallet as aa
+left join pnt_carton as bb on aa.carton_id = bb.carton_id
+left join pnt_pack as cc on bb.pack_id = cc.pack_id
+left join t_module as dd on cc.tray_id = dd.tray_id
+where aa.pallet_id = @pcode
+and aa.status = '1'
+and bb.status = '1'
+and cc.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 15:57:17 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:57:42 === Create database NIDEC category:PostgreSQL
+[INF] 2019-05-29 15:57:43 === Open database OK.
+[INF] 2019-05-29 15:57:43 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-05-29 15:57:43 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-05-29 15:57:46 === Open database OK.
+[INF] 2019-05-29 15:57:46 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-05-29 15:57:46 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 15:57:49 === Open database OK.
+[INF] 2019-05-29 15:57:49 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pallet as aa
+left join pnt_carton as bb on aa.carton_id = bb.carton_id
+left join pnt_pack as cc on bb.pack_id = cc.pack_id
+left join t_module as dd on cc.tray_id = dd.tray_id
+where aa.pallet_id = @pcode
+and aa.status = '1'
+and bb.status = '1'
+and cc.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 15:57:49 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 16:00:10 === Open database OK.
+[INF] 2019-05-29 16:00:10 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pack as aa
+left join t_module as bb on aa.tray_id = bb.tray_id
+where aa.pack_id = @pcode
+and aa.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 16:00:10 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:BM004HK189165C0002. }
+[INF] 2019-05-29 16:01:07 === Create database NIDEC category:PostgreSQL
+[INF] 2019-05-29 16:01:08 === Open database OK.
+[INF] 2019-05-29 16:01:08 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-05-29 16:01:08 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-05-29 16:01:17 === Open database OK.
+[INF] 2019-05-29 16:01:17 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-05-29 16:01:17 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 16:01:19 === Open database OK.
+[INF] 2019-05-29 16:01:19 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pallet as aa
+left join pnt_carton as bb on aa.carton_id = bb.carton_id
+left join pnt_pack as cc on bb.pack_id = cc.pack_id
+left join t_module as dd on cc.tray_id = dd.tray_id
+where aa.pallet_id = @pcode
+and aa.status = '1'
+and bb.status = '1'
+and cc.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 16:01:19 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980001. }
+[INF] 2019-05-29 16:47:20 === Create database NIDEC category:PostgreSQL
+[INF] 2019-05-29 16:47:21 === Open database OK.
+[INF] 2019-05-29 16:47:21 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-05-29 16:47:21 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-05-29 16:47:32 === Open database OK.
+[INF] 2019-05-29 16:47:32 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-05-29 16:47:32 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980004. }
+[INF] 2019-05-29 16:47:43 === Open database OK.
+[INF] 2019-05-29 16:47:43 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pallet as aa
+left join pnt_carton as bb on aa.carton_id = bb.carton_id
+left join pnt_pack as cc on bb.pack_id = cc.pack_id
+left join t_module as dd on cc.tray_id = dd.tray_id
+where aa.pallet_id = @pcode
+and aa.status = '1'
+and bb.status = '1'
+and cc.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 16:47:43 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980004. }
+[INF] 2019-05-29 16:47:56 === Open database OK.
+[INF] 2019-05-29 16:47:56 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_carton as aa
+left join pnt_pack as bb on aa.pack_id = bb.pack_id
+left join t_module as cc on bb.tray_id = cc.tray_id
+where aa.carton_id = @pcode
+and aa.status = '1'
+and bb.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 16:47:56 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:HNIDEC201952980004. }
+[INF] 2019-05-29 16:47:59 === Open database OK.
+[INF] 2019-05-29 16:47:59 === Execute SQL:insert into pnt_mng (pkg_id, pkg_type, act, pkg_date, pkg_qty, pkg_user, pkg_status) values (@id, @type, @act, @date, @qty, @user, @status) Params:{ParamName:@id, DbType:AnsiString, Value:PNIDEC201952980004. },{ParamName:@type, DbType:AnsiString, Value:pack. },{ParamName:@act, DbType:AnsiString, Value:r. },{ParamName:@date, DbType:DateTime, Value:2019/5/29 16:47:59. },{ParamName:@qty, DbType:Int32, Value:1. },{ParamName:@status, DbType:Int32, Value:1. },{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-05-29 19:01:59 === Create database NIDEC category:PostgreSQL
+[INF] 2019-05-29 19:02:01 === Open database OK.
+[INF] 2019-05-29 19:02:01 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-05-29 19:02:01 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-05-29 19:02:53 === Open database OK.
+[INF] 2019-05-29 19:02:53 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-05-29 19:02:53 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980004. }
+[INF] 2019-05-29 19:02:59 === Open database OK.
+[INF] 2019-05-29 19:02:59 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pallet as aa
+left join pnt_carton as bb on aa.carton_id = bb.carton_id
+left join pnt_pack as cc on bb.pack_id = cc.pack_id
+left join t_module as dd on cc.tray_id = dd.tray_id
+where aa.pallet_id = @pcode
+and aa.status = '1'
+and bb.status = '1'
+and cc.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 19:02:59 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980004. }
+[INF] 2019-05-29 19:03:04 === Open database OK.
+[INF] 2019-05-29 19:03:04 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_carton as aa
+left join pnt_pack as bb on aa.pack_id = bb.pack_id
+left join t_module as cc on bb.tray_id = cc.tray_id
+where aa.carton_id = @pcode
+and aa.status = '1'
+and bb.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 19:03:04 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:HNIDEC201952980004. }
+[INF] 2019-05-29 19:04:09 === Create database NIDEC category:PostgreSQL
+[INF] 2019-05-29 19:04:11 === Open database OK.
+[INF] 2019-05-29 19:04:11 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-05-29 19:04:11 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-05-29 19:04:14 === Open database OK.
+[INF] 2019-05-29 19:04:14 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-05-29 19:04:14 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980004. }
+[INF] 2019-05-29 19:04:18 === Open database OK.
+[INF] 2019-05-29 19:04:18 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pallet as aa
+left join pnt_carton as bb on aa.carton_id = bb.carton_id
+left join pnt_pack as cc on bb.pack_id = cc.pack_id
+left join t_module as dd on cc.tray_id = dd.tray_id
+where aa.pallet_id = @pcode
+and aa.status = '1'
+and bb.status = '1'
+and cc.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 19:04:18 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980004. }
+[INF] 2019-05-29 19:04:29 === Open database OK.
+[INF] 2019-05-29 19:04:29 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_carton as aa
+left join pnt_pack as bb on aa.pack_id = bb.pack_id
+left join t_module as cc on bb.tray_id = cc.tray_id
+where aa.carton_id = @pcode
+and aa.status = '1'
+and bb.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 19:04:29 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:HNIDEC201952980004. }
+[INF] 2019-05-29 19:04:54 === Open database OK.
+[INF] 2019-05-29 19:04:54 === Execute SQL:insert into pnt_mng (pkg_id, pkg_type, act, pkg_date, pkg_qty, pkg_user, pkg_status) values (@id, @type, @act, @date, @qty, @user, @status) Params:{ParamName:@id, DbType:AnsiString, Value:PNIDEC201952980004. },{ParamName:@type, DbType:AnsiString, Value:pallet. },{ParamName:@act, DbType:AnsiString, Value:r. },{ParamName:@date, DbType:DateTime, Value:2019/5/29 19:04:54. },{ParamName:@qty, DbType:Int32, Value:1. },{ParamName:@status, DbType:Int32, Value:1. },{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-05-29 19:07:53 === Open database OK.
+[INF] 2019-05-29 19:07:53 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-05-29 19:07:53 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980004. }
+[INF] 2019-05-29 19:55:39 === Create database NIDEC category:PostgreSQL
+[INF] 2019-05-29 19:55:40 === Open database OK.
+[INF] 2019-05-29 19:55:40 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-05-29 19:55:41 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-05-29 19:55:58 === Open database OK.
+[INF] 2019-05-29 19:55:58 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-05-29 19:55:58 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980004. }
+[INF] 2019-05-29 19:56:01 === Open database OK.
+[INF] 2019-05-29 19:56:01 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pallet as aa
+left join pnt_carton as bb on aa.carton_id = bb.carton_id
+left join pnt_pack as cc on bb.pack_id = cc.pack_id
+left join t_module as dd on cc.tray_id = dd.tray_id
+where aa.pallet_id = @pcode
+and aa.status = '1'
+and bb.status = '1'
+and cc.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-05-29 19:56:01 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:PNIDEC201952980004. }
