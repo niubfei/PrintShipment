@@ -1102,46 +1102,56 @@ namespace LabelPrint
         public TPCResult<List<List<string>>> GetFXZZ_Data(string pcode)
         {
             StringBuilder sql=new StringBuilder();
-            string mode = pcode.Substring(0, 1);
-            switch (mode)
-            {
-                case "B":
-                    sql.AppendLine("select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)");
-                    sql.AppendLine("from");
-                    sql.AppendLine("(select lot,count(lot) from pnt_pack as aa");
-                    sql.AppendLine("left join t_module as bb on aa.tray_id = bb.tray_id");
-                    sql.AppendLine("where aa.pack_id = @pcode");
-                    sql.AppendLine("and aa.status = '1'");
-                    sql.AppendLine("group by lot)as tt");
-                    sql.AppendLine("order by count desc limit 1");
-                    break;
-                case "H":
-                    sql.AppendLine("select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)");
-                    sql.AppendLine("from");
-                    sql.AppendLine("(select lot,count(lot) from pnt_carton as aa");
-                    sql.AppendLine("left join pnt_pack as bb on aa.pack_id = bb.pack_id");
-                    sql.AppendLine("left join t_module as cc on bb.tray_id = cc.tray_id");
-                    sql.AppendLine("where aa.carton_id = @pcode");
-                    sql.AppendLine("and aa.status = '1'");
-                    sql.AppendLine("and bb.status = '1'");
-                    sql.AppendLine("group by lot)as tt");
-                    sql.AppendLine("order by count desc limit 1");
-                    break;
-                case "P":
-                    sql.AppendLine("select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)");
-                    sql.AppendLine("from");
-                    sql.AppendLine("(select lot,count(lot) from pnt_pallet as aa");
-                    sql.AppendLine("left join pnt_carton as bb on aa.carton_id = bb.carton_id");
-                    sql.AppendLine("left join pnt_pack as cc on bb.pack_id = cc.pack_id");
-                    sql.AppendLine("left join t_module as dd on cc.tray_id = dd.tray_id");
-                    sql.AppendLine("where aa.pallet_id = @pcode");
-                    sql.AppendLine("and aa.status = '1'");
-                    sql.AppendLine("and bb.status = '1'");
-                    sql.AppendLine("and cc.status = '1'");
-                    sql.AppendLine("group by lot)as tt");
-                    sql.AppendLine("order by count desc limit 1");
-                    break;
-            }
+            //string mode = pcode.Substring(0, 1);            
+            //switch (mode)
+            //{
+            //    case "B":
+            //        sql.AppendLine("select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)");
+            //        sql.AppendLine("from");
+            //        sql.AppendLine("(select lot,count(lot) from pnt_pack as aa");
+            //        sql.AppendLine("left join t_module as bb on aa.tray_id = bb.tray_id");
+            //        sql.AppendLine("where aa.pack_id = @pcode");
+            //        sql.AppendLine("and aa.status = '1'");
+            //        sql.AppendLine("group by lot)as tt");
+            //        sql.AppendLine("order by count desc limit 1");
+            //        break;
+            //    case "H":
+            //        sql.AppendLine("select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)");
+            //        sql.AppendLine("from");
+            //        sql.AppendLine("(select lot,count(lot) from pnt_carton as aa");
+            //        sql.AppendLine("left join pnt_pack as bb on aa.pack_id = bb.pack_id");
+            //        sql.AppendLine("left join t_module as cc on bb.tray_id = cc.tray_id");
+            //        sql.AppendLine("where aa.carton_id = @pcode");
+            //        sql.AppendLine("and aa.status = '1'");
+            //        sql.AppendLine("and bb.status = '1'");
+            //        sql.AppendLine("group by lot)as tt");
+            //        sql.AppendLine("order by count desc limit 1");
+            //        break;
+            //    case "P":
+            //        sql.AppendLine("select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)");
+            //        sql.AppendLine("from");
+            //        sql.AppendLine("(select lot,count(lot) from pnt_pallet as aa");
+            //        sql.AppendLine("left join pnt_carton as bb on aa.carton_id = bb.carton_id");
+            //        sql.AppendLine("left join pnt_pack as cc on bb.pack_id = cc.pack_id");
+            //        sql.AppendLine("left join t_module as dd on cc.tray_id = dd.tray_id");
+            //        sql.AppendLine("where aa.pallet_id = @pcode");
+            //        sql.AppendLine("and aa.status = '1'");
+            //        sql.AppendLine("and bb.status = '1'");
+            //        sql.AppendLine("and cc.status = '1'");
+            //        sql.AppendLine("group by lot)as tt");
+            //        sql.AppendLine("order by count desc limit 1");
+            //        break;
+            //}
+            sql.AppendLine("select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)");
+            sql.AppendLine("from");
+            sql.AppendLine("(select lot,count(lot) from pnt_carton as aa");
+            sql.AppendLine("left join pnt_pack as bb on aa.pack_id = bb.pack_id");
+            sql.AppendLine("left join t_module as cc on bb.tray_id = cc.tray_id");
+            sql.AppendLine("where aa.carton_id = @pcode");
+            sql.AppendLine("and aa.status = '1'");
+            sql.AppendLine("and bb.status = '1'");
+            sql.AppendLine("group by lot)as tt");
+            sql.AppendLine("order by count desc limit 1");
             TPCResult<List<List<string>>> result = new TPCResult<List<List<string>>>();
             List<DbParameter> parameters = new List<DbParameter>();
             parameters.Add(new DbParameter("@pcode", DbType.AnsiString, pcode));

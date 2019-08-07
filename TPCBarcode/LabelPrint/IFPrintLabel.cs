@@ -87,14 +87,29 @@ namespace TPCBarcode.LabelPrint
                 if (item.State == TextState.state_dynamic)
                 {
                     MatchCollection matches = Regex.Matches(item.Text, @"\$\$\d+");
-                    foreach (Match match in matches)
+                    //foreach (Match match in matches)
+                    //{
+                    //    int index = 0;
+                    //    //如果$1是A，要是字符串$1$10$12,会变成AA0A2
+                    //    if (int.TryParse(match.Value.Replace("$$", ""), out index))
+                    //    {
+                    //        string param = parameters[index - 1];
+                    //        item.Text = item.Text.Replace(match.Value, param);
+                    //    }
+                    //}
+
+                    int[] intArray = new int[matches.Count];                    
+                    for (int i = 0; i < matches.Count; i++)
                     {
-                        int index = 0;
-                        if (int.TryParse(match.Value.Replace("$$", ""), out index))
-                        {
-                            string param = parameters[index - 1];
-                            item.Text = item.Text.Replace(match.Value, param);
-                        }
+                        intArray[i] =Convert.ToInt32(matches[i].Groups[0].Value.Replace("$$", ""));
+                    }
+                    Array.Sort(intArray);
+                    Array.Reverse(intArray);
+
+                    foreach (int intStr in intArray)
+                    {
+                        string param = parameters[intStr - 1];
+                        item.Text = item.Text.Replace("$$"+intStr, param);
                     }
                 }
             }

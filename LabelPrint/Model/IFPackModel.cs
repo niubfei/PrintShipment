@@ -237,13 +237,20 @@ namespace LabelPrint.Model
         protected PrinterSettings GetPrinterSetting()
         {
             PrintDialog dlg = new PrintDialog();
-            if (dlg.ShowDialog() == DialogResult.OK)
-            {
-                return dlg.PrinterSettings;
+            try
+            {                
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    return dlg.PrinterSettings;
+                }
+                else
+                {
+                    return null;
+                }
             }
-            else
+            finally
             {
-                return null;
+                dlg.Dispose();
             }
         }
 

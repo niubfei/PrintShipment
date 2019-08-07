@@ -105,7 +105,7 @@ namespace LabelPrint
             g.DrawString("大箱数量", f, b, new Point(x2 + xAdd1 * 2, y1));
             g.DrawString("QTY", f, b, new Point(x2 + xAdd1 * 3, y1));
             
-            g.DrawString("1", f, b, new Point(x2 + xAdd1 * 0, y1+yAdd1));
+            g.DrawString("1", f, b, new Point(x2 + xAdd1 * 0, y1+yAdd1));            
             g.DrawString(LabelPrintGlobal.g_Config.APN, f, b, new Point(x2 + xAdd1 * 1, y1 + yAdd1));
             g.DrawString(i.ToString(), f, b, new Point(x2 + xAdd1 * 2, y1 + yAdd1));
             g.DrawString(QTY, f, b, new Point(x2 + xAdd1 * 3, y1 + yAdd1));

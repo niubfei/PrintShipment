@@ -33,7 +33,7 @@ namespace LabelPrint
                 MessageBox.Show("Initialize language failed.", "ERROR", MessageBoxButtons.OK);
                 return;
             }
-            //load database oonfig
+            //load database config
             string config = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\database.xml";
             if (!DatabaseFactory.GetInstance().LoadConfig(config))
             {

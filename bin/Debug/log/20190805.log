@@ -1,0 +1,206 @@
+[INF] 2019-08-05 18:44:26 === Create database NIDEC category:PostgreSQL
+[INF] 2019-08-05 18:44:28 === Open database OK.
+[INF] 2019-08-05 18:44:28 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-08-05 18:44:28 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-08-05 18:44:39 === Open database OK.
+[INF] 2019-08-05 18:44:39 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-08-05 18:44:39 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 18:44:43 === Open database OK.
+[INF] 2019-08-05 18:44:43 === Execute SQL:select count(m.module_id) as qty from t_module m, pnt_pack p where p.tray_id = m.tray_id and p.pack_id = @code and p.status = 1
+[INF] 2019-08-05 18:44:43 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 18:44:43 === Open database OK.
+[INF] 2019-08-05 18:44:43 === Execute SQL:select lot ,count(lot) as qty from t_module left join pnt_pack on t_module.tray_id = pnt_pack.tray_id where pack_id =  @code group by lot order by qty desc ,lot  limit 16
+[INF] 2019-08-05 18:44:43 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 18:44:43 === Open database OK.
+[INF] 2019-08-05 18:44:43 === Execute SQL:select count(lot) as qty from t_module left join pnt_pack on t_module.tray_id = pnt_pack.tray_id where pack_id = @code 
+[INF] 2019-08-05 18:44:43 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 18:44:49 === Open database OK.
+[INF] 2019-08-05 18:44:49 === Execute SQL:insert into pnt_mng (pkg_id, pkg_type, act, pkg_date, pkg_qty, pkg_user, pkg_status) values (@id, @type, @act, @date, @qty, @user, @status) Params:{ParamName:@id, DbType:AnsiString, Value:BNIDEC201980580006. },{ParamName:@type, DbType:AnsiString, Value:pack. },{ParamName:@act, DbType:AnsiString, Value:r. },{ParamName:@date, DbType:DateTime, Value:2019/8/5 18:44:49. },{ParamName:@qty, DbType:Int32, Value:1. },{ParamName:@status, DbType:Int32, Value:1. },{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-08-05 18:45:11 === Create database NIDEC category:PostgreSQL
+[INF] 2019-08-05 18:45:12 === Open database OK.
+[INF] 2019-08-05 18:45:12 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-08-05 18:45:12 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-08-05 18:45:15 === Open database OK.
+[INF] 2019-08-05 18:45:15 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-08-05 18:45:15 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 18:45:18 === Open database OK.
+[INF] 2019-08-05 18:45:18 === Execute SQL:select count(m.module_id) as qty from t_module m, pnt_pack p where p.tray_id = m.tray_id and p.pack_id = @code and p.status = 1
+[INF] 2019-08-05 18:45:18 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 18:45:18 === Open database OK.
+[INF] 2019-08-05 18:45:18 === Execute SQL:select lot ,count(lot) as qty from t_module left join pnt_pack on t_module.tray_id = pnt_pack.tray_id where pack_id =  @code group by lot order by qty desc ,lot  limit 16
+[INF] 2019-08-05 18:45:18 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 18:45:18 === Open database OK.
+[INF] 2019-08-05 18:45:18 === Execute SQL:select count(lot) as qty from t_module left join pnt_pack on t_module.tray_id = pnt_pack.tray_id where pack_id = @code 
+[INF] 2019-08-05 18:45:18 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 18:45:21 === Open database OK.
+[INF] 2019-08-05 18:45:21 === Execute SQL:insert into pnt_mng (pkg_id, pkg_type, act, pkg_date, pkg_qty, pkg_user, pkg_status) values (@id, @type, @act, @date, @qty, @user, @status) Params:{ParamName:@id, DbType:AnsiString, Value:BNIDEC201980580006. },{ParamName:@type, DbType:AnsiString, Value:pack. },{ParamName:@act, DbType:AnsiString, Value:r. },{ParamName:@date, DbType:DateTime, Value:2019/8/5 18:45:21. },{ParamName:@qty, DbType:Int32, Value:1. },{ParamName:@status, DbType:Int32, Value:1. },{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-08-05 18:46:32 === Create database NIDEC category:PostgreSQL
+[INF] 2019-08-05 18:46:34 === Open database OK.
+[INF] 2019-08-05 18:46:34 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-08-05 18:46:34 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-08-05 18:46:50 === Open database OK.
+[INF] 2019-08-05 18:46:50 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-08-05 18:46:50 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 18:46:59 === Open database OK.
+[INF] 2019-08-05 18:46:59 === Execute SQL:select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)
+from
+(select lot,count(lot) from pnt_pack as aa
+left join t_module as bb on aa.tray_id = bb.tray_id
+where aa.pack_id = @pcode
+and aa.status = '1'
+group by lot)as tt
+order by count desc limit 1
+
+[INF] 2019-08-05 18:46:59 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 18:47:06 === Open database OK.
+[INF] 2019-08-05 18:47:06 === Execute SQL:insert into pnt_mng (pkg_id, pkg_type, act, pkg_date, pkg_qty, pkg_user, pkg_status) values (@id, @type, @act, @date, @qty, @user, @status) Params:{ParamName:@id, DbType:AnsiString, Value:BNIDEC201980580006. },{ParamName:@type, DbType:AnsiString, Value:pack. },{ParamName:@act, DbType:AnsiString, Value:r. },{ParamName:@date, DbType:DateTime, Value:2019/8/5 18:47:06. },{ParamName:@qty, DbType:Int32, Value:1. },{ParamName:@status, DbType:Int32, Value:1. },{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-08-05 19:11:18 === Create database NIDEC category:PostgreSQL
+[INF] 2019-08-05 19:11:19 === Open database OK.
+[INF] 2019-08-05 19:11:19 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-08-05 19:11:19 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-08-05 19:11:22 === Open database OK.
+[INF] 2019-08-05 19:11:22 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-08-05 19:11:22 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 19:11:26 === Open database OK.
+[INF] 2019-08-05 19:11:26 === Execute SQL:select count(m.module_id) as qty from t_module m, pnt_pack p where p.tray_id = m.tray_id and p.pack_id = @code and p.status = 1
+[INF] 2019-08-05 19:11:26 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 19:11:26 === Open database OK.
+[INF] 2019-08-05 19:11:26 === Execute SQL:select lot ,count(lot) as qty from t_module left join pnt_pack on t_module.tray_id = pnt_pack.tray_id where pack_id =  @code group by lot order by qty desc ,lot  limit 16
+[INF] 2019-08-05 19:11:27 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 19:11:27 === Open database OK.
+[INF] 2019-08-05 19:11:27 === Execute SQL:select count(lot) as qty from t_module left join pnt_pack on t_module.tray_id = pnt_pack.tray_id where pack_id = @code 
+[INF] 2019-08-05 19:11:27 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 19:11:45 === Open database OK.
+[INF] 2019-08-05 19:11:45 === Execute SQL:insert into pnt_mng (pkg_id, pkg_type, act, pkg_date, pkg_qty, pkg_user, pkg_status) values (@id, @type, @act, @date, @qty, @user, @status) Params:{ParamName:@id, DbType:AnsiString, Value:BNIDEC201980580006. },{ParamName:@type, DbType:AnsiString, Value:pack. },{ParamName:@act, DbType:AnsiString, Value:r. },{ParamName:@date, DbType:DateTime, Value:2019/8/5 19:11:45. },{ParamName:@qty, DbType:Int32, Value:1. },{ParamName:@status, DbType:Int32, Value:1. },{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-08-05 19:20:56 === Create database NIDEC category:PostgreSQL
+[INF] 2019-08-05 19:20:57 === Open database OK.
+[INF] 2019-08-05 19:20:57 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-08-05 19:20:57 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-08-05 19:21:02 === Open database OK.
+[INF] 2019-08-05 19:21:02 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-08-05 19:21:02 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 19:21:09 === Open database OK.
+[INF] 2019-08-05 19:21:09 === Execute SQL:select count(m.module_id) as qty from t_module m, pnt_pack p where p.tray_id = m.tray_id and p.pack_id = @code and p.status = 1
+[INF] 2019-08-05 19:21:09 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 19:21:09 === Open database OK.
+[INF] 2019-08-05 19:21:09 === Execute SQL:select lot ,count(lot) as qty from t_module left join pnt_pack on t_module.tray_id = pnt_pack.tray_id where pack_id =  @code group by lot order by qty desc ,lot  limit 16
+[INF] 2019-08-05 19:21:09 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 19:21:09 === Open database OK.
+[INF] 2019-08-05 19:21:09 === Execute SQL:select count(lot) as qty from t_module left join pnt_pack on t_module.tray_id = pnt_pack.tray_id where pack_id = @code 
+[INF] 2019-08-05 19:21:09 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 19:21:19 === Open database OK.
+[INF] 2019-08-05 19:21:19 === Execute SQL:insert into pnt_mng (pkg_id, pkg_type, act, pkg_date, pkg_qty, pkg_user, pkg_status) values (@id, @type, @act, @date, @qty, @user, @status) Params:{ParamName:@id, DbType:AnsiString, Value:BNIDEC201980580006. },{ParamName:@type, DbType:AnsiString, Value:pack. },{ParamName:@act, DbType:AnsiString, Value:r. },{ParamName:@date, DbType:DateTime, Value:2019/8/5 19:21:19. },{ParamName:@qty, DbType:Int32, Value:1. },{ParamName:@status, DbType:Int32, Value:1. },{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-08-05 19:30:52 === Create database NIDEC category:PostgreSQL
+[INF] 2019-08-05 19:30:53 === Open database OK.
+[INF] 2019-08-05 19:30:53 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-08-05 19:30:53 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-08-05 19:30:56 === Open database OK.
+[INF] 2019-08-05 19:30:56 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-08-05 19:30:56 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 19:30:59 === Open database OK.
+[INF] 2019-08-05 19:30:59 === Execute SQL:select count(m.module_id) as qty from t_module m, pnt_pack p where p.tray_id = m.tray_id and p.pack_id = @code and p.status = 1
+[INF] 2019-08-05 19:30:59 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 19:30:59 === Open database OK.
+[INF] 2019-08-05 19:30:59 === Execute SQL:select lot ,count(lot) as qty from t_module left join pnt_pack on t_module.tray_id = pnt_pack.tray_id where pack_id =  @code group by lot order by qty desc ,lot  limit 16
+[INF] 2019-08-05 19:30:59 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 19:30:59 === Open database OK.
+[INF] 2019-08-05 19:30:59 === Execute SQL:select count(lot) as qty from t_module left join pnt_pack on t_module.tray_id = pnt_pack.tray_id where pack_id = @code 
+[INF] 2019-08-05 19:30:59 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 19:31:07 === Open database OK.
+[INF] 2019-08-05 19:31:07 === Execute SQL:insert into pnt_mng (pkg_id, pkg_type, act, pkg_date, pkg_qty, pkg_user, pkg_status) values (@id, @type, @act, @date, @qty, @user, @status) Params:{ParamName:@id, DbType:AnsiString, Value:BNIDEC201980580006. },{ParamName:@type, DbType:AnsiString, Value:pack. },{ParamName:@act, DbType:AnsiString, Value:r. },{ParamName:@date, DbType:DateTime, Value:2019/8/5 19:31:07. },{ParamName:@qty, DbType:Int32, Value:1. },{ParamName:@status, DbType:Int32, Value:1. },{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-08-05 19:42:50 === Create database NIDEC category:PostgreSQL
+[INF] 2019-08-05 19:42:51 === Open database OK.
+[INF] 2019-08-05 19:42:51 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-08-05 19:42:51 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-08-05 19:43:03 === Open database OK.
+[INF] 2019-08-05 19:43:03 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-08-05 19:43:03 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 19:43:06 === Open database OK.
+[INF] 2019-08-05 19:43:06 === Execute SQL:select count(m.module_id) as qty from t_module m, pnt_pack p where p.tray_id = m.tray_id and p.pack_id = @code and p.status = 1
+[INF] 2019-08-05 19:43:06 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 19:43:06 === Open database OK.
+[INF] 2019-08-05 19:43:06 === Execute SQL:select lot ,count(lot) as qty from t_module left join pnt_pack on t_module.tray_id = pnt_pack.tray_id where pack_id =  @code group by lot order by qty desc ,lot  limit 16
+[INF] 2019-08-05 19:43:06 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 19:43:06 === Open database OK.
+[INF] 2019-08-05 19:43:06 === Execute SQL:select count(lot) as qty from t_module left join pnt_pack on t_module.tray_id = pnt_pack.tray_id where pack_id = @code 
+[INF] 2019-08-05 19:43:06 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 19:43:06 === Open database OK.
+[INF] 2019-08-05 19:43:06 === Execute SQL:select lot ,count(lot) as qty from t_module left join pnt_pack on t_module.tray_id = pnt_pack.tray_id where pack_id =  @code group by lot order by qty desc ,lot  limit 16
+[INF] 2019-08-05 19:43:06 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 19:43:06 === Open database OK.
+[INF] 2019-08-05 19:43:06 === Execute SQL:select count(lot) as qty from t_module left join pnt_pack on t_module.tray_id = pnt_pack.tray_id where pack_id = @code 
+[INF] 2019-08-05 19:43:06 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 19:43:21 === Open database OK.
+[INF] 2019-08-05 19:43:21 === Execute SQL:insert into pnt_mng (pkg_id, pkg_type, act, pkg_date, pkg_qty, pkg_user, pkg_status) values (@id, @type, @act, @date, @qty, @user, @status) Params:{ParamName:@id, DbType:AnsiString, Value:BNIDEC201980580006. },{ParamName:@type, DbType:AnsiString, Value:pack. },{ParamName:@act, DbType:AnsiString, Value:r. },{ParamName:@date, DbType:DateTime, Value:2019/8/5 19:43:21. },{ParamName:@qty, DbType:Int32, Value:1. },{ParamName:@status, DbType:Int32, Value:1. },{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-08-05 19:59:11 === Create database NIDEC category:PostgreSQL
+[INF] 2019-08-05 19:59:13 === Open database OK.
+[INF] 2019-08-05 19:59:13 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-08-05 19:59:13 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-08-05 19:59:16 === Open database OK.
+[INF] 2019-08-05 19:59:16 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-08-05 19:59:16 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 19:59:21 === Open database OK.
+[INF] 2019-08-05 19:59:21 === Execute SQL:select count(m.module_id) as qty from t_module m, pnt_pack p where p.tray_id = m.tray_id and p.pack_id = @code and p.status = 1
+[INF] 2019-08-05 19:59:21 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 19:59:21 === Open database OK.
+[INF] 2019-08-05 19:59:21 === Execute SQL:select lot ,count(lot) as qty from t_module left join pnt_pack on t_module.tray_id = pnt_pack.tray_id where pack_id =  @code group by lot order by qty desc ,lot  limit 16
+[INF] 2019-08-05 19:59:21 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 19:59:21 === Open database OK.
+[INF] 2019-08-05 19:59:21 === Execute SQL:select count(lot) as qty from t_module left join pnt_pack on t_module.tray_id = pnt_pack.tray_id where pack_id = @code 
+[INF] 2019-08-05 19:59:21 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 19:59:23 === Open database OK.
+[INF] 2019-08-05 19:59:23 === Execute SQL:insert into pnt_mng (pkg_id, pkg_type, act, pkg_date, pkg_qty, pkg_user, pkg_status) values (@id, @type, @act, @date, @qty, @user, @status) Params:{ParamName:@id, DbType:AnsiString, Value:BNIDEC201980580006. },{ParamName:@type, DbType:AnsiString, Value:pack. },{ParamName:@act, DbType:AnsiString, Value:r. },{ParamName:@date, DbType:DateTime, Value:2019/8/5 19:59:23. },{ParamName:@qty, DbType:Int32, Value:1. },{ParamName:@status, DbType:Int32, Value:1. },{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-08-05 20:00:15 === Create database NIDEC category:PostgreSQL
+[INF] 2019-08-05 20:00:16 === Open database OK.
+[INF] 2019-08-05 20:00:16 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-08-05 20:00:16 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-08-05 20:00:19 === Open database OK.
+[INF] 2019-08-05 20:00:19 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-08-05 20:00:19 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 20:00:21 === Open database OK.
+[INF] 2019-08-05 20:00:21 === Execute SQL:select count(m.module_id) as qty from t_module m, pnt_pack p where p.tray_id = m.tray_id and p.pack_id = @code and p.status = 1
+[INF] 2019-08-05 20:00:21 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 20:00:21 === Open database OK.
+[INF] 2019-08-05 20:00:21 === Execute SQL:select lot ,count(lot) as qty from t_module left join pnt_pack on t_module.tray_id = pnt_pack.tray_id where pack_id =  @code group by lot order by qty desc ,lot  limit 16
+[INF] 2019-08-05 20:00:21 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 20:00:21 === Open database OK.
+[INF] 2019-08-05 20:00:21 === Execute SQL:select count(lot) as qty from t_module left join pnt_pack on t_module.tray_id = pnt_pack.tray_id where pack_id = @code 
+[INF] 2019-08-05 20:00:21 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 20:00:26 === Open database OK.
+[INF] 2019-08-05 20:00:26 === Execute SQL:insert into pnt_mng (pkg_id, pkg_type, act, pkg_date, pkg_qty, pkg_user, pkg_status) values (@id, @type, @act, @date, @qty, @user, @status) Params:{ParamName:@id, DbType:AnsiString, Value:BNIDEC201980580006. },{ParamName:@type, DbType:AnsiString, Value:pack. },{ParamName:@act, DbType:AnsiString, Value:r. },{ParamName:@date, DbType:DateTime, Value:2019/8/5 20:00:26. },{ParamName:@qty, DbType:Int32, Value:1. },{ParamName:@status, DbType:Int32, Value:1. },{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-08-05 20:05:42 === Create database NIDEC category:PostgreSQL
+[INF] 2019-08-05 20:05:43 === Open database OK.
+[INF] 2019-08-05 20:05:43 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-08-05 20:05:43 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-08-05 20:05:45 === Open database OK.
+[INF] 2019-08-05 20:05:45 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-08-05 20:05:45 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 20:05:48 === Open database OK.
+[INF] 2019-08-05 20:05:48 === Execute SQL:select count(m.module_id) as qty from t_module m, pnt_pack p where p.tray_id = m.tray_id and p.pack_id = @code and p.status = 1
+[INF] 2019-08-05 20:05:48 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 20:05:48 === Open database OK.
+[INF] 2019-08-05 20:05:48 === Execute SQL:select lot ,count(lot) as qty from t_module left join pnt_pack on t_module.tray_id = pnt_pack.tray_id where pack_id =  @code group by lot order by qty desc ,lot  limit 16
+[INF] 2019-08-05 20:05:48 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 20:05:48 === Open database OK.
+[INF] 2019-08-05 20:05:48 === Execute SQL:select count(lot) as qty from t_module left join pnt_pack on t_module.tray_id = pnt_pack.tray_id where pack_id = @code 
+[INF] 2019-08-05 20:05:48 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 20:05:52 === Open database OK.
+[INF] 2019-08-05 20:05:52 === Execute SQL:insert into pnt_mng (pkg_id, pkg_type, act, pkg_date, pkg_qty, pkg_user, pkg_status) values (@id, @type, @act, @date, @qty, @user, @status) Params:{ParamName:@id, DbType:AnsiString, Value:BNIDEC201980580006. },{ParamName:@type, DbType:AnsiString, Value:pack. },{ParamName:@act, DbType:AnsiString, Value:r. },{ParamName:@date, DbType:DateTime, Value:2019/8/5 20:05:52. },{ParamName:@qty, DbType:Int32, Value:1. },{ParamName:@status, DbType:Int32, Value:1. },{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-08-05 20:07:04 === Create database NIDEC category:PostgreSQL
+[INF] 2019-08-05 20:07:04 === Open database OK.
+[INF] 2019-08-05 20:07:04 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-08-05 20:07:04 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-08-05 20:07:07 === Open database OK.
+[INF] 2019-08-05 20:07:07 === Execute SQL:select name, pcode, ccode, p_date, status from vw_packing where pcode = @pcode and status = 1 order by ccode
+[INF] 2019-08-05 20:07:07 === 		Parameters:{ParamName:@pcode, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 20:07:10 === Open database OK.
+[INF] 2019-08-05 20:07:10 === Execute SQL:select count(m.module_id) as qty from t_module m, pnt_pack p where p.tray_id = m.tray_id and p.pack_id = @code and p.status = 1
+[INF] 2019-08-05 20:07:10 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 20:07:10 === Open database OK.
+[INF] 2019-08-05 20:07:10 === Execute SQL:select lot ,count(lot) as qty from t_module left join pnt_pack on t_module.tray_id = pnt_pack.tray_id where pack_id =  @code group by lot order by qty desc ,lot  limit 16
+[INF] 2019-08-05 20:07:10 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 20:07:10 === Open database OK.
+[INF] 2019-08-05 20:07:10 === Execute SQL:select count(lot) as qty from t_module left join pnt_pack on t_module.tray_id = pnt_pack.tray_id where pack_id = @code 
+[INF] 2019-08-05 20:07:10 === 		Parameters:{ParamName:@code, DbType:AnsiString, Value:BNIDEC201980580006. }
+[INF] 2019-08-05 20:07:13 === Open database OK.
+[INF] 2019-08-05 20:07:13 === Execute SQL:insert into pnt_mng (pkg_id, pkg_type, act, pkg_date, pkg_qty, pkg_user, pkg_status) values (@id, @type, @act, @date, @qty, @user, @status) Params:{ParamName:@id, DbType:AnsiString, Value:BNIDEC201980580006. },{ParamName:@type, DbType:AnsiString, Value:pack. },{ParamName:@act, DbType:AnsiString, Value:r. },{ParamName:@date, DbType:DateTime, Value:2019/8/5 20:07:13. },{ParamName:@qty, DbType:Int32, Value:1. },{ParamName:@status, DbType:Int32, Value:1. },{ParamName:@user, DbType:AnsiString, Value:20181115110. }

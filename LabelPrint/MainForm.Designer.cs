@@ -87,6 +87,7 @@
             this.btNewFXZZ.TabIndex = 27;
             this.btNewFXZZ.Text = "新FXZZ";
             this.btNewFXZZ.UseVisualStyleBackColor = true;
+            this.btNewFXZZ.Visible = false;
             this.btNewFXZZ.Click += new System.EventHandler(this.BtNewFXZZ_Click);
             // 
             // button1

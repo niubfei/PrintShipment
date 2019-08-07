@@ -360,7 +360,6 @@ namespace LabelPrint
             if (dlg.ShowDialog() != DialogResult.OK)
             {
                 return;
-
             }
             PrinterSettings setting = dlg.PrinterSettings;
 
@@ -379,20 +378,17 @@ namespace LabelPrint
             data.Quantity = result.Value;
 
             string label_nameFrist = "";
-            string label_nameSecond = "";
+            string label_nameSecond = "fxzz_additional";
             switch (m_Mode)
             {
                 case PACK_MODE.Pack:
                     label_nameFrist = "pack_fxzz";
-                    label_nameSecond = "pack_fxzz";
                     break;
                 case PACK_MODE.Carton:
                     label_nameFrist = "carton_fxzz";
-                    label_nameSecond = "carton_fxzz";
                     break;
                 case PACK_MODE.Pallet:
-                    label_nameFrist = "pallet_fxzz";
-                    label_nameSecond = "pallet_fxzz";
+                    label_nameFrist = "pallet_fxzz";                    
                     break;
             }
             //打印第一页信息
@@ -400,30 +396,128 @@ namespace LabelPrint
             List<string> parametersFrist = MakePrintParameters(m_Mode, data);
 
             //打印第二页信息
-            //TPCPrintLabel labelSecond = LabelPrintGlobal.g_LabelCreator.GetPrintLabel(label_nameSecond);
-            //List<string> parametersSecond = MakePrintParameters(m_Mode, data);
+            TPCPrintLabel labelSecond = LabelPrintGlobal.g_LabelCreator.GetPrintLabel(label_nameSecond);
+            List<string> parametersSecond = MakePrintParameters(m_Mode, data);
+            #region 修改打印参数
+            #region lotNo
+            string lotNo = parametersSecond[14];            
+            parametersSecond[14] = lotNo.Substring(0, lotNo.Length - 1);
+            #endregion
+            
+            #region dateCode            
+            //将时间格式9013改成2019-01-03            
+            string outputTime = "";
+            string dateCode = parametersSecond[14].Substring(3);
+            string[] code = { dateCode.Substring(0, 1), dateCode.Substring(1, 2), dateCode.Substring(3, 1) };
+            
+            //确定年
+            string today = DateTime.Today.ToString("yyyy");
+            for (int i = 0; i < 10; i++)
+            {
+                if (today.Substring(3, 1).Equals(code[0]))
+                {
+                    outputTime = today;
+                }
+                else
+                {
+                    today = (Convert.ToInt16(today) - 1).ToString();
+                }
+            }
+            //确定月份和日
+            DateTime dtTemp = Convert.ToDateTime(outputTime + "-01-01");
+            GregorianCalendar gc = new GregorianCalendar();
+            for (int i = 0; i < 365; i++)
+            {
+                int weekOfYear = gc.GetWeekOfYear(dtTemp, CalendarWeekRule.FirstDay, DayOfWeek.Sunday);
+                int dayOfWeek = (int)dtTemp.DayOfWeek + 1;
+                if (weekOfYear == Convert.ToInt16(code[1]) && dayOfWeek == Convert.ToInt16(code[2]))
+                {
+                    outputTime = dtTemp.ToString("yyyy-MM-dd");
+                    break;
+                }
+                else { dtTemp = dtTemp.AddDays(1); }
+            }
+            
+            parametersSecond[5] = outputTime;
+            #endregion
+            #endregion
 
             switch (m_Mode)
             {
                 case PACK_MODE.Pack:
                     labelFrist.Print(setting, parametersFrist);
-                    //labelSecond.Print(setting, parametersSecond);
+                    labelSecond.Print(setting, parametersSecond);
                     break;
                 case PACK_MODE.Carton:
                     labelFrist.Print(setting, parametersFrist);
                     labelFrist.Print(setting, parametersFrist);
-                    //labelSecond.Print(setting, parametersSecond);
-                    //labelSecond.Print(setting, parametersSecond);
+                    labelSecond.Print(setting, parametersSecond);
+                    labelSecond.Print(setting, parametersSecond);
                     break;
                 case PACK_MODE.Pallet:
                     labelFrist.Print(setting, parametersFrist);
                     labelFrist.Print(setting, parametersFrist);
                     labelFrist.Print(setting, parametersFrist);
                     labelFrist.Print(setting, parametersFrist);
-                    //labelSecond.Print(setting, parametersSecond);
-                    //labelSecond.Print(setting, parametersSecond);
-                    //labelSecond.Print(setting, parametersSecond);
-                    //labelSecond.Print(setting, parametersSecond);
+                    labelSecond.Print(setting, parametersSecond);
+
+                    #region 富士康卡板A4纸张
+                    //设置新纸张大小
+                    dlg = new PrintDialog();
+                    if (dlg.ShowDialog() != DialogResult.OK)
+                    {
+                        return;
+                    }
+                    setting = dlg.PrinterSettings;
+
+                    Print2 print2 = new Print2(txtCode.Text, parametersSecond[7], outputTime, parametersSecond[14]);
+
+                    DataTable dt = new DataTable();
+                    dt.Columns.Add("No.");
+                    dt.Columns.Add("箱号");
+                    dt.Columns.Add("料号");
+                    dt.Columns.Add("数量");
+                    int i = 0;
+                    //每行写上被包括的子标签数量等
+                    TPCResult<List<List<string>>> items = null;
+                    bool queryInfo(string ID)
+                    {
+                        items = null;
+                        //m_Mode = PACK_MODE.Pack;
+                        items = Database.GetFXZZ_Data(ID);
+                        if (items.State == RESULT_STATE.NG)
+                        {
+                            MessageBox.Show(items.Message);
+                            return false;
+                        }
+                        return true;
+                    }                    
+                    foreach (ListViewItem var in lstItems.Items)
+                    {
+                        string id = var.SubItems[1].Text;                        
+                        if (!queryInfo(id))
+                            return;
+                        if (items.Value.Count == 0)
+                            continue;
+                        DataRow dr = dt.NewRow();
+                        dr["No."] = (++i).ToString();
+                        dr["箱号"] = id;
+                        dr["料号"] = LabelPrintGlobal.g_Config.APN;
+                        dr["数量"] = items.Value[0][0].ToString();
+                        dt.Rows.Add(dr);
+                    }
+
+                   
+
+                    print2.ImportDataTable(dt);
+
+                    if (print2.BtnPrint_Click(setting))
+                    {
+                        print2.Dispose();
+                        return;
+                    }
+                    print2.Dispose();
+                    #endregion
                     break;
             }
 
