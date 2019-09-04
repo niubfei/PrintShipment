@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="LabelPrint.exe" version="2.0.0729.1930" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
+  <asmv1:assemblyIdentity name="LabelPrint.exe" version="2.0.0807.1931" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
   <description asmv2:iconFile="barcode.ico" asmv2:publisher="Technopro China" co.v1:suiteName="LabelPrint" asmv2:product="LabelPrint" asmv2:supportUrl="http://172.27.42.15:9600/" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="LabelPrint" version="2.0.729.1930" language="neutral" processorArchitecture="x86" />
+    <assemblyIdentity name="LabelPrint" version="2.0.904.1830" language="neutral" processorArchitecture="x86" />
     <commandLine file="LabelPrint.exe" parameters="" />
   </entryPoint>
   <co.v1:useManifestForTrust xmlns="urn:schemas-microsoft-com:asm.v1" />
@@ -44,14 +44,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LabelPrint.exe" size="181760">
-      <assemblyIdentity name="LabelPrint" version="2.0.729.1930" language="neutral" processorArchitecture="x86" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LabelPrint.exe" size="183808">
+      <assemblyIdentity name="LabelPrint" version="2.0.904.1830" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>i+5VxwNLeH2lJcNycQhVDxcR1uWTV44jfBARLM1j5fE=</dsig:DigestValue>
+        <dsig:DigestValue>fHzJsusy+bj6KVM5ah0kQJAID9+y+63Mn1xomantwCg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -80,14 +80,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OUT.exe" size="16896">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OUT.exe" size="17408">
       <assemblyIdentity name="OUT" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>kli+jelIDcdVgfAWcUMxdPtCOXtuaQulB5E3aE31DP8=</dsig:DigestValue>
+        <dsig:DigestValue>Wp8jLdt/KCzwSMAPouoCb8Svc+wKZuu8rqiU4bu/FUM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -111,7 +111,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>LoEEc3nCdGj4NvLrIuRaf6j2pfWfvPOmpjzQeSDzNA4=</dsig:DigestValue>
+        <dsig:DigestValue>TsKU3Md7SiAwZTejCKnJKs2uoc+HhUPCFPkzcjULKbQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -123,7 +123,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>PgkaIvbYGzW5X69gYZgY4WPra9bUPo5EWm331QtXRDY=</dsig:DigestValue>
+        <dsig:DigestValue>o5mbWPaR467QacCFOvRAC767xYkMqyEtNam+lWS/U14=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -148,40 +148,40 @@
       <dsig:DigestValue>MMa4kDnYcTMIqrABwUK3LA9erHsOIdHAfQu3+psVsl8=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="config.xml" size="718">
+  <file name="config.xml" size="726">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>7gcn+uI2uRTTSnlEDvQAz6rN+RwNL+cBAyFt13JH5U8=</dsig:DigestValue>
+      <dsig:DigestValue>w8dxYg5NVsZir7w8xdtbWD6caoCTeYYL9CU6R9f4Xmg=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="database.xml" size="272">
+  <file name="database.xml" size="274">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>S/EISoaKfZBNEw9GGDg2FVfLS4TIleDBC+GrZ6Qsd4U=</dsig:DigestValue>
+      <dsig:DigestValue>5fpoCxunZnVFje5XM3N7BCtUUiMhs690PhspcUxOSqM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Label.xml" size="82375">
+  <file name="Label.xml" size="84748">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ok0hs+UQzevb/xzkyTFAYSWxz1hJ2wcWcB47vONXutA=</dsig:DigestValue>
+      <dsig:DigestValue>llTCI/rEJY6rC9C5AfT/2iad9w9teBj0W62MucMO4Y4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="LabelPrint.exe.config" size="966">
+  <file name="LabelPrint.exe.config" size="852">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>0UQsg3XhCA7LLz19+Ngw5fBZYImGkgZWInZuUkmW7aM=</dsig:DigestValue>
+      <dsig:DigestValue>O58WpggzKfhXC1s98fd6tEKFrzNWrsinOjaCKrYhUno=</dsig:DigestValue>
     </hash>
   </file>
   <file name="language.xml" size="7229">

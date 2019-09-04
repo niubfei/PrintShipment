@@ -460,6 +460,9 @@ namespace LabelPrint
                     labelFrist.Print(setting, parametersFrist);
                     labelFrist.Print(setting, parametersFrist);
                     labelSecond.Print(setting, parametersSecond);
+                    labelSecond.Print(setting, parametersSecond);
+                    labelSecond.Print(setting, parametersSecond);
+                    labelSecond.Print(setting, parametersSecond);
 
                     #region 富士康卡板A4纸张
                     //设置新纸张大小

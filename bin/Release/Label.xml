@@ -1856,4 +1856,65 @@
       <size>60,5</size>
     </item>
     </label>
+
+  <label name="fxzz_additional" margin="0.5" line-width="0.4">
+    <!--HH P/N-->
+    <item text="HH P/N:$$2" state="dynamic" image="false" offset="0,0" position="0,0" size="67,5">
+      <font face="verdana" size="8" />
+    </item>
+    <item text="$$2" state="dynamic" image="true" offset="0,0" position="0,4" size="67,3">
+      <code>code128</code>
+      <size>65,10</size>
+    </item>
+    
+    <!--QTY-->
+    <item text="QTY:$$8" state="dynamic" image="false" offset="0,0" position="0,18" size="67,8">
+      <font face="verdana" size="8" />
+    </item>
+    <item text="$$8" state="dynamic" image="true" offset="0,0" position="0,22" size="67,3">
+      <code>code39</code>
+      <size>30,10</size>
+    </item>
+    <!--Lot No-->
+    <item text="Lot No:$$15" state="dynamic" image="false" offset="0,0" position="35,18" size="12,5">
+      <font face="verdana" size="8" />
+    </item>
+    <item text="$$15" state="dynamic" image="true" offset="0,0" position="35,22" size="55,8">
+      <code>code128</code>
+      <size>30,10</size>
+    </item>
+    
+    <!--Mfr P/N-->
+    <item text="Mfr P/N:$$1" state="dynamic" image="false" offset="0,0" position="0,36" size="12,5">
+      <font face="verdana" size="8" />
+    </item>
+    <item text="$$1" state="dynamic" image="true" offset="0,0" position="0,40" size="55,8">
+      <code>code128</code>
+      <size>65,10</size>
+    </item>
+    
+    <!--Date Code-->
+    <item text="Date Code: $$6" state="dynamic" image="false" offset="0,0" position="0,54" size="67,10">
+      <font face="Arial" size="8" />
+    </item>
+    <item text="$$6" state="dynamic" image="true" offset="0,0" position="0,58" size="67,10">
+      <code>code128</code>
+      <size>65,10</size>
+    </item>
+    <!-- ID 2DCode image size不作用-->
+    <item text="$$2,$$8,$$1,$$6,$$15,$$10" state="dynamic" image="true" offset="0,0" position="50,54" size="67,12">
+      <font face="verdana" size="8" />
+      <code>codeQR</code>
+      <size>30,30</size>
+    </item>
+    
+    <!--PKG ID-->
+    <item text="PKG ID: $$10" state="dynamic" image="false" offset="0,0" position="0,72" size="67,10">
+      <font face="Arial" size="8" />
+    </item>
+    <item text="$$10" state="dynamic" image="true" offset="0,0" position="0,76" size="67,10">
+      <code>code128</code>
+      <size>65,10</size>
+    </item>
+  </label>
 </labels>
