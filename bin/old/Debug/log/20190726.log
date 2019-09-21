@@ -1,3 +1,0 @@
-[INF] 2019-07-26 15:00:12 === Create database NIDEC category:PostgreSQL
-[ERR] 2019-07-26 15:00:33 === Connection establishment timeout. Increase Timeout value in ConnectionString.
-[ERR] 2019-07-26 15:00:33 === Open Database Failed.

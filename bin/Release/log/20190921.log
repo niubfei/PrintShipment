@@ -1,0 +1,27 @@
+[INF] 2019-09-21 09:21:17 === Create database NIDEC category:PostgreSQL
+[INF] 2019-09-21 09:21:24 === Open database OK.
+[INF] 2019-09-21 09:21:24 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-09-21 09:21:24 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-09-21 11:33:33 === Create database NIDEC category:PostgreSQL
+[INF] 2019-09-21 11:33:38 === Open database OK.
+[INF] 2019-09-21 11:33:38 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-09-21 11:33:38 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-09-21 11:33:53 === Create database NIDEC category:PostgreSQL
+[INF] 2019-09-21 11:33:58 === Open database OK.
+[INF] 2019-09-21 11:33:58 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-09-21 11:33:58 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-09-21 11:34:42 === Create database NIDEC category:PostgreSQL
+[INF] 2019-09-21 11:34:46 === Open database OK.
+[INF] 2019-09-21 11:34:46 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-09-21 11:34:46 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-09-21 11:34:53 === Create database NIDEC category:PostgreSQL
+[INF] 2019-09-21 11:34:57 === Open database OK.
+[INF] 2019-09-21 11:34:57 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-09-21 11:34:57 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-09-21 13:55:49 === Create database NIDEC category:PostgreSQL
+[INF] 2019-09-21 13:55:54 === Open database OK.
+[INF] 2019-09-21 13:55:54 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-09-21 13:55:54 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-09-21 13:55:58 === Open database OK.
+[INF] 2019-09-21 13:55:58 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-09-21 13:55:58 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
