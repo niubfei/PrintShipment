@@ -84,7 +84,7 @@ namespace LabelPrint
             parameters.Add(new DbParameter("@date", DbType.AnsiString, date));
             //日期参数要修改
             //TPCResult<string> result = Database.ExecuteSP("fn_apply_no", parameters);
-            TPCResult<string> result = Database.ExecuteSP("fn_apply_no", parameters);
+            TPCResult<string> result = Database.ExecuteSP("fn_apply_no_new", parameters);
             if (result == null)
             {
                 result = new TPCResult<string>();
