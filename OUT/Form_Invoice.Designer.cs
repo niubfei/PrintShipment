@@ -43,31 +43,25 @@
             this.label4 = new System.Windows.Forms.Label();
             this.kaban1 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.sales_date = new System.Windows.Forms.DateTimePicker();
+            this.sales_cbx = new System.Windows.Forms.CheckBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateShift_cbx = new System.Windows.Forms.CheckBox();
-            this.sales_cbx = new System.Windows.Forms.CheckBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.sales_date = new System.Windows.Forms.DateTimePicker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtInvoice_new = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.dtpSales_new = new System.Windows.Forms.DateTimePicker();
             this.chkSales = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.txtInvoice_old = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.txtPallet_old = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtInvoice_new = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtPallet_new = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -80,7 +74,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(340, 87);
+            this.label6.Location = new System.Drawing.Point(558, 64);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 19);
             this.label6.TabIndex = 14;
@@ -89,7 +83,7 @@
             // start_date
             // 
             this.start_date.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.start_date.Location = new System.Drawing.Point(375, 55);
+            this.start_date.Location = new System.Drawing.Point(407, 61);
             this.start_date.Name = "start_date";
             this.start_date.Size = new System.Drawing.Size(143, 26);
             this.start_date.TabIndex = 13;
@@ -98,7 +92,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(371, 33);
+            this.label5.Location = new System.Drawing.Point(403, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 19);
             this.label5.TabIndex = 12;
@@ -107,7 +101,7 @@
             // end_date
             // 
             this.end_date.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.end_date.Location = new System.Drawing.Point(375, 84);
+            this.end_date.Location = new System.Drawing.Point(593, 61);
             this.end_date.Name = "end_date";
             this.end_date.Size = new System.Drawing.Size(143, 26);
             this.end_date.TabIndex = 11;
@@ -115,7 +109,7 @@
             // btn_search
             // 
             this.btn_search.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_search.Location = new System.Drawing.Point(524, 35);
+            this.btn_search.Location = new System.Drawing.Point(755, 28);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(100, 75);
             this.btn_search.TabIndex = 9;
@@ -231,6 +225,36 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "卡板出货：";
             // 
+            // sales_date
+            // 
+            this.sales_date.CustomFormat = "yyyy-MM-dd hh:mm:ss";
+            this.sales_date.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.sales_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.sales_date.Location = new System.Drawing.Point(134, 107);
+            this.sales_date.Name = "sales_date";
+            this.sales_date.Size = new System.Drawing.Size(212, 26);
+            this.sales_date.TabIndex = 16;
+            // 
+            // sales_cbx
+            // 
+            this.sales_cbx.AutoSize = true;
+            this.sales_cbx.Location = new System.Drawing.Point(354, 116);
+            this.sales_cbx.Name = "sales_cbx";
+            this.sales_cbx.Size = new System.Drawing.Size(15, 14);
+            this.sales_cbx.TabIndex = 17;
+            this.sales_cbx.UseVisualStyleBackColor = true;
+            this.sales_cbx.CheckedChanged += new System.EventHandler(this.Sales_cbx_CheckedChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label9.Location = new System.Drawing.Point(19, 112);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(109, 19);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "出货时间：";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -279,7 +303,7 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox1.Location = new System.Drawing.Point(10, 159);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(633, 123);
+            this.groupBox1.Size = new System.Drawing.Size(866, 123);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "卡板查询：";
@@ -287,74 +311,67 @@
             // dateShift_cbx
             // 
             this.dateShift_cbx.AutoSize = true;
-            this.dateShift_cbx.Location = new System.Drawing.Point(479, 35);
+            this.dateShift_cbx.Location = new System.Drawing.Point(511, 31);
             this.dateShift_cbx.Name = "dateShift_cbx";
             this.dateShift_cbx.Size = new System.Drawing.Size(15, 14);
             this.dateShift_cbx.TabIndex = 15;
             this.dateShift_cbx.UseVisualStyleBackColor = true;
             // 
-            // sales_cbx
-            // 
-            this.sales_cbx.AutoSize = true;
-            this.sales_cbx.Location = new System.Drawing.Point(354, 116);
-            this.sales_cbx.Name = "sales_cbx";
-            this.sales_cbx.Size = new System.Drawing.Size(15, 14);
-            this.sales_cbx.TabIndex = 17;
-            this.sales_cbx.UseVisualStyleBackColor = true;
-            this.sales_cbx.CheckedChanged += new System.EventHandler(this.Sales_cbx_CheckedChanged);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label9.Location = new System.Drawing.Point(19, 112);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(109, 19);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "出货时间：";
-            // 
-            // sales_date
-            // 
-            this.sales_date.CustomFormat = "yyyy-MM-dd hh:mm:ss";
-            this.sales_date.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.sales_date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.sales_date.Location = new System.Drawing.Point(134, 107);
-            this.sales_date.Name = "sales_date";
-            this.sales_date.Size = new System.Drawing.Size(212, 26);
-            this.sales_date.TabIndex = 16;
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.txtInvoice_new);
             this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.txtPallet_new);
-            this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Controls.Add(this.dtpSales_new);
             this.groupBox3.Controls.Add(this.chkSales);
             this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.btnUpdate);
-            this.groupBox3.Controls.Add(this.txtInvoice_old);
-            this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.txtPallet_old);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox3.Location = new System.Drawing.Point(649, 7);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(402, 235);
+            this.groupBox3.Size = new System.Drawing.Size(402, 146);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "修改出货：";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label15.ForeColor = System.Drawing.Color.Red;
+            this.label15.Location = new System.Drawing.Point(6, 70);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(20, 19);
+            this.label15.TabIndex = 23;
+            this.label15.Text = "*";
+            // 
+            // txtInvoice_new
+            // 
+            this.txtInvoice_new.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtInvoice_new.Location = new System.Drawing.Point(122, 68);
+            this.txtInvoice_new.Name = "txtInvoice_new";
+            this.txtInvoice_new.Size = new System.Drawing.Size(212, 26);
+            this.txtInvoice_new.TabIndex = 21;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label17.Location = new System.Drawing.Point(19, 69);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(109, 19);
+            this.label17.TabIndex = 20;
+            this.label17.Text = "新发票号：";
             // 
             // dtpSales_new
             // 
             this.dtpSales_new.CustomFormat = "yyyy-MM-dd hh:mm:ss";
             this.dtpSales_new.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dtpSales_new.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpSales_new.Location = new System.Drawing.Point(122, 197);
+            this.dtpSales_new.Location = new System.Drawing.Point(116, 107);
             this.dtpSales_new.Name = "dtpSales_new";
             this.dtpSales_new.Size = new System.Drawing.Size(212, 26);
             this.dtpSales_new.TabIndex = 16;
@@ -362,7 +379,7 @@
             // chkSales
             // 
             this.chkSales.AutoSize = true;
-            this.chkSales.Location = new System.Drawing.Point(345, 206);
+            this.chkSales.Location = new System.Drawing.Point(331, 116);
             this.chkSales.Name = "chkSales";
             this.chkSales.Size = new System.Drawing.Size(15, 14);
             this.chkSales.TabIndex = 17;
@@ -373,22 +390,11 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label10.Location = new System.Drawing.Point(10, 201);
+            this.label10.Location = new System.Drawing.Point(4, 111);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(109, 19);
             this.label10.TabIndex = 16;
             this.label10.Text = "出货时间：";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(6, 73);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(20, 19);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "*";
             // 
             // label12
             // 
@@ -406,29 +412,11 @@
             this.btnUpdate.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnUpdate.Location = new System.Drawing.Point(345, 25);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(49, 159);
+            this.btnUpdate.Size = new System.Drawing.Size(49, 108);
             this.btnUpdate.TabIndex = 9;
             this.btnUpdate.Text = "确定修改";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
-            // 
-            // txtInvoice_old
-            // 
-            this.txtInvoice_old.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtInvoice_old.Location = new System.Drawing.Point(122, 71);
-            this.txtInvoice_old.Name = "txtInvoice_old";
-            this.txtInvoice_old.Size = new System.Drawing.Size(212, 26);
-            this.txtInvoice_old.TabIndex = 8;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label13.Location = new System.Drawing.Point(19, 72);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(109, 19);
-            this.label13.TabIndex = 7;
-            this.label13.Text = "旧发票号：";
             // 
             // txtPallet_old
             // 
@@ -444,67 +432,9 @@
             this.label14.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label14.Location = new System.Drawing.Point(19, 28);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(109, 19);
+            this.label14.Size = new System.Drawing.Size(89, 19);
             this.label14.TabIndex = 5;
-            this.label14.Text = "旧卡板号：";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(6, 160);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(20, 19);
-            this.label15.TabIndex = 23;
-            this.label15.Text = "*";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label16.ForeColor = System.Drawing.Color.Red;
-            this.label16.Location = new System.Drawing.Point(6, 115);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(20, 19);
-            this.label16.TabIndex = 22;
-            this.label16.Text = "*";
-            // 
-            // txtInvoice_new
-            // 
-            this.txtInvoice_new.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtInvoice_new.Location = new System.Drawing.Point(122, 158);
-            this.txtInvoice_new.Name = "txtInvoice_new";
-            this.txtInvoice_new.Size = new System.Drawing.Size(212, 26);
-            this.txtInvoice_new.TabIndex = 21;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label17.Location = new System.Drawing.Point(19, 159);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(109, 19);
-            this.label17.TabIndex = 20;
-            this.label17.Text = "新发票号：";
-            // 
-            // txtPallet_new
-            // 
-            this.txtPallet_new.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtPallet_new.Location = new System.Drawing.Point(122, 114);
-            this.txtPallet_new.Name = "txtPallet_new";
-            this.txtPallet_new.Size = new System.Drawing.Size(212, 26);
-            this.txtPallet_new.TabIndex = 19;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label18.Location = new System.Drawing.Point(19, 115);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(109, 19);
-            this.label18.TabIndex = 18;
-            this.label18.Text = "新卡板号：";
+            this.label14.Text = "卡板号：";
             // 
             // groupBox4
             // 
@@ -566,19 +496,13 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtInvoice_new;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox txtPallet_new;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.DateTimePicker dtpSales_new;
         private System.Windows.Forms.CheckBox chkSales;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.TextBox txtInvoice_old;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtPallet_old;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox4;
