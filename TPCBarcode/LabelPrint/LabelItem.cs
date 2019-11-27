@@ -17,7 +17,9 @@ namespace TPCBarcode.LabelPrint
     }
 
     public enum TextState
-    { 
+    {
+        state_iconRoHS = -2,
+        state_iconHF = -1,
         state_fixed = 0,
         state_dynamic = 1,
     }
@@ -155,8 +157,26 @@ namespace TPCBarcode.LabelPrint
             //设定坐标原点为相对位置原点
             g.TranslateTransform(m_Offset.X, m_Offset.Y);
 
+            if (m_State == TextState.state_iconRoHS)
+            {
+                //使用Rectangle定义椭圆的边界，位置在（X-6,Y-3）宽22，高11
+                Rectangle Rec = new Rectangle((int)m_Position.X - 6, (int)m_Position.Y - 3, 22, 11);
+                //使用DrawEllipse绘制椭圆
+                g.DrawEllipse(new Pen(Color.Black,0.5f), Rec);
+
+                //是绘制图标文字
+                Brush b = new SolidBrush(Color.Black);
+                g.DrawString(m_Text.Replace("[CR]","\r\n"), m_TextFont, b, m_Position);
+            }
+            else if (m_State == TextState.state_iconHF)
+            {
+                g.DrawRectangle(new Pen(Color.Black, 0.5f), (int)m_Position.X - 6, (int)m_Position.Y - 3, 22, 10);
+
+                Brush b = new SolidBrush(Color.Black);
+                g.DrawString(m_Text, m_TextFont, b, m_Position);
+            }
             //绘制条码
-            if (m_IsImage && m_Text.Trim().Length > 0)
+            else if (m_IsImage && m_Text.Trim().Length > 0)
             { 
                 //是绘制条码图像
                 m_Barcode.Width = m_BarcodeWidth;

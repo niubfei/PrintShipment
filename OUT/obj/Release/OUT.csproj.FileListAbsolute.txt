@@ -124,3 +124,4 @@ C:\Users\yyx19\Desktop\PrintShipment\OUT\obj\Release\OUT.pdb
 C:\Users\yyx19\Desktop\PrintShipment\bin\Release\OUT.exe.config
 C:\Users\yyx19\Desktop\PrintShipment\bin\Release\OUT.exe
 C:\Users\yyx19\Desktop\PrintShipment\bin\Release\OUT.pdb
+C:\Users\yyx19\Desktop\PrintShipment\OUT\obj\Release\OUT.csprojAssemblyReference.cache

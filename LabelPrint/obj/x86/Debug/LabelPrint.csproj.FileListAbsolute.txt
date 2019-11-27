@@ -412,7 +412,6 @@ C:\Users\yyx19\Desktop\PrintShipment\LabelPrint\obj\x86\Debug\LabelPrint.NewFXZZ
 C:\Users\yyx19\Desktop\PrintShipment\LabelPrint\obj\x86\Debug\LabelPrint.ReprintForm.resources
 C:\Users\yyx19\Desktop\PrintShipment\LabelPrint\obj\x86\Debug\LabelPrint.UnpackForm.resources
 C:\Users\yyx19\Desktop\PrintShipment\LabelPrint\obj\x86\Debug\LabelPrint.csproj.GenerateResource.cache
-C:\Users\yyx19\Desktop\PrintShipment\LabelPrint\obj\x86\Debug\LabelPrint.csproj.CoreCompileInputs.cache
 C:\Users\yyx19\Desktop\PrintShipment\LabelPrint\obj\x86\Debug\LabelPrint.TrustInfo.xml
 C:\Users\yyx19\Desktop\PrintShipment\LabelPrint\obj\x86\Debug\LabelPrint.exe.manifest
 C:\Users\yyx19\Desktop\PrintShipment\LabelPrint\obj\x86\Debug\LabelPrint.application

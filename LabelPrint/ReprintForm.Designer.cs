@@ -89,6 +89,7 @@
             this.colDate});
             this.lstItems.FullRowSelect = true;
             this.lstItems.GridLines = true;
+            this.lstItems.HideSelection = false;
             this.lstItems.Location = new System.Drawing.Point(4, 73);
             this.lstItems.Name = "lstItems";
             this.lstItems.Size = new System.Drawing.Size(778, 362);

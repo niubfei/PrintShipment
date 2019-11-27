@@ -117,24 +117,6 @@ namespace TPCBarcode.LabelPrint
 
         protected PrintDocument m_Printer = null;
 
-        public void Print(string print_name, List<string> parameters)
-        {
-            if (m_Printer == null)
-            {
-                m_Printer = new PrintDocument();
-                m_Printer.PrintPage += this.OnPrint;
-            }
-            if (print_name.Length > 0)
-            {
-                m_Printer.PrinterSettings.PrinterName = print_name;
-            }
-
-            if (m_Printer.PrinterSettings.IsValid)
-            {
-                SetDynamicParameters(parameters);
-                m_Printer.Print();
-            }
-        }
 
         public void Print(PrinterSettings setting, List<string> parameters)
         {
@@ -155,30 +137,23 @@ namespace TPCBarcode.LabelPrint
             }
         }
 
-        public void SaveToBMP(string bitmap, float width, float height)
-        {
-            float dpi = 96.0f / 25.4f;
-
-            Bitmap bmp = new Bitmap((int)(width * dpi), (int)(height * dpi));
-            using (Graphics g = Graphics.FromImage(bmp))
-            {
-                g.TranslateTransform(m_MarginWidth, m_MarginWidth);
-                PrintLabel(g);
-                g.TranslateTransform(-m_MarginWidth, -m_MarginWidth);
-            }
-            bmp.Save(bitmap);
-        }
-
         private void OnPrint(object sender, PrintPageEventArgs e)
         {
             Graphics g = e.Graphics;
             g.TranslateTransform(m_MarginWidth, m_MarginWidth);
+            //Image imgBarcode = Image.FromFile(@"C:\Users\yyx19\Desktop\测试图片\RoHS.png");
+            //g.DrawImage(imgBarcode, new Point(150, 13));
+            //imgBarcode = Image.FromFile(@"C:\Users\yyx19\Desktop\测试图片\HF.png");
+            //g.DrawImage(imgBarcode, new Point(150, 66));
+
             PrintLabel(g);
+            ////使用Rectangle定义椭圆的边界，位置在（30,30）宽150，高70
+            //Rectangle Rec = new Rectangle(50, 20, 30, 14);
+            ////使用DrawEllipse绘制椭圆
+            //g.DrawEllipse(new Pen(Color.Black), Rec);
+
             g.TranslateTransform(-m_MarginWidth, -m_MarginWidth);
             e.HasMorePages = false;
-
-            //Pen pen = new Pen(Color.Red, 5);
-            //g.DrawLine(pen, new Point(10, 50), new Point(100, 50));
         }
     }
 }

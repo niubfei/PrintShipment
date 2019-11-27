@@ -14,9 +14,9 @@
     <vendor_pn>N/A</vendor_pn>
   </constant>
   <conversion>
-    <pack-tray>13</pack-tray>
-    <carton-pack>2</carton-pack>
-    <pallet-carton>48</pallet-carton>
+    <pack-tray>1</pack-tray>
+    <carton-pack>1</carton-pack>
+    <pallet-carton>1</pallet-carton>
   </conversion>
   <checkModuleBin>
     <switch>ON</switch>    

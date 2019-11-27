@@ -100,6 +100,16 @@
   </label>
 
   <label name="pack_pega" margin="0.5" line-width="0.4">
+    <!-- iconRoHS:  -->
+    <item text="RoHS[CR] 2.0" state="iconRoHS" image="false" offset="50,10" position="0,0" size="15,5" border="none">
+      <font face="verdana" size="8" />
+      <size>15,5</size>
+    </item>
+    <!-- iconHF:  -->
+    <item text=" HF" state="iconHF" image="false" offset="50,22" position="0,0" size="15,5" border="none">
+      <font face="verdana" size="12" />
+      <size>15,5</size>
+    </item>
     <!-- Pack ID:  -->
     <item text="Pack ID: " state="fixed" image="false" offset="0,0" position="0,0" size="15,5" border="none">
       <font face="verdana" size="8" />
@@ -341,7 +351,17 @@
   </label>
   
   <label name="pack_fxzz" margin="0.5" line-width="0.4">
-    <!-- Pack ID:  -->
+    <!-- iconRoHS:  -->
+    <item text="RoHS[CR] 2.0" state="iconRoHS" image="false" offset="50,10" position="0,0" size="15,5" border="none">
+      <font face="verdana" size="8" />
+      <size>15,5</size>
+    </item>
+    <!-- iconHF:  -->
+    <item text=" HF" state="iconHF" image="false" offset="50,22" position="0,0" size="15,5" border="none">
+      <font face="verdana" size="12" />
+      <size>15,5</size>
+    </item>
+     <!--Pack ID:-->  
     <item text="Pack ID: " state="fixed" image="false" offset="0,0" position="0,0" size="15,5" border="none">
       <font face="verdana" size="8" />
       <size>15,5</size>
@@ -719,6 +739,16 @@
   </label>
 
   <label name="carton_pega" margin="0.5" line-width="0.4">
+    <!-- iconRoHS:  -->
+    <item text="RoHS[CR] 2.0" state="iconRoHS" image="false" offset="50,10" position="0,0" size="15,5" border="none">
+      <font face="verdana" size="8" />
+      <size>15,5</size>
+    </item>
+    <!-- iconHF:  -->
+    <item text=" HF" state="iconHF" image="false" offset="50,22" position="0,0" size="15,5" border="none">
+      <font face="verdana" size="12" />
+      <size>15,5</size>
+    </item>
     <!-- Carton ID:  -->
     <item text="Carton ID: " state="fixed" image="false" offset="0,0" position="0,0" size="15,5" border="none">
       <font face="verdana" size="8" />
@@ -960,6 +990,16 @@
   </label>
 
   <label name="carton_fxzz" margin="0.5" line-width="0.4">
+    <!-- iconRoHS:  -->
+    <item text="RoHS[CR] 2.0" state="iconRoHS" image="false" offset="50,10" position="0,0" size="15,5" border="none">
+      <font face="verdana" size="8" />
+      <size>15,5</size>
+    </item>
+    <!-- iconHF:  -->
+    <item text=" HF" state="iconHF" image="false" offset="50,22" position="0,0" size="15,5" border="none">
+      <font face="verdana" size="12" />
+      <size>15,5</size>
+    </item>
     <!-- Carton ID:  -->
     <item text="Carton ID: " state="fixed" image="false" offset="0,0" position="0,0" size="15,5" border="none">
       <font face="verdana" size="8" />
@@ -1338,6 +1378,16 @@
   </label>
 
   <label name="pallet_pega" margin="0.5" line-width="0.4">
+    <!-- iconRoHS:  -->
+    <item text="RoHS[CR] 2.0" state="iconRoHS" image="false" offset="50,10" position="0,0" size="15,5" border="none">
+      <font face="verdana" size="8" />
+      <size>15,5</size>
+    </item>
+    <!-- iconHF:  -->
+    <item text=" HF" state="iconHF" image="false" offset="50,22" position="0,0" size="15,5" border="none">
+      <font face="verdana" size="12" />
+      <size>15,5</size>
+    </item>
     <!-- Pallet ID:  -->
     <item text="Pallet ID: " state="fixed" image="false" offset="0,0" position="0,0" size="15,5" border="none">
       <font face="verdana" size="8" />
@@ -1579,6 +1629,16 @@
   </label>
 
   <label name="pallet_fxzz" margin="0.5" line-width="0.4">
+    <!-- iconRoHS:  -->
+    <item text="RoHS[CR] 2.0" state="iconRoHS" image="false" offset="50,10" position="0,0" size="15,5" border="none">
+      <font face="verdana" size="8" />
+      <size>15,5</size>
+    </item>
+    <!-- iconHF:  -->
+    <item text=" HF" state="iconHF" image="false" offset="50,22" position="0,0" size="15,5" border="none">
+      <font face="verdana" size="12" />
+      <size>15,5</size>
+    </item>
     <!-- Pallet ID:  -->
     <item text="Pallet ID: " state="fixed" image="false" offset="0,0" position="0,0" size="15,5" border="none">
       <font face="verdana" size="8" />

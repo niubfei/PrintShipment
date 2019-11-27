@@ -1,0 +1,8 @@
+[INF] 2019-11-27 11:33:02 === Create database NIDEC category:PostgreSQL
+[INF] 2019-11-27 11:33:10 === Open database OK.
+[INF] 2019-11-27 11:33:10 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-11-27 11:33:10 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
+[INF] 2019-11-27 11:35:12 === Create database NIDEC category:PostgreSQL
+[INF] 2019-11-27 11:35:16 === Open database OK.
+[INF] 2019-11-27 11:35:16 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
+[INF] 2019-11-27 11:35:16 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }
