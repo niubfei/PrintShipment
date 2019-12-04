@@ -30,7 +30,6 @@
     <item key="BT_PRINT" zh-cn="打印PEGA" jp="打印PEGA" en="打印PEGA" />
     <!--修正时间20180517-->
     <item key="BT_PRINT_NEW" zh-cn="打印FXZZ" jp="打印FXZZ" en="打印FXZZ" />
-    <item key="BT_PRINT_3" zh-cn="打印WKS" jp="打印WKS" en="打印WKS" />
     <!--end-->
 
     <!-- 拆包画面 -->
@@ -59,8 +58,7 @@
     <item key="REPRINT_BT_CLOSE" zh-cn="关闭" jp="关闭" en="关闭" />
     <!--修正时间20180517-->
     <item key="REPRINT_BT_PRINT_NEW" zh-cn="打印FXZZ" jp="打印FXZZ" en="打印FXZZ" />
-    <!--end-->
-    <item key="REPRINT_BT_PRINT3" zh-cn="打印WKS" jp="打印WKS" en="打印WKS" />
+    <!--end--> 
     
   </static>
   <dynamic>

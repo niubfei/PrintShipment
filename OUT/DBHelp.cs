@@ -4,18 +4,25 @@ using System;
 using System.Configuration;
 using System.Data;
 
+using System.Xml.Linq;
+using System.Linq;
+
 namespace OUT
 {
 	public class DBHelp
 	{
-		static string DbConnectstring = ConfigurationManager.AppSettings["conn"].ToString();
-		NpgsqlConnection con;
+        //static string DbConnectstring = ConfigurationManager.AppSettings["conn"].ToString();
 
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="sqlStr"></param>
-		public DataTable ExecuteDataTable(string sqlStr, ref string errMsg)
+        //共用一个xml配置文件        
+        static string DbConnectstring = XDocument.Load(AppDomain.CurrentDomain.BaseDirectory + "database.xml")
+            .Descendants("database").FirstOrDefault().Attribute("connection").Value;
+        NpgsqlConnection con;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sqlStr"></param>
+        public DataTable ExecuteDataTable(string sqlStr, ref string errMsg)
 		{
 			DataTable dt = new DataTable();
 			using (con = new NpgsqlConnection(DbConnectstring))

@@ -100,6 +100,16 @@
   </label>
 
   <label name="pack_pega" margin="0.5" line-width="0.4">
+    <!-- iconRoHS:  -->
+    <item text="RoHS[CR] 2.0" state="iconRoHS" image="false" offset="50,10" position="0,0" size="15,5" border="none">
+      <font face="verdana" size="8" />
+      <size>15,5</size>
+    </item>
+    <!-- iconHF:  -->
+    <item text=" HF" state="iconHF" image="false" offset="50,22" position="0,0" size="15,5" border="none">
+      <font face="verdana" size="12" />
+      <size>15,5</size>
+    </item>
     <!-- Pack ID:  -->
     <item text="Pack ID: " state="fixed" image="false" offset="0,0" position="0,0" size="15,5" border="none">
       <font face="verdana" size="8" />
@@ -341,6 +351,16 @@
   </label>
   
   <label name="pack_fxzz" margin="0.5" line-width="0.4">
+    <!-- iconRoHS:  -->
+    <item text="RoHS[CR] 2.0" state="iconRoHS" image="false" offset="50,10" position="0,0" size="15,5" border="none">
+      <font face="verdana" size="8" />
+      <size>15,5</size>
+    </item>
+    <!-- iconHF:  -->
+    <item text=" HF" state="iconHF" image="false" offset="50,22" position="0,0" size="15,5" border="none">
+      <font face="verdana" size="12" />
+      <size>15,5</size>
+    </item>
     <!-- Pack ID:  -->
     <item text="Pack ID: " state="fixed" image="false" offset="0,0" position="0,0" size="15,5" border="none">
       <font face="verdana" size="8" />
@@ -580,45 +600,7 @@
       <font face="verdana" size="8" />
     </item>
   </label>
-  
-  <label name="pack_wks" margin="0.5" line-width="0.4">    
-    <!-- APN-->
-    <item text="APN: $$2" state="dynamic" image="false" offset="0,17" position="0,-10" size="67,5" >
-      <font face="verdana" size="8" />
-    </item>
-    <!-- APN barcode image -->
-    <item text="$$2" state="dynamic" image="true" offset="0,57" position="1,-45" size="67,10">
-      <code>code128</code>
-      <size>66,10</size>
-    </item>    
-    
-    <!--ID text--> 
-    <item text="Pack ID: $$10" state="dynamic" image="false" offset="0,35" position="0,0" size="67,10">
-      <font face="Arial" size="8" />
-    </item>
-   <!--ID barcode image--> 
-    <item text="$$10" state="dynamic" image="true" offset="0,57" position="1,-15" size="67,10">
-      <code>code128</code>
-      <size>66,10</size>
-    </item>   
-    
-    <!-- QTY text -->
-    <item text="QTY: $$8" state="dynamic" image="false" offset="0,65" position="0,1" size="67,8" >
-      <font face="verdana" size="8" />
-    </item>
-     <!-- QTY barcode image -->
-    <item text="$$8" state="dynamic" image="true" offset="0,41" position="1,30" size="67,10">
-      <code>code39</code>
-      <size>30,10</size>
-    </item>
-  
-   <!-- RoHS+HF -->
-    <item text="RoHS+HF" state="fixed" image="false" offset="0,5" position="40,70" size="67,5">
-      <font face="verdana" size="8" />
-      <size>60,5</size>
-    </item>
-    </label>
-  
+
   <label name="carton" margin="0.5" line-width="0.4">
     <!-- PEGATRON -->
     <item text="PEGATRON" state="fixed" image="false" offset="0,0" position="0,1" size="67,5" border="left|top|right">
@@ -719,6 +701,16 @@
   </label>
 
   <label name="carton_pega" margin="0.5" line-width="0.4">
+    <!-- iconRoHS:  -->
+    <item text="RoHS[CR] 2.0" state="iconRoHS" image="false" offset="50,10" position="0,0" size="15,5" border="none">
+      <font face="verdana" size="8" />
+      <size>15,5</size>
+    </item>
+    <!-- iconHF:  -->
+    <item text=" HF" state="iconHF" image="false" offset="50,22" position="0,0" size="15,5" border="none">
+      <font face="verdana" size="12" />
+      <size>15,5</size>
+    </item>
     <!-- Carton ID:  -->
     <item text="Carton ID: " state="fixed" image="false" offset="0,0" position="0,0" size="15,5" border="none">
       <font face="verdana" size="8" />
@@ -960,6 +952,16 @@
   </label>
 
   <label name="carton_fxzz" margin="0.5" line-width="0.4">
+    <!-- iconRoHS:  -->
+    <item text="RoHS[CR] 2.0" state="iconRoHS" image="false" offset="50,10" position="0,0" size="15,5" border="none">
+      <font face="verdana" size="8" />
+      <size>15,5</size>
+    </item>
+    <!-- iconHF:  -->
+    <item text=" HF" state="iconHF" image="false" offset="50,22" position="0,0" size="15,5" border="none">
+      <font face="verdana" size="12" />
+      <size>15,5</size>
+    </item>
     <!-- Carton ID:  -->
     <item text="Carton ID: " state="fixed" image="false" offset="0,0" position="0,0" size="15,5" border="none">
       <font face="verdana" size="8" />
@@ -1200,44 +1202,6 @@
     </item>
   </label>
 
-  <label name="carton_wks" margin="0.5" line-width="0.4">    
-    <!-- APN-->
-    <item text="APN: $$2" state="dynamic" image="false" offset="0,17" position="0,-10" size="67,5" >
-      <font face="verdana" size="8" />
-    </item>
-    <!-- APN barcode image -->
-    <item text="$$2" state="dynamic" image="true" offset="0,57" position="1,-45" size="67,10">
-      <code>code128</code>
-      <size>66,10</size>
-    </item>    
-    
-    <!--ID text--> 
-    <item text="Carton ID: $$10" state="dynamic" image="false" offset="0,35" position="0,0" size="67,10">
-      <font face="Arial" size="8" />
-    </item>
-   <!--ID barcode image--> 
-    <item text="$$10" state="dynamic" image="true" offset="0,57" position="1,-15" size="67,10">
-      <code>code128</code>
-      <size>66,10</size>
-    </item>   
-    
-    <!-- QTY text -->
-    <item text="QTY: $$8" state="dynamic" image="false" offset="0,65" position="0,1" size="67,8" >
-      <font face="verdana" size="8" />
-    </item>
-     <!-- QTY barcode image -->
-    <item text="$$8" state="dynamic" image="true" offset="0,41" position="1,30" size="67,10">
-      <code>code39</code>
-      <size>30,10</size>
-    </item>
-  
-   <!-- RoHS+HF -->
-    <item text="RoHS+HF" state="fixed" image="false" offset="0,5" position="40,70" size="67,5">
-      <font face="verdana" size="8" />
-      <size>60,5</size>
-    </item>
-    </label>
-    
   <label name="pallet" margin="0.5" line-width="0.4">
     <!-- PEGATRON -->
     <item text="PEGATRON" state="fixed" image="false" offset="0,0" position="0,1" size="67,5" border="left|top|right">
@@ -1338,6 +1302,16 @@
   </label>
 
   <label name="pallet_pega" margin="0.5" line-width="0.4">
+    <!-- iconRoHS:  -->
+    <item text="RoHS[CR] 2.0" state="iconRoHS" image="false" offset="50,10" position="0,0" size="15,5" border="none">
+      <font face="verdana" size="8" />
+      <size>15,5</size>
+    </item>
+    <!-- iconHF:  -->
+    <item text=" HF" state="iconHF" image="false" offset="50,22" position="0,0" size="15,5" border="none">
+      <font face="verdana" size="12" />
+      <size>15,5</size>
+    </item>
     <!-- Pallet ID:  -->
     <item text="Pallet ID: " state="fixed" image="false" offset="0,0" position="0,0" size="15,5" border="none">
       <font face="verdana" size="8" />
@@ -1579,6 +1553,16 @@
   </label>
 
   <label name="pallet_fxzz" margin="0.5" line-width="0.4">
+    <!-- iconRoHS:  -->
+    <item text="RoHS[CR] 2.0" state="iconRoHS" image="false" offset="50,10" position="0,0" size="15,5" border="none">
+      <font face="verdana" size="8" />
+      <size>15,5</size>
+    </item>
+    <!-- iconHF:  -->
+    <item text=" HF" state="iconHF" image="false" offset="50,22" position="0,0" size="15,5" border="none">
+      <font face="verdana" size="12" />
+      <size>15,5</size>
+    </item>
     <!-- Pallet ID:  -->
     <item text="Pallet ID: " state="fixed" image="false" offset="0,0" position="0,0" size="15,5" border="none">
       <font face="verdana" size="8" />
@@ -1818,42 +1802,5 @@
       <font face="verdana" size="8" />
     </item>
   </label>
-  
-  <label name="pallet_wks" margin="0.5" line-width="0.4">    
-    <!-- APN-->
-    <item text="APN: $$2" state="dynamic" image="false" offset="0,17" position="0,-10" size="67,5" >
-      <font face="verdana" size="8" />
-    </item>
-    <!-- APN barcode image -->
-    <item text="$$2" state="dynamic" image="true" offset="0,57" position="1,-45" size="67,10">
-      <code>code128</code>
-      <size>66,10</size>
-    </item>    
-    
-    <!--ID text--> 
-    <item text="Pallet ID: $$10" state="dynamic" image="false" offset="0,35" position="0,0" size="67,10">
-      <font face="Arial" size="8" />
-    </item>
-   <!--ID barcode image--> 
-    <item text="$$10" state="dynamic" image="true" offset="0,57" position="1,-15" size="67,10">
-      <code>code128</code>
-      <size>66,10</size>
-    </item>   
-    
-    <!-- QTY text -->
-    <item text="QTY: $$8" state="dynamic" image="false" offset="0,65" position="0,1" size="67,8" >
-      <font face="verdana" size="8" />
-    </item>
-     <!-- QTY barcode image -->
-    <item text="$$8" state="dynamic" image="true" offset="0,41" position="1,30" size="67,10">
-      <code>code39</code>
-      <size>30,10</size>
-    </item>
-  
-   <!-- RoHS+HF -->
-    <item text="RoHS+HF" state="fixed" image="false" offset="0,5" position="40,70" size="67,5">
-      <font face="verdana" size="8" />
-      <size>60,5</size>
-    </item>
-    </label>
+
 </labels>

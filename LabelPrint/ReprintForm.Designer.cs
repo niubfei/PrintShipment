@@ -40,10 +40,9 @@
             this.txtQty = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lbQty = new System.Windows.Forms.Label();
+            this.btReprint = new System.Windows.Forms.Button();
             this.btClose = new System.Windows.Forms.Button();
             this.btReprintNew = new System.Windows.Forms.Button();
-            this.btReprint3 = new System.Windows.Forms.Button();
-            this.btReprint = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbScan
@@ -89,6 +88,7 @@
             this.colDate});
             this.lstItems.FullRowSelect = true;
             this.lstItems.GridLines = true;
+            this.lstItems.HideSelection = false;
             this.lstItems.Location = new System.Drawing.Point(4, 73);
             this.lstItems.Name = "lstItems";
             this.lstItems.Size = new System.Drawing.Size(778, 362);
@@ -150,6 +150,16 @@
             this.lbQty.TabIndex = 22;
             this.lbQty.Text = "打包数量：";
             // 
+            // btReprint
+            // 
+            this.btReprint.Location = new System.Drawing.Point(136, 458);
+            this.btReprint.Name = "btReprint";
+            this.btReprint.Size = new System.Drawing.Size(126, 41);
+            this.btReprint.TabIndex = 25;
+            this.btReprint.Text = "打印";
+            this.btReprint.UseVisualStyleBackColor = true;
+            this.btReprint.Click += new System.EventHandler(this.btReprint_Click);
+            // 
             // btClose
             // 
             this.btClose.Location = new System.Drawing.Point(527, 458);
@@ -162,7 +172,7 @@
             // 
             // btReprintNew
             // 
-            this.btReprintNew.Location = new System.Drawing.Point(137, 458);
+            this.btReprintNew.Location = new System.Drawing.Point(4, 458);
             this.btReprintNew.Name = "btReprintNew";
             this.btReprintNew.Size = new System.Drawing.Size(126, 41);
             this.btReprintNew.TabIndex = 25;
@@ -170,32 +180,11 @@
             this.btReprintNew.UseVisualStyleBackColor = true;
             this.btReprintNew.Click += new System.EventHandler(this.btReprintNew_Click);
             // 
-            // btReprint3
-            // 
-            this.btReprint3.Location = new System.Drawing.Point(5, 458);
-            this.btReprint3.Name = "btReprint3";
-            this.btReprint3.Size = new System.Drawing.Size(126, 41);
-            this.btReprint3.TabIndex = 26;
-            this.btReprint3.Text = "打印3";
-            this.btReprint3.UseVisualStyleBackColor = true;
-            this.btReprint3.Click += new System.EventHandler(this.BtReprint3_Click);
-            // 
-            // btReprint
-            // 
-            this.btReprint.Location = new System.Drawing.Point(269, 458);
-            this.btReprint.Name = "btReprint";
-            this.btReprint.Size = new System.Drawing.Size(126, 41);
-            this.btReprint.TabIndex = 25;
-            this.btReprint.Text = "打印";
-            this.btReprint.UseVisualStyleBackColor = true;
-            this.btReprint.Click += new System.EventHandler(this.btReprint_Click);
-            // 
             // ReprintForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(788, 526);
-            this.Controls.Add(this.btReprint3);
             this.Controls.Add(this.btClose);
             this.Controls.Add(this.btReprintNew);
             this.Controls.Add(this.btReprint);
@@ -233,9 +222,8 @@
         private System.Windows.Forms.TextBox txtQty;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbQty;
+        private System.Windows.Forms.Button btReprint;
         private System.Windows.Forms.Button btClose;
         private System.Windows.Forms.Button btReprintNew;
-        private System.Windows.Forms.Button btReprint3;
-        private System.Windows.Forms.Button btReprint;
     }
 }

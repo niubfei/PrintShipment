@@ -53,12 +53,6 @@ namespace LabelPrint
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-
-
-            //Print2 print2 = new Print2("id", "A", "a", "_", "1", "1 a_A");
-            //Application.Run(print2);
-            //return;
-
             LoginForm login = new LoginForm();
             DialogResult rt = login.ShowDialog();
             if (rt == DialogResult.Cancel)

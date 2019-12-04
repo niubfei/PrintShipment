@@ -19,7 +19,7 @@ namespace LabelPrint
     {
         public ReprintForm()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
 
         protected override void OnLoad(EventArgs e)
@@ -43,7 +43,6 @@ namespace LabelPrint
 
             btReprint.Text = LanguageMapping.Instance.GetStaticMessage("REPRINT_BT_PRINT", LabelPrintGlobal.g_Language);
             btReprintNew.Text = LanguageMapping.Instance.GetStaticMessage("REPRINT_BT_PRINT_NEW", LabelPrintGlobal.g_Language);
-            btReprint3.Text = LanguageMapping.Instance.GetStaticMessage("REPRINT_BT_PRINT3", LabelPrintGlobal.g_Language);
             btClose.Text = LanguageMapping.Instance.GetStaticMessage("REPRINT_BT_CLOSE", LabelPrintGlobal.g_Language);
         }
 
@@ -224,7 +223,7 @@ namespace LabelPrint
 
         private void btReprint_Click(object sender, EventArgs e)
         {
-            reprint1();
+            reprint();
         }
 
         private void btClose_Click(object sender, EventArgs e)
@@ -251,13 +250,10 @@ namespace LabelPrint
         //修改日期20180518
         private void btReprintNew_Click(object sender, EventArgs e)
         {
-            reprint2();
+            reprintNew();
         }
-        private void BtReprint3_Click(object sender, EventArgs e)
-        {
-            reprint3();
-        }
-        private void reprint1()
+
+        private void reprint()
         {
             if (lstItems.Items.Count < Convert.ToInt32(txtTotal.Text))
             {
@@ -307,36 +303,11 @@ namespace LabelPrint
             //打印第一页信息
             TPCPrintLabel labelFrist = LabelPrintGlobal.g_LabelCreator.GetPrintLabel(label_nameFrist);
             List<string> parametersFrist = MakePrintParameters(m_Mode, data);
-            
+            labelFrist.Print(setting, parametersFrist);
             //打印第二页信息
             TPCPrintLabel labelSecond = LabelPrintGlobal.g_LabelCreator.GetPrintLabel(label_nameSecond);
-            List<string> parametersSecond = MakePrintParameters(m_Mode, data);            
-
-            switch (m_Mode)
-            {
-                case PACK_MODE.Pack:
-                    labelFrist.Print(setting, parametersFrist);
-                    labelSecond.Print(setting, parametersSecond);
-                    break;
-                case PACK_MODE.Carton:
-                    labelFrist.Print(setting, parametersFrist);
-                    labelFrist.Print(setting, parametersFrist);
-                    labelSecond.Print(setting, parametersSecond);
-                    labelSecond.Print(setting, parametersSecond);
-                    break;
-                case PACK_MODE.Pallet:
-                    labelFrist.Print(setting, parametersFrist);
-                    labelFrist.Print(setting, parametersFrist);
-                    labelFrist.Print(setting, parametersFrist);
-                    labelFrist.Print(setting, parametersFrist);
-                    labelSecond.Print(setting, parametersSecond);
-                    labelSecond.Print(setting, parametersSecond);
-                    labelSecond.Print(setting, parametersSecond);
-                    labelSecond.Print(setting, parametersSecond);
-                    break;
-            }
-
-
+            List<string> parametersSecond = MakePrintParameters(m_Mode, data);
+            labelSecond.Print(setting, parametersSecond);
 
             //这里需要写入pnt_mng表
             TPCResult<bool> ret = Database.SetManagerData(m_Mode, data.PCode, Program.LoginUser,
@@ -348,7 +319,7 @@ namespace LabelPrint
                 return;
             }
         }
-        private void reprint2()
+        private void reprintNew()
         {
             if (lstItems.Items.Count < Convert.ToInt32(txtTotal.Text))
             {
@@ -398,34 +369,11 @@ namespace LabelPrint
             //打印第一页信息
             TPCPrintLabel labelFrist = LabelPrintGlobal.g_LabelCreator.GetPrintLabel(label_nameFrist);
             List<string> parametersFrist = MakePrintParameters(m_Mode, data);
-
+            labelFrist.Print(setting, parametersFrist);
             //打印第二页信息
             //TPCPrintLabel labelSecond = LabelPrintGlobal.g_LabelCreator.GetPrintLabel(label_nameSecond);
             //List<string> parametersSecond = MakePrintParameters(m_Mode, data);
-
-            switch (m_Mode)
-            {
-                case PACK_MODE.Pack:
-                    labelFrist.Print(setting, parametersFrist);
-                    //labelSecond.Print(setting, parametersSecond);
-                    break;
-                case PACK_MODE.Carton:
-                    labelFrist.Print(setting, parametersFrist);
-                    labelFrist.Print(setting, parametersFrist);
-                    //labelSecond.Print(setting, parametersSecond);
-                    //labelSecond.Print(setting, parametersSecond);
-                    break;
-                case PACK_MODE.Pallet:
-                    labelFrist.Print(setting, parametersFrist);
-                    labelFrist.Print(setting, parametersFrist);
-                    labelFrist.Print(setting, parametersFrist);
-                    labelFrist.Print(setting, parametersFrist);
-                    //labelSecond.Print(setting, parametersSecond);
-                    //labelSecond.Print(setting, parametersSecond);
-                    //labelSecond.Print(setting, parametersSecond);
-                    //labelSecond.Print(setting, parametersSecond);
-                    break;
-            }
+            //labelSecond.Print(setting, parametersSecond);
 
             //这里需要写入pnt_mng表
             TPCResult<bool> ret = Database.SetManagerData(m_Mode, data.PCode, Program.LoginUser,
@@ -437,95 +385,5 @@ namespace LabelPrint
                 return;
             }
         }
-        private void reprint3()
-        {
-            if (lstItems.Items.Count < Convert.ToInt32(txtTotal.Text))
-            {
-                MessageBox.Show(LabelPrintGlobal.ShowWarningMessage("NOT_FULL_QUANTITY_ERROR"), "ERROR", MessageBoxButtons.OK);
-                return;
-            }
-
-            PrintDialog dlg = new PrintDialog();
-            if (dlg.ShowDialog() != DialogResult.OK)
-            {
-                return;
-
-            }
-            PrinterSettings setting = dlg.PrinterSettings;
-
-            PrintLabelData data = new PrintLabelData();
-            data.PCode = txtCode.Text;
-            data.DataCode = GetCodeDate();
-            data.Total = Convert.ToInt32(txtTotal.Text);
-            data.Date = GetDate();
-            TPCResult<int> result = Database.GetModuleCount(m_Mode, txtCode.Text);
-            if (result.State == RESULT_STATE.NG)
-            {
-                MessageBox.Show(result.Message);
-                return;
-            }
-
-            data.Quantity = result.Value;
-
-            string label_nameFrist = "";
-            string label_nameSecond = "";
-            switch (m_Mode)
-            {
-                case PACK_MODE.Pack:
-                    label_nameFrist = "pack_fxzz";
-                    label_nameSecond = "pack_wks";
-                    break;
-                case PACK_MODE.Carton:
-                    label_nameFrist = "carton_fxzz";
-                    label_nameSecond = "carton_wks";
-                    break;
-                case PACK_MODE.Pallet:
-                    label_nameFrist = "pallet_fxzz";
-                    label_nameSecond = "pallet_wks";
-                    break;
-            }
-            //打印第一页信息
-            TPCPrintLabel labelFrist = LabelPrintGlobal.g_LabelCreator.GetPrintLabel(label_nameFrist);
-            List<string> parametersFrist = MakePrintParameters(m_Mode, data);
-            
-            //打印第二页信息
-            TPCPrintLabel labelSecond = LabelPrintGlobal.g_LabelCreator.GetPrintLabel(label_nameSecond);
-            List<string> parametersSecond = MakePrintParameters(m_Mode, data);
-           
-            switch (m_Mode)
-            {
-                case PACK_MODE.Pack:
-                    labelFrist.Print(setting, parametersFrist);
-                    labelSecond.Print(setting, parametersSecond);
-                    break;
-                case PACK_MODE.Carton:
-                    labelFrist.Print(setting, parametersFrist);
-                    labelFrist.Print(setting, parametersFrist);
-                    labelSecond.Print(setting, parametersSecond);
-                    labelSecond.Print(setting, parametersSecond);
-                    break;
-                case PACK_MODE.Pallet:
-                    labelFrist.Print(setting, parametersFrist);
-                    labelFrist.Print(setting, parametersFrist);
-                    labelFrist.Print(setting, parametersFrist);
-                    labelFrist.Print(setting, parametersFrist);
-                    labelSecond.Print(setting, parametersSecond);
-                    labelSecond.Print(setting, parametersSecond);
-                    labelSecond.Print(setting, parametersSecond);
-                    labelSecond.Print(setting, parametersSecond);
-                    break;
-            }
-
-
-            //这里需要写入pnt_mng表
-            TPCResult<bool> ret = Database.SetManagerData(m_Mode, data.PCode, Program.LoginUser,
-                                            Convert.ToInt32(data.Total), PACK_ACTION.Register,
-                                            PACK_STATUS.Completed);
-            if (ret.State == RESULT_STATE.NG)
-            {
-                MessageBox.Show(ret.Message);
-                return;
-            }
-        }       
     }
 }

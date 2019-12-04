@@ -95,11 +95,6 @@ namespace LabelPrint
         }
         //end
 
-        public Button PrintButton3
-        {
-            get { return btPrintLabel3; }
-        }
-
         public RadioButton PackingRadioButton
         {
             get { return rdPacking; }
@@ -200,31 +195,6 @@ namespace LabelPrint
         {
             if (e.KeyCode == Keys.Return)
             {
-                #region 20190522增加针对KK04输入箱号的bin检查
-                string code0 = txtCNo.Text;
-                if (LabelPrintGlobal.g_Config.Switch.Equals("ON"))//配置文件开关时"ON"时启用
-                {
-                    //string mode = code0.Substring(13, 1);
-                    //if (mode == "P")
-                    //{
-                        TPCResult<DataTable> checkBin = m_Model.CheckBin( code0);
-                        if (checkBin.State == RESULT_STATE.NG)
-                        {
-                            MessageBox.Show(checkBin.Message);
-                            return;
-                        }
-                        string bin= LabelPrintGlobal.g_Config.Bin;//配置文件bin的对比
-                    //检查bin是否ok
-                        if (checkBin.Value.Rows.Count != 1 || checkBin.Value.Rows[0][0].ToString() != bin)
-                        {
-                            MessageBox.Show("该箱存在马达Bin不匹配","马达Bin检查：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-                    //MessageBox.Show(checkBin.Value.Rows[0][0].ToString());
-                }
-                #endregion
-
-
                 string code = CNoEdit.Text;
                 //这里增加限制，如果父项条码没有预约，则不允许扫描
                 if (txtPNo.Text.Length == 0)
@@ -307,7 +277,7 @@ namespace LabelPrint
             }
             //修改日期20180521
             //打印新标签PEGA 2页
-            m_Model.PrintLabel1();
+            m_Model.PrintLabel();
             //标签打印结束，清空明细列表
             lstItems.Items.Clear();
             //清空父ID信息
@@ -393,6 +363,7 @@ namespace LabelPrint
         /// <param name="e"></param>
         private void btPrintLabelNew_Click(object sender, EventArgs e)
         {
+
             if (lstItems.Items.Count < Convert.ToInt32(txtTotal.Text))
             {
                 MessageBox.Show(LabelPrintGlobal.ShowWarningMessage("NOT_FULL_QUANTITY_ERROR"), "ERROR", MessageBoxButtons.OK);
@@ -417,7 +388,7 @@ namespace LabelPrint
             }
             //修改日期20180521
             //打印标签FXZZ
-            m_Model.PrintLabel2();
+            m_Model.PrintLabelNew();
             //标签打印结束，清空明细列表
             lstItems.Items.Clear();
             //清空父ID信息
@@ -427,41 +398,6 @@ namespace LabelPrint
 
             //打印后允许修改总数
             //txtTotal.Enabled = true;
-        }
-
-        private void BtPrintLabel3_Click(object sender, EventArgs e)
-        {
-            if (lstItems.Items.Count < Convert.ToInt32(txtTotal.Text))
-            {
-                MessageBox.Show(LabelPrintGlobal.ShowWarningMessage("NOT_FULL_QUANTITY_ERROR"), "ERROR", MessageBoxButtons.OK);
-                return;
-            }
-
-            //检查明细的状态，如果为1则已经打印，不能在这里打印了
-            if (lstItems.Tag != null)
-            {
-                List<CItem> items = lstItems.Tag as List<CItem>;
-                if (items != null)
-                {
-                    foreach (CItem item in items)
-                    {
-                        if (item.Status == 1)
-                        {
-                            MessageBox.Show(LabelPrintGlobal.ShowWarningMessage("REPACK_NOT_PRINT"), "ERROR", MessageBoxButtons.OK);
-                            return;
-                        }
-                    }
-                }
-            }
-            //修改日期20180521
-            //打印标签FXZZ
-            m_Model.PrintLabel3();
-            //标签打印结束，清空明细列表
-            lstItems.Items.Clear();
-            //清空父ID信息
-            txtPNo.Text = "";
-
-            txtCNo.ReadOnly = true;
         }
     }
 }

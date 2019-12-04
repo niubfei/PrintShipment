@@ -30,7 +30,7 @@ namespace LabelPrint.Model
             //修正时间20180517
             Parent.PrintButtonNew.Text = LanguageMapping.Instance.GetStaticMessage("BT_PRINT_NEW", LabelPrintGlobal.g_Language);
             //end
-            Parent.PrintButton3.Text = LanguageMapping.Instance.GetStaticMessage("BT_PRINT_3", LabelPrintGlobal.g_Language);
+
             InitCtrl();
             Parent.QTYTotalEdit.Text = string.Format("{0}", LabelPrintGlobal.g_Config.PalletCarton);
         }
@@ -91,17 +91,6 @@ namespace LabelPrint.Model
             return result;
         }
 
-        public override TPCResult<System.Data.DataTable> CheckBin( string code)
-        {
-            TPCResult<System.Data.DataTable> result = new TPCResult<System.Data.DataTable>();
-            result = Database.CheckBin(code);
-            if (result.State == RESULT_STATE.NG)
-            {
-                return result;
-            }
-            return result;
-        }
-
         public override TPCResult<bool> ScanPCode(string code)
         {
             TPCResult<bool> result = new TPCResult<bool>();
@@ -143,7 +132,7 @@ namespace LabelPrint.Model
         /// <summary>
         /// 打印标签
         /// </summary>
-        public override TPCResult<bool> PrintLabel1()
+        public override TPCResult<bool> PrintLabel()
         {
             TPCResult<bool> result = null;
             List<CItem> items = null;
@@ -164,16 +153,9 @@ namespace LabelPrint.Model
             TPCPrintLabel labelFrist = LabelPrintGlobal.g_LabelCreator.GetPrintLabel("pallet");
             List<string> parametersFrist = MakePrintParameters(PACK_MODE.Pallet, GetLabelData());
             labelFrist.Print(setting, parametersFrist);
-            labelFrist.Print(setting, parametersFrist);
-            labelFrist.Print(setting, parametersFrist);
-            labelFrist.Print(setting, parametersFrist);
-
             //打印第二页信息
             TPCPrintLabel labelSecond = LabelPrintGlobal.g_LabelCreator.GetPrintLabel("pallet_pega");
             List<string> parametersSecond = MakePrintParameters(PACK_MODE.Pallet, GetLabelData());
-            labelSecond.Print(setting, parametersSecond);
-            labelSecond.Print(setting, parametersSecond);
-            labelSecond.Print(setting, parametersSecond);
             labelSecond.Print(setting, parametersSecond);
 
             //这里需要写入pnt_mng表
@@ -186,7 +168,7 @@ namespace LabelPrint.Model
         /// <summary>
         /// 修改日期20180517
         /// </summary>
-        public override TPCResult<bool> PrintLabel2()
+        public override TPCResult<bool> PrintLabelNew()
         {
 
             TPCResult<bool> result = null;
@@ -210,9 +192,6 @@ namespace LabelPrint.Model
             TPCPrintLabel labelFrist = LabelPrintGlobal.g_LabelCreator.GetPrintLabel("pallet_fxzz");
             List<string> parametersFrist = MakePrintParameters(PACK_MODE.Pallet, GetLabelData());
             labelFrist.Print(setting, parametersFrist);
-            labelFrist.Print(setting, parametersFrist);
-            labelFrist.Print(setting, parametersFrist);
-            labelFrist.Print(setting, parametersFrist);
             //打印第二页信息
             //TPCPrintLabel labelSecond = LabelPrintGlobal.g_LabelCreator.GetPrintLabel("pallet_fxzz");
             //List<string> parametersSecond = MakePrintParameters(PACK_MODE.Pallet, GetLabelData());
@@ -225,48 +204,6 @@ namespace LabelPrint.Model
 
             return result;
         }
-
-
-        public override TPCResult<bool> PrintLabel3()
-        {
-            TPCResult<bool> result = null;
-            List<CItem> items = null;
-
-            PrinterSettings setting = GetPrinterSetting();
-            if (setting == null)
-            {
-                return new TPCResult<bool>();
-            }
-
-            items = GetPackingItems();
-            result = Database.CompletedPallet(items);
-            if (result.State == RESULT_STATE.NG)
-            {
-                return result;
-            }
-            //打印第一页信息
-            TPCPrintLabel labelFrist = LabelPrintGlobal.g_LabelCreator.GetPrintLabel("pallet_fxzz");
-            List<string> parametersFrist = MakePrintParameters(PACK_MODE.Pallet, GetLabelData());
-            labelFrist.Print(setting, parametersFrist);
-            labelFrist.Print(setting, parametersFrist);
-            labelFrist.Print(setting, parametersFrist);
-            labelFrist.Print(setting, parametersFrist);
-            //打印第二页信息
-            TPCPrintLabel labelSecond = LabelPrintGlobal.g_LabelCreator.GetPrintLabel("pallet_wks");
-            List<string> parametersSecond = MakePrintParameters(PACK_MODE.Pallet, GetLabelData());
-            labelSecond.Print(setting, parametersSecond);
-            labelSecond.Print(setting, parametersSecond);
-            labelSecond.Print(setting, parametersSecond);
-            labelSecond.Print(setting, parametersSecond);
-
-            //这里需要写入pnt_mng表
-            result = Database.SetManagerData(PACK_MODE.Pallet, Parent.PNoEdit.Text, Program.LoginUser,
-                                            Convert.ToInt32(Parent.QTYEdit.Text), PACK_ACTION.Register,
-                                            PACK_STATUS.Completed);
-
-            return result;
-        }
-
         /// <summary>
         /// 检查Carton编码是否合法
         /// </summary>

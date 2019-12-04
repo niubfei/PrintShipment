@@ -50,9 +50,6 @@ namespace LabelPrint
             txtQtyTrays.Text = string.Format("{0}", LabelPrintGlobal.g_Config.PackTrays);
             txtQTYPacks.Text = string.Format("{0}", LabelPrintGlobal.g_Config.CartonPack);
             txtQTYCartons.Text = string.Format("{0}", LabelPrintGlobal.g_Config.PalletCarton);
-
-            cboSwitch.Text = LabelPrintGlobal.g_Config.Switch;
-            txtBin.Text = LabelPrintGlobal.g_Config.Bin;
         }
 
         protected void GetData()
@@ -72,9 +69,6 @@ namespace LabelPrint
             LabelPrintGlobal.g_Config.PackTrays = Convert.ToInt32(txtQtyTrays.Text);
             LabelPrintGlobal.g_Config.CartonPack = Convert.ToInt32(txtQTYPacks.Text);
             LabelPrintGlobal.g_Config.PalletCarton = Convert.ToInt32(txtQTYCartons.Text);
-
-            LabelPrintGlobal.g_Config.Switch = cboSwitch.Text;
-            LabelPrintGlobal.g_Config.Bin = txtBin.Text;
         }
 
         protected bool CheckInput()

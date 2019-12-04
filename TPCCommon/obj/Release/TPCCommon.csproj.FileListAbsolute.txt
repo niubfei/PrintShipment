@@ -3,9 +3,3 @@ C:\Users\YANG YU - NSTD\Desktop\SFC\bin\Release\TPCCommon.pdb
 C:\Users\YANG YU - NSTD\Desktop\SFC\TPCCommon\obj\Release\TPCCommon.csprojResolveAssemblyReference.cache
 C:\Users\YANG YU - NSTD\Desktop\SFC\TPCCommon\obj\Release\TPCCommon.dll
 C:\Users\YANG YU - NSTD\Desktop\SFC\TPCCommon\obj\Release\TPCCommon.pdb
-C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\bin\Release\TPCCommon.dll
-C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\bin\Release\TPCCommon.pdb
-C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\TPCCommon\obj\Release\TPCCommon.csproj.CoreCompileInputs.cache
-C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\TPCCommon\obj\Release\TPCCommon.csproj.CopyComplete
-C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\TPCCommon\obj\Release\TPCCommon.dll
-C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\TPCCommon\obj\Release\TPCCommon.pdb

@@ -34,9 +34,9 @@ namespace TPCBarcode.LabelPrint
         }
 
         protected List<LabelItem> m_Items = new List<LabelItem>();
-        public List<LabelItem> Items
+        public List<LabelItem> Items 
         {
-            get { return m_Items; }
+            get { return m_Items; } 
         }
 
         public TPCPrintLabel Clone()
@@ -92,7 +92,7 @@ namespace TPCBarcode.LabelPrint
                         int index = 0;
                         if (int.TryParse(match.Value.Replace("$$", ""), out index))
                         {
-                            string param = parameters[index - 1];
+                            string param = parameters[index-1];
                             item.Text = item.Text.Replace(match.Value, param);
                         }
                     }
@@ -161,9 +161,6 @@ namespace TPCBarcode.LabelPrint
             PrintLabel(g);
             g.TranslateTransform(-m_MarginWidth, -m_MarginWidth);
             e.HasMorePages = false;
-
-            //Pen pen = new Pen(Color.Red, 5);
-            //g.DrawLine(pen, new Point(10, 50), new Point(100, 50));
         }
     }
 }

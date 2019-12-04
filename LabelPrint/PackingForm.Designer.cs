@@ -47,7 +47,6 @@
             this.lbPNo = new System.Windows.Forms.Label();
             this.txtPNo = new System.Windows.Forms.TextBox();
             this.btPrintLabelNew = new System.Windows.Forms.Button();
-            this.btPrintLabel3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btPrintLabel
@@ -228,22 +227,11 @@
             this.btPrintLabelNew.UseVisualStyleBackColor = true;
             this.btPrintLabelNew.Click += new System.EventHandler(this.btPrintLabelNew_Click);
             // 
-            // btPrintLabel3
-            // 
-            this.btPrintLabel3.Location = new System.Drawing.Point(616, 540);
-            this.btPrintLabel3.Name = "btPrintLabel3";
-            this.btPrintLabel3.Size = new System.Drawing.Size(116, 40);
-            this.btPrintLabel3.TabIndex = 29;
-            this.btPrintLabel3.Text = "打印标签3";
-            this.btPrintLabel3.UseVisualStyleBackColor = true;
-            this.btPrintLabel3.Click += new System.EventHandler(this.BtPrintLabel3_Click);
-            // 
             // PackingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1003, 592);
-            this.Controls.Add(this.btPrintLabel3);
             this.Controls.Add(this.btPrintLabelNew);
             this.Controls.Add(this.btPrintLabel);
             this.Controls.Add(this.dtPackDate);
@@ -294,6 +282,6 @@
         private System.Windows.Forms.Label lbPNo;
         private System.Windows.Forms.TextBox txtPNo;
         private System.Windows.Forms.Button btPrintLabelNew;
-        private System.Windows.Forms.Button btPrintLabel3;
+
     }
 }

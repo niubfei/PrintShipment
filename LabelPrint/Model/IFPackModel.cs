@@ -99,30 +99,12 @@ namespace LabelPrint.Model
         /// <returns></returns>
         protected string GetCodeDate()
         {
-            //DateTime day = Parent.DatePicker.Value;
-            //string year = string.Format("{0:yyyy}", day).Substring(3);
-            //GregorianCalendar gc = new GregorianCalendar();
-            //string week = string.Format("{0:d2}", gc.GetWeekOfYear(day, CalendarWeekRule.FirstDay, DayOfWeek.Sunday));
-            //return string.Format("{0}{1}{2}", year, week, (int)day.DayOfWeek + 1);
-
-            string CodeDate = DateTime.Today.ToString("yyyyMdd");
-            if (CodeDate.Length==8)
-            {
-                string key=CodeDate.Substring(4,2);
-                switch (key)
-                {
-                    case "10":
-                        CodeDate = DateTime.Today.ToString("yyyyAdd");
-                        break;
-                    case "11":
-                        CodeDate = DateTime.Today.ToString("yyyyBdd");
-                        break;
-                    case "12":
-                        CodeDate = DateTime.Today.ToString("yyyyCdd");
-                        break;
-                }
-            }
-            return CodeDate;
+            DateTime day = Parent.DatePicker.Value;
+            string year = string.Format("{0:yyyy}", day).Substring(3);
+            GregorianCalendar gc = new GregorianCalendar();
+            string week = string.Format("{0:d2}", gc.GetWeekOfYear(day, CalendarWeekRule.FirstDay, DayOfWeek.Sunday));
+            
+            return string.Format("{0}{1}{2}", year, week, (int)day.DayOfWeek + 1);
         }
 
         /// <summary>
@@ -161,7 +143,6 @@ namespace LabelPrint.Model
             //修正时间20180517
             Parent.PrintButtonNew.Enabled = (Parent.ItemsListView.Items.Count == total);
             //end
-            Parent.PrintButton3.Enabled = (Parent.ItemsListView.Items.Count == total);
         }
 
         /// <summary>
@@ -394,9 +375,6 @@ namespace LabelPrint.Model
         /// </summary>
         /// <param name="code"></param>
         public abstract TPCResult<bool> ScanCCode(string code);
-
-        public abstract TPCResult<System.Data.DataTable> CheckBin( string code);
-
         /// <summary>
         /// 父编号编辑框，收到扫描条码后事件
         /// 逻辑上认为扫描的条码为子项，需要从数据库中检索出父项条码
@@ -408,17 +386,11 @@ namespace LabelPrint.Model
         /// <summary>
         /// 打印标签
         /// </summary>
-        public abstract TPCResult<bool> PrintLabel1();
+        public abstract TPCResult<bool> PrintLabel();
         /// <summary>
         /// 修改日期20180517
         /// </summary>
-        public abstract TPCResult<bool> PrintLabel2();
+        public abstract TPCResult<bool> PrintLabelNew();
         #endregion
-
-        /// <summary>
-        /// 新客户20190617
-        /// </summary>
-        /// <returns></returns>
-        public abstract TPCResult<bool> PrintLabel3();
     }
 }

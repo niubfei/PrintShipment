@@ -29,13 +29,10 @@
         private void InitializeComponent()
         {
             this.grpParam = new System.Windows.Forms.GroupBox();
-            this.label31 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.txtVendorPN = new System.Windows.Forms.TextBox();
             this.txtBacth = new System.Windows.Forms.TextBox();
             this.txtLc = new System.Windows.Forms.TextBox();
             this.txtSiteCode = new System.Windows.Forms.TextBox();
@@ -77,16 +74,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btOK = new System.Windows.Forms.Button();
             this.btCancel = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cboSwitch = new System.Windows.Forms.ComboBox();
-            this.txtBin = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.txtVendorPN = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
             this.grpParam.SuspendLayout();
             this.grpUnit.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpParam
@@ -131,17 +123,6 @@
             this.grpParam.TabStop = false;
             this.grpParam.Text = "Constant";
             // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label31.ForeColor = System.Drawing.Color.Red;
-            this.label31.Location = new System.Drawing.Point(555, 459);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(68, 17);
-            this.label31.TabIndex = 14;
-            this.label31.Text = "半角英数字";
-            // 
             // label29
             // 
             this.label29.AutoSize = true;
@@ -164,16 +145,6 @@
             this.label28.TabIndex = 13;
             this.label28.Text = "半角英数字(10桁)";
             // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.ForeColor = System.Drawing.Color.Blue;
-            this.label30.Location = new System.Drawing.Point(11, 452);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(125, 25);
-            this.label30.TabIndex = 12;
-            this.label30.Text = "Vendor P/N:";
-            // 
             // label27
             // 
             this.label27.AutoSize = true;
@@ -193,14 +164,6 @@
             this.label26.Size = new System.Drawing.Size(48, 25);
             this.label26.TabIndex = 11;
             this.label26.Text = "L/C:";
-            // 
-            // txtVendorPN
-            // 
-            this.txtVendorPN.Location = new System.Drawing.Point(188, 449);
-            this.txtVendorPN.MaxLength = 10;
-            this.txtVendorPN.Name = "txtVendorPN";
-            this.txtVendorPN.Size = new System.Drawing.Size(361, 33);
-            this.txtVendorPN.TabIndex = 10;
             // 
             // txtBacth
             // 
@@ -355,7 +318,7 @@
             // txtAPN
             // 
             this.txtAPN.Location = new System.Drawing.Point(188, 67);
-            this.txtAPN.MaxLength = 12;
+            this.txtAPN.MaxLength = 10;
             this.txtAPN.Name = "txtAPN";
             this.txtAPN.Size = new System.Drawing.Size(361, 33);
             this.txtAPN.TabIndex = 2;
@@ -413,7 +376,7 @@
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(106, 17);
             this.label17.TabIndex = 0;
-            this.label17.Text = "半角英数字 (12桁)";
+            this.label17.Text = "半角英数字 (10桁)";
             // 
             // label15
             // 
@@ -470,7 +433,7 @@
             this.grpUnit.Controls.Add(this.label6);
             this.grpUnit.Location = new System.Drawing.Point(6, 513);
             this.grpUnit.Name = "grpUnit";
-            this.grpUnit.Size = new System.Drawing.Size(309, 191);
+            this.grpUnit.Size = new System.Drawing.Size(664, 191);
             this.grpUnit.TabIndex = 1;
             this.grpUnit.TabStop = false;
             this.grpUnit.Text = "Conversion";
@@ -606,86 +569,40 @@
             this.btCancel.UseVisualStyleBackColor = true;
             this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
-            // groupBox1
+            // label30
             // 
-            this.groupBox1.Controls.Add(this.cboSwitch);
-            this.groupBox1.Controls.Add(this.txtBin);
-            this.groupBox1.Controls.Add(this.label32);
-            this.groupBox1.Controls.Add(this.label34);
-            this.groupBox1.Controls.Add(this.label36);
-            this.groupBox1.Controls.Add(this.label40);
-            this.groupBox1.Location = new System.Drawing.Point(351, 513);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(309, 191);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "CheckModuleBin";
+            this.label30.AutoSize = true;
+            this.label30.ForeColor = System.Drawing.Color.Blue;
+            this.label30.Location = new System.Drawing.Point(11, 452);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(125, 25);
+            this.label30.TabIndex = 12;
+            this.label30.Text = "Vendor P/N:";
             // 
-            // cboSwitch
+            // txtVendorPN
             // 
-            this.cboSwitch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboSwitch.FormattingEnabled = true;
-            this.cboSwitch.Items.AddRange(new object[] {
-            "ON",
-            "OFF"});
-            this.cboSwitch.Location = new System.Drawing.Point(116, 38);
-            this.cboSwitch.Name = "cboSwitch";
-            this.cboSwitch.Size = new System.Drawing.Size(121, 33);
-            this.cboSwitch.TabIndex = 9;
+            this.txtVendorPN.Location = new System.Drawing.Point(188, 449);
+            this.txtVendorPN.MaxLength = 10;
+            this.txtVendorPN.Name = "txtVendorPN";
+            this.txtVendorPN.Size = new System.Drawing.Size(361, 33);
+            this.txtVendorPN.TabIndex = 10;
             // 
-            // txtBin
+            // label31
             // 
-            this.txtBin.Location = new System.Drawing.Point(116, 82);
-            this.txtBin.Name = "txtBin";
-            this.txtBin.Size = new System.Drawing.Size(84, 33);
-            this.txtBin.TabIndex = 8;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.ForeColor = System.Drawing.Color.Blue;
-            this.label32.Location = new System.Drawing.Point(84, 85);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(26, 25);
-            this.label32.TabIndex = 0;
-            this.label32.Text = "=";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.ForeColor = System.Drawing.Color.Blue;
-            this.label34.Location = new System.Drawing.Point(84, 38);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(26, 25);
-            this.label34.TabIndex = 0;
-            this.label34.Text = "=";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.ForeColor = System.Drawing.Color.Blue;
-            this.label36.Location = new System.Drawing.Point(11, 85);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(41, 25);
-            this.label36.TabIndex = 0;
-            this.label36.Text = "Bin";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.ForeColor = System.Drawing.Color.Blue;
-            this.label40.Location = new System.Drawing.Point(11, 38);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(72, 25);
-            this.label40.TabIndex = 0;
-            this.label40.Text = "Switch";
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label31.ForeColor = System.Drawing.Color.Red;
+            this.label31.Location = new System.Drawing.Point(555, 459);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(68, 17);
+            this.label31.TabIndex = 14;
+            this.label31.Text = "半角英数字";
             // 
             // ConfigForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(677, 784);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btOK);
             this.Controls.Add(this.grpUnit);
@@ -702,8 +619,6 @@
             this.grpParam.PerformLayout();
             this.grpUnit.ResumeLayout(false);
             this.grpUnit.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -759,12 +674,5 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox txtVendorPN;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox cboSwitch;
-        private System.Windows.Forms.TextBox txtBin;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label40;
     }
 }

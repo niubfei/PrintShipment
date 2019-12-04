@@ -1,21 +1,13 @@
-C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\bin\Debug\example.config
-C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\bin\Debug\TPCBarcode.dll
-C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\bin\Debug\TPCBarcode.pdb
-C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\TPCBarcode\obj\Debug\TPCBarcode.csproj.CoreCompileInputs.cache
-C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\TPCBarcode\obj\Debug\TPCBarcode.csproj.CopyComplete
-C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\TPCBarcode\obj\Debug\TPCBarcode.dll
-C:\Users\yyx19\Desktop\临时回收站\新建文件夹 (5)\20190618\SFC\TPCBarcode\obj\Debug\TPCBarcode.pdb
-C:\Users\yyx19\Desktop\测试代码\20190618\SFC\bin\Debug\example.config
-C:\Users\yyx19\Desktop\测试代码\20190618\SFC\bin\Debug\TPCBarcode.dll
-C:\Users\yyx19\Desktop\测试代码\20190618\SFC\bin\Debug\TPCBarcode.pdb
-C:\Users\yyx19\Desktop\测试代码\20190618\SFC\TPCBarcode\obj\Debug\TPCBarcode.csproj.CoreCompileInputs.cache
-C:\Users\yyx19\Desktop\测试代码\20190618\SFC\TPCBarcode\obj\Debug\TPCBarcode.csproj.CopyComplete
-C:\Users\yyx19\Desktop\测试代码\20190618\SFC\TPCBarcode\obj\Debug\TPCBarcode.dll
-C:\Users\yyx19\Desktop\测试代码\20190618\SFC\TPCBarcode\obj\Debug\TPCBarcode.pdb
-C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\bin\Debug\example.config
-C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\bin\Debug\TPCBarcode.dll
-C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\bin\Debug\TPCBarcode.pdb
-C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\TPCBarcode\obj\Debug\TPCBarcode.csproj.CoreCompileInputs.cache
-C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\TPCBarcode\obj\Debug\TPCBarcode.csproj.CopyComplete
-C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\TPCBarcode\obj\Debug\TPCBarcode.dll
-C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\TPCBarcode\obj\Debug\TPCBarcode.pdb
+C:\Users\Administrator\Desktop\SFC\bin\Debug\example.config
+C:\Users\Administrator\Desktop\SFC\bin\Debug\TPCBarcode.dll
+C:\Users\Administrator\Desktop\SFC\bin\Debug\TPCBarcode.pdb
+C:\Users\Administrator\Desktop\SFC\TPCBarcode\obj\Debug\TPCBarcode.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\SFC\TPCBarcode\obj\Debug\TPCBarcode.dll
+C:\Users\Administrator\Desktop\SFC\TPCBarcode\obj\Debug\TPCBarcode.pdb
+C:\Users\yyx19\Desktop\SFC\bin\Debug\example.config
+C:\Users\yyx19\Desktop\SFC\bin\Debug\TPCBarcode.dll
+C:\Users\yyx19\Desktop\SFC\bin\Debug\TPCBarcode.pdb
+C:\Users\yyx19\Desktop\SFC\TPCBarcode\obj\Debug\TPCBarcode.csprojAssemblyReference.cache
+C:\Users\yyx19\Desktop\SFC\TPCBarcode\obj\Debug\TPCBarcode.csproj.CopyComplete
+C:\Users\yyx19\Desktop\SFC\TPCBarcode\obj\Debug\TPCBarcode.dll
+C:\Users\yyx19\Desktop\SFC\TPCBarcode\obj\Debug\TPCBarcode.pdb

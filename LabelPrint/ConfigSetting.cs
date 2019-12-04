@@ -87,6 +87,7 @@ namespace LabelPrint
             get { return m_Vendor_PN; }
             set { m_Vendor_PN = value; }
         }
+
         #endregion
 
         #region 单位换算
@@ -112,36 +113,6 @@ namespace LabelPrint
         }
         #endregion
 
-        #region 针对KK04箱输入时的马达Bin检查
-        protected string m_Switch = "";
-        public string Switch
-        {
-            get { return m_Switch; }
-            set { m_Switch = value; }
-        }
-
-        protected string m_Bin = "";
-        public string Bin
-        {
-            get { return m_Bin; }
-            set { m_Bin = value; }
-        }
-        #endregion
-
-        #region 新富士康附加标签
-        protected string m_HH = "";
-        public string HH
-        {
-            get { return m_HH; }
-            set { m_HH = value; }
-        }
-        protected string m_Mfr = "";
-        public string Mfr
-        {
-            get { return m_Mfr; }
-            set { m_Mfr = value; }
-        }
-        #endregion
 
         public TPCResult<bool> LoadConfig(string config)
         {
@@ -237,37 +208,6 @@ namespace LabelPrint
                 }
                 #endregion
 
-                # region 修改日期20190422
-                //(P)C P/N
-                nod = doc.SelectSingleNode("configuration/newFXZZ/C");
-                if (nod != null)
-                {
-                    m_HH = nod.InnerText;
-                }
-                //(M)Mfr P/N
-                nod = doc.SelectSingleNode("configuration/newFXZZ/Mfr");
-                if (nod != null)
-                {
-                    m_Mfr = nod.InnerText;
-                }
-                #endregion
-
-                #region KK04输入箱时检查Bin 修改日期20190523
-                //开关
-                nod = doc.SelectSingleNode("configuration/checkModuleBin/switch");
-                if (nod != null)
-                {
-                    m_Switch = nod.InnerText;
-                }
-
-                //Bin字符串
-                nod = doc.SelectSingleNode("configuration/checkModuleBin/bin");
-                if (nod != null)
-                {
-                    m_Bin = nod.InnerText;
-                }
-                #endregion
-
                 #region Unit Conersion
 
                 //Pack - Tray
@@ -321,7 +261,6 @@ namespace LabelPrint
                     doc.AppendChild(root);
                     root.AppendChild(doc.CreateElement("constant"));
                     root.AppendChild(doc.CreateElement("conversion"));
-                    root.AppendChild(doc.CreateElement("newFXZZ"));                    
                 }
                 
                 #region Constant Parameter
@@ -432,45 +371,7 @@ namespace LabelPrint
                     nod = nodConversion.AppendChild(doc.CreateElement("pallet-carton"));
                 }
                 nod.InnerText = string.Format("{0}", m_PalletCarton);
-
-                #endregion
-
-                #region 新富士康附加
-
-                XmlNode nodNewFXZZ = doc.SelectSingleNode("configuration/newFXZZ");
-                //C
-                nod = nodNewFXZZ.SelectSingleNode("C");
-                if (nod == null)
-                {
-                    nod = nodNewFXZZ.AppendChild(doc.CreateElement("C"));
-                }
-                nod.InnerText = m_HH;
-                //Mfr
-                nod = nodNewFXZZ.SelectSingleNode("Mfr");
-                if (nod == null)
-                {
-                    nod = nodNewFXZZ.AppendChild(doc.CreateElement("Mfr"));
-                }
-                nod.InnerText = m_Mfr;
-                #endregion
-
-                #region KK04输入箱时的检查马达的bin
-                XmlNode nodCheckModuleBin = doc.SelectSingleNode("configuration/checkModuleBin");
-                //switch
-                nod = nodCheckModuleBin.SelectSingleNode("switch");
-                if (nod == null)
-                {
-                    nod = nodCheckModuleBin.AppendChild(doc.CreateElement("switch"));
-                }
-                nod.InnerText = string.Format("{0}", m_Switch);
-
-                //bin
-                nod = nodCheckModuleBin.SelectSingleNode("bin");
-                if (nod == null)
-                {
-                    nod = nodCheckModuleBin.AppendChild(doc.CreateElement("bin"));
-                }
-                nod.InnerText = string.Format("{0}", m_Bin);
+                
                 #endregion
 
                 doc.Save(LabelPrintGlobal.g_ConfigFile);

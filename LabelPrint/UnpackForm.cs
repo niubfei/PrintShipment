@@ -156,7 +156,6 @@ namespace LabelPrint
 
         private void btOK_Click(object sender, EventArgs e)
         {
-            //如果没有选择任何拆包的明细，则不允许确定
             if (!CheckUnpack())
                 return;
 

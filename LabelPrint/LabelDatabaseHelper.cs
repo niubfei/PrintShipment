@@ -82,8 +82,7 @@ namespace LabelPrint
             parameters.Add(new DbParameter("@vendor", DbType.AnsiString, vendor));
             parameters.Add(new DbParameter("@sitecode", DbType.AnsiString, site_code));
             parameters.Add(new DbParameter("@date", DbType.AnsiString, date));
-            //日期参数要修改
-            //TPCResult<string> result = Database.ExecuteSP("fn_apply_no", parameters);
+
             TPCResult<string> result = Database.ExecuteSP("fn_apply_no", parameters);
             if (result == null)
             {
@@ -217,8 +216,7 @@ namespace LabelPrint
             switch (mode)
             { 
                 case PACK_MODE.Pack:
-                    sql = "select count(m.module_id) as qty from t_module m, pnt_pack p" +
-                        " where p.tray_id = m.tray_id and p.pack_id = @code "
+                    sql = "select count(m.module_id) as qty from t_module m, pnt_pack p where p.tray_id = m.tray_id and p.pack_id = @code "
                         + "and p.status = 1";
                     break;
                 case PACK_MODE.Carton:
@@ -594,64 +592,6 @@ namespace LabelPrint
 
             result = Database.Execute(sql, parameters);
 
-            return result;
-        }
-
-        public TPCResult<System.Data.DataTable> CheckBin(string id)
-        {
-            StringBuilder sql = new StringBuilder();
-            string mode = id.Substring(0, 1);
-            switch (mode)
-            {
-                case "M":
-                    sql.AppendLine("select distinct bin");
-                    sql.AppendLine("from t_module");
-                    sql.AppendLine("where tray_id = @id");
-                    break;
-                case "B":
-                    sql.AppendLine("select distinct mm.bin");
-                    sql.AppendLine("from pnt_pack as pp");
-                    sql.AppendLine("inner join t_module as mm");
-                    sql.AppendLine("on pp.tray_id = mm.tray_id");
-                    sql.AppendLine("where pp.status=1");
-                    sql.AppendLine("and pp.pack_id =@id");
-                    break;
-                case "H":
-                    //左连接left join改成内连接inner join，防止空值
-                    //< param name = "status" > 状态:0 = BEGIN; 1 = COMPLETED; 2 = CANCELED </ param >
-                    //public TPCResult<bool> SetManagerData(PACK_MODE mode, string id, string user, int qty, PACK_ACTION action, PACK_STATUS status)
-                    sql.AppendLine("select distinct bin");
-                    sql.AppendLine("from pnt_carton as cc");
-                    sql.AppendLine("inner join pnt_pack as pp");
-                    sql.AppendLine("on cc.pack_id=pp.pack_id");
-                    sql.AppendLine("inner join t_module as mm");
-                    sql.AppendLine("on pp.tray_id=mm.tray_id");
-                    sql.AppendLine("where cc.status=1");
-                    sql.AppendLine("and pp.status=1");
-                    sql.AppendLine("and cc.carton_id=@id");
-                    break;
-            }
-            List<DbParameter> parameters = new List<DbParameter>();            
-            parameters.Add(new DbParameter("@id", DbType.AnsiString, id));
-
-
-            TPCResult<System.Data.DataTable> result = new TPCResult<System.Data.DataTable>();
-            TPCResult<DataTable> dt = Database.Query(sql.ToString(), parameters);
-
-            if (dt.State == RESULT_STATE.NG)
-            {
-                result.Message = dt.Message;
-                result.State = RESULT_STATE.NG;
-                return result;
-            }
-            //没有记录
-            if (dt.Value.Rows.Count == 0)
-            {
-                result.State = RESULT_STATE.NG;
-                result.Message = string.Format("Not found module bin: {0}", id);
-                return result;
-            }
-            result.Value = dt.Value;
             return result;
         }
 
@@ -1098,74 +1038,7 @@ namespace LabelPrint
         }
         #endregion
 
-        #region 富士康新标签
-        public TPCResult<List<List<string>>> GetFXZZ_Data(string pcode)
-        {
-            StringBuilder sql=new StringBuilder();
-            string mode = pcode.Substring(0, 1);
-            switch (mode)
-            {
-                case "B":
-                    sql.AppendLine("select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)");
-                    sql.AppendLine("from");
-                    sql.AppendLine("(select lot,count(lot) from pnt_pack as aa");
-                    sql.AppendLine("left join t_module as bb on aa.tray_id = bb.tray_id");
-                    sql.AppendLine("where aa.pack_id = @pcode");
-                    sql.AppendLine("and aa.status = '1'");
-                    sql.AppendLine("group by lot)as tt");
-                    sql.AppendLine("order by count desc limit 1");
-                    break;
-                case "H":
-                    sql.AppendLine("select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)");
-                    sql.AppendLine("from");
-                    sql.AppendLine("(select lot,count(lot) from pnt_carton as aa");
-                    sql.AppendLine("left join pnt_pack as bb on aa.pack_id = bb.pack_id");
-                    sql.AppendLine("left join t_module as cc on bb.tray_id = cc.tray_id");
-                    sql.AppendLine("where aa.carton_id = @pcode");
-                    sql.AppendLine("and aa.status = '1'");
-                    sql.AppendLine("and bb.status = '1'");
-                    sql.AppendLine("group by lot)as tt");
-                    sql.AppendLine("order by count desc limit 1");
-                    break;
-                case "P":
-                    sql.AppendLine("select sum(count)over(partition by 1),substring(lot,4,4),substring(lot,1,7)");
-                    sql.AppendLine("from");
-                    sql.AppendLine("(select lot,count(lot) from pnt_pallet as aa");
-                    sql.AppendLine("left join pnt_carton as bb on aa.carton_id = bb.carton_id");
-                    sql.AppendLine("left join pnt_pack as cc on bb.pack_id = cc.pack_id");
-                    sql.AppendLine("left join t_module as dd on cc.tray_id = dd.tray_id");
-                    sql.AppendLine("where aa.pallet_id = @pcode");
-                    sql.AppendLine("and aa.status = '1'");
-                    sql.AppendLine("and bb.status = '1'");
-                    sql.AppendLine("and cc.status = '1'");
-                    sql.AppendLine("group by lot)as tt");
-                    sql.AppendLine("order by count desc limit 1");
-                    break;
-            }
-            TPCResult<List<List<string>>> result = new TPCResult<List<List<string>>>();
-            List<DbParameter> parameters = new List<DbParameter>();
-            parameters.Add(new DbParameter("@pcode", DbType.AnsiString, pcode));
-
-            TPCResult<DataTable> dt = Database.Query(sql.ToString(), parameters);
-            if (dt.State == RESULT_STATE.NG)
-            {
-                result.State = RESULT_STATE.NG;
-                result.Message = dt.Message;
-                return result;
-            }
-
-            result.Value = new List<List<string>>();
-            foreach (DataRow row in dt.Value.Rows)
-            {
-                List<string> item = new List<string>();
-                item.Add(row[0].ToString());
-                item.Add(row[1].ToString());
-                item.Add(row[2].ToString());
-                result.Value.Add(item);
-            }
-
-            return result;
-        }
+        #region 重新打印
         #endregion
     }
 }

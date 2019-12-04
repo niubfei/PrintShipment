@@ -29,7 +29,6 @@ namespace LabelPrint.Model
             //修正时间20180517
             Parent.PrintButtonNew.Text = LanguageMapping.Instance.GetStaticMessage("BT_PRINT_NEW", LabelPrintGlobal.g_Language);
             //end
-            Parent.PrintButton3.Text = LanguageMapping.Instance.GetStaticMessage("BT_PRINT_3", LabelPrintGlobal.g_Language);
             InitCtrl();
             Parent.QTYTotalEdit.Text = string.Format("{0}", LabelPrintGlobal.g_Config.CartonPack);
         }
@@ -90,17 +89,6 @@ namespace LabelPrint.Model
             return result;
         }
 
-        public override TPCResult<System.Data.DataTable> CheckBin( string code)
-        {
-            TPCResult<System.Data.DataTable> result = new TPCResult<System.Data.DataTable>();
-            result = Database.CheckBin(code);
-            if (result.State == RESULT_STATE.NG)
-            {
-                return result;
-            }
-            return result;
-        }
-
         public override TPCResult<bool> ScanPCode(string code)
         {
             TPCResult<bool> result = new TPCResult<bool>();
@@ -143,7 +131,7 @@ namespace LabelPrint.Model
         /// <summary>
         /// 打印标签
         /// </summary>
-        public override TPCResult<bool> PrintLabel1()
+        public override TPCResult<bool> PrintLabel()
         {
             TPCResult<bool> result = null;
             List<CItem> items = null;
@@ -165,11 +153,9 @@ namespace LabelPrint.Model
             TPCPrintLabel labelFristPage = LabelPrintGlobal.g_LabelCreator.GetPrintLabel("carton");
             List<string> parametersFristPage = MakePrintParameters(PACK_MODE.Carton, GetLabelData());
             labelFristPage.Print(setting, parametersFristPage);
-            labelFristPage.Print(setting, parametersFristPage);
             //打印第二页信息
             TPCPrintLabel labelSecondPage = LabelPrintGlobal.g_LabelCreator.GetPrintLabel("carton_pega");
             List<string> parametersSecondPage = MakePrintParameters(PACK_MODE.Carton, GetLabelData());
-            labelSecondPage.Print(setting, parametersSecondPage);
             labelSecondPage.Print(setting, parametersSecondPage);
 
             //这里需要写入pnt_mng表
@@ -183,7 +169,7 @@ namespace LabelPrint.Model
         /// <summary>
         /// 修改日期20180517
         /// </summary>
-        public override TPCResult<bool> PrintLabel2()
+        public override TPCResult<bool> PrintLabelNew()
         {
             TPCResult<bool> result = null;
             List<CItem> items = null;
@@ -206,47 +192,9 @@ namespace LabelPrint.Model
             TPCPrintLabel labelFristPage = LabelPrintGlobal.g_LabelCreator.GetPrintLabel("carton_fxzz");
             List<string> parametersFristPage = MakePrintParameters(PACK_MODE.Carton, GetLabelData());
             labelFristPage.Print(setting, parametersFristPage);
-            labelFristPage.Print(setting, parametersFristPage);
             //打印第二页信息
-            //TPCPrintLabel labelSecondPage = LabelPrintGlobal.g_LabelCreator.GetPrintLabel("carton_fxzz");
-            //List<string> parametersSecondPage = MakePrintParameters(PACK_MODE.Carton, GetLabelData());
-            //labelSecondPage.Print(setting, parametersSecondPage);
-
-            //这里需要写入pnt_mng表
-            result = Database.SetManagerData(PACK_MODE.Carton, Parent.PNoEdit.Text, Program.LoginUser,
-                                            Convert.ToInt32(Parent.QTYEdit.Text), PACK_ACTION.Register,
-                                            PACK_STATUS.Completed);
-
-            return result;
-        }
-
-        public override TPCResult<bool> PrintLabel3()
-        {
-            TPCResult<bool> result = null;
-            List<CItem> items = null;
-
-            result = new TPCResult<bool>();
-            PrinterSettings setting = GetPrinterSetting();
-            if (setting == null)
-            {
-                return result;
-            }
-
-            items = GetPackingItems();
-            result = Database.CompletedCarton(items);
-            if (result.State == RESULT_STATE.NG)
-            {
-                return result;
-            }
-            //打印第一页信息
-            TPCPrintLabel labelFristPage = LabelPrintGlobal.g_LabelCreator.GetPrintLabel("carton_fxzz");
-            List<string> parametersFristPage = MakePrintParameters(PACK_MODE.Carton, GetLabelData());
-            labelFristPage.Print(setting, parametersFristPage);
-            labelFristPage.Print(setting, parametersFristPage);
-            //打印第二页信息
-            TPCPrintLabel labelSecondPage = LabelPrintGlobal.g_LabelCreator.GetPrintLabel("carton_wks");
+            TPCPrintLabel labelSecondPage = LabelPrintGlobal.g_LabelCreator.GetPrintLabel("carton_fxzz");
             List<string> parametersSecondPage = MakePrintParameters(PACK_MODE.Carton, GetLabelData());
-            labelSecondPage.Print(setting, parametersSecondPage);
             labelSecondPage.Print(setting, parametersSecondPage);
 
             //这里需要写入pnt_mng表

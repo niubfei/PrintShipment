@@ -55,7 +55,23 @@ namespace TPCBarcode.LabelPrint
                             }
                             if (nodItem.Attributes["state"] != null)
                             {
-                                item.State = (nodItem.Attributes["state"].Value.Equals("fixed")) ? TextState.state_fixed : TextState.state_dynamic;
+                                //item.State = (nodItem.Attributes["state"].Value.Equals("fixed")) ? TextState.state_fixed : TextState.state_dynamic;
+                                switch (nodItem.Attributes["state"].Value)
+                                {
+                                    case "iconRoHS":
+                                        item.State = TextState.state_iconRoHS;
+                                        break;
+                                    case "iconHF":
+                                        item.State = TextState.state_iconHF;
+                                        break;
+                                    case "fixed":
+                                        item.State = TextState.state_fixed;
+                                        break;
+                                    case "dynamic":
+                                    default:
+                                        item.State = TextState.state_dynamic;
+                                        break;
+                                }
                             }
                             if (nodItem.Attributes["image"] != null)
                             {

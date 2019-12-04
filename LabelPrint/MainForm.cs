@@ -21,7 +21,7 @@ namespace LabelPrint
         public MainForm()
         {
             InitializeComponent();
-            Text = Text + "_" + Application.ProductVersion.ToString();
+            Text += "_" + Application.ProductVersion;
             cboLanguage.SelectedIndex = 0;
         }
 
@@ -155,10 +155,9 @@ namespace LabelPrint
         /// <param name="e"></param>
         private void btConfig_Click(object sender, EventArgs e)
         {
-            //设置参数
             ConfigForm dlg = new ConfigForm();
             dlg.ShowDialog();
-            //设置参数后，重新载入
+
             ShowMode((PACK_MODE)tabWork.SelectedIndex);
         }
 
@@ -228,12 +227,5 @@ namespace LabelPrint
 			invoice.logingname = login.LoginUser;
 			invoice.Show();
 		}
-
-        private void BtNewFXZZ_Click(object sender, EventArgs e)
-        {
-            NewFXZZ fm = new NewFXZZ();
-            fm.Database = DatabaseHelper;
-            fm.ShowDialog();
-        }
-    }
+	}
 }
