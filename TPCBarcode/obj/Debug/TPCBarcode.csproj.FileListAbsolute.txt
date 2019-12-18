@@ -25,4 +25,3 @@ C:\Users\yyx19\Desktop\PrintShipment\bin\Debug\TPCBarcode.pdb
 C:\Users\yyx19\Desktop\PrintShipment\TPCBarcode\obj\Debug\TPCBarcode.csproj.CopyComplete
 C:\Users\yyx19\Desktop\PrintShipment\TPCBarcode\obj\Debug\TPCBarcode.dll
 C:\Users\yyx19\Desktop\PrintShipment\TPCBarcode\obj\Debug\TPCBarcode.pdb
-C:\Users\yyx19\Desktop\PrintShipment\TPCBarcode\obj\Debug\TPCBarcode.csprojAssemblyReference.cache

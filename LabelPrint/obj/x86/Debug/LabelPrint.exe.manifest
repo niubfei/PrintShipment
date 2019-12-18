@@ -51,7 +51,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>uLJUK+DiL4jti2KwhilU/inUfWIFqAcmf9H45BcpBZ4=</dsig:DigestValue>
+        <dsig:DigestValue>J9hJrxxKfOTyBvHw+3eGpMJtG1IKx5CKGrSdZRzuJ1Q=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -87,7 +87,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>5xHU/uHjSwYqT4hp7tzcQMVLRvtcD6MJey2g/UyIdE4=</dsig:DigestValue>
+        <dsig:DigestValue>XDQgMHA71XlrYkY+rliEcfG+U3jjrEamV2lP2iXGUGg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -111,7 +111,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Mchthu8WAuCukCpp0xfDLSdfXxGuIsV/Izj+NlIClwQ=</dsig:DigestValue>
+        <dsig:DigestValue>zAsLho7Zq7BS1WCLroDram63g9bXW+QQ9pc64axefSY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -123,7 +123,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TROqvgYygq90pDheCdHOh/VcQiX9frWuGttGe6WnG5k=</dsig:DigestValue>
+        <dsig:DigestValue>oZO1ZszCwwWy9t69WBcQR87xbqG+DoLOK1/K/94UmAQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -148,13 +148,13 @@
       <dsig:DigestValue>MMa4kDnYcTMIqrABwUK3LA9erHsOIdHAfQu3+psVsl8=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="config.xml" size="724">
+  <file name="config.xml" size="726">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>oJh+C88zCIga+zHiWHopWRnB+o9LHCK1/NYa9qYV72A=</dsig:DigestValue>
+      <dsig:DigestValue>w8dxYg5NVsZir7w8xdtbWD6caoCTeYYL9CU6R9f4Xmg=</dsig:DigestValue>
     </hash>
   </file>
   <file name="database.xml" size="274">

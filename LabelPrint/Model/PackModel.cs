@@ -221,53 +221,57 @@ namespace LabelPrint.Model
             TPCPrintLabel labelFristPage = LabelPrintGlobal.g_LabelCreator.GetPrintLabel("pack_fxzz");
             List<string> parametersFristPage = MakePrintParameters(PACK_MODE.Pack, GetLabelData());
             labelFristPage.Print(setting, parametersFristPage);
-            //打印第二页信息
-            TPCPrintLabel labelSecond = LabelPrintGlobal.g_LabelCreator.GetPrintLabel("fxzz_additional");
-            List<string> parametersSecond = MakePrintParameters(PACK_MODE.Pack, GetLabelData());
-            #region 修改打印参数
-            #region lotNo
-            string lotNo = parametersSecond[14];
-            parametersSecond[14] = lotNo.Substring(0, lotNo.Length - 1);
-            #endregion
-
-            #region dateCode            
-            //将时间格式9013改成2019-01-03            
-            string outputTime = "";
-            string dateCode = parametersSecond[14].Substring(3);
-            string[] code = { dateCode.Substring(0, 1), dateCode.Substring(1, 2), dateCode.Substring(3, 1) };
-
-            //确定年
-            string today = DateTime.Today.ToString("yyyy");
-            for (int i = 0; i < 10; i++)
+            //选择性打印第二页信息
+            setting = GetPrinterSetting();
+            if (setting != null)
             {
-                if (today.Substring(3, 1).Equals(code[0]))
-                {
-                    outputTime = today;
-                }
-                else
-                {
-                    today = (Convert.ToInt16(today) - 1).ToString();
-                }
-            }
-            //确定月份和日
-            DateTime dtTemp = Convert.ToDateTime(outputTime + "-01-01");
-            GregorianCalendar gc = new GregorianCalendar();
-            for (int i = 0; i < 365; i++)
-            {
-                int weekOfYear = gc.GetWeekOfYear(dtTemp, CalendarWeekRule.FirstDay, DayOfWeek.Sunday);
-                int dayOfWeek = (int)dtTemp.DayOfWeek + 1;
-                if (weekOfYear == Convert.ToInt16(code[1]) && dayOfWeek == Convert.ToInt16(code[2]))
-                {
-                    outputTime = dtTemp.ToString("yyyy-MM-dd");
-                    break;
-                }
-                else { dtTemp = dtTemp.AddDays(1); }
-            }
+                TPCPrintLabel labelSecond = LabelPrintGlobal.g_LabelCreator.GetPrintLabel("fxzz_additional");
+                List<string> parametersSecond = MakePrintParameters(PACK_MODE.Pack, GetLabelData());
+                #region 修改打印参数
+                #region lotNo
+                string lotNo = parametersSecond[14];
+                parametersSecond[14] = lotNo.Substring(0, lotNo.Length - 1);
+                #endregion
 
-            parametersSecond[5] = outputTime;
-            #endregion
-            #endregion
-            labelSecond.Print(setting, parametersSecond);
+                #region dateCode            
+                //将时间格式9013改成2019-01-03            
+                string outputTime = "";
+                string dateCode = parametersSecond[14].Substring(3);
+                string[] code = { dateCode.Substring(0, 1), dateCode.Substring(1, 2), dateCode.Substring(3, 1) };
+
+                //确定年
+                string today = DateTime.Today.ToString("yyyy");
+                for (int i = 0; i < 10; i++)
+                {
+                    if (today.Substring(3, 1).Equals(code[0]))
+                    {
+                        outputTime = today;
+                    }
+                    else
+                    {
+                        today = (Convert.ToInt16(today) - 1).ToString();
+                    }
+                }
+                //确定月份和日
+                DateTime dtTemp = Convert.ToDateTime(outputTime + "-01-01");
+                GregorianCalendar gc = new GregorianCalendar();
+                for (int i = 0; i < 365; i++)
+                {
+                    int weekOfYear = gc.GetWeekOfYear(dtTemp, CalendarWeekRule.FirstDay, DayOfWeek.Sunday);
+                    int dayOfWeek = (int)dtTemp.DayOfWeek + 1;
+                    if (weekOfYear == Convert.ToInt16(code[1]) && dayOfWeek == Convert.ToInt16(code[2]))
+                    {
+                        outputTime = dtTemp.ToString("yyyy-MM-dd");
+                        break;
+                    }
+                    else { dtTemp = dtTemp.AddDays(1); }
+                }
+
+                parametersSecond[5] = outputTime;
+                #endregion
+                #endregion
+                labelSecond.Print(setting, parametersSecond);
+            }
 
             //这里需要写入pnt_mng表
             result = Database.SetManagerData(PACK_MODE.Pack, Parent.PNoEdit.Text, Program.LoginUser,

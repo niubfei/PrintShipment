@@ -215,7 +215,7 @@ namespace LabelPrint.Model
             labelFrist.Print(setting, parametersFrist);
             labelFrist.Print(setting, parametersFrist);
             labelFrist.Print(setting, parametersFrist);
-            //打印第二页信息
+            //选择性打印第二页信息
             TPCPrintLabel labelSecond = LabelPrintGlobal.g_LabelCreator.GetPrintLabel("fxzz_additional");
             List<string> parametersSecond = MakePrintParameters(PACK_MODE.Pallet, GetLabelData());
             #region 修改打印参数
@@ -262,10 +262,14 @@ namespace LabelPrint.Model
             parametersSecond[5] = outputTime;
             #endregion
             #endregion
-            labelSecond.Print(setting, parametersSecond);
-            labelSecond.Print(setting, parametersSecond);
-            labelSecond.Print(setting, parametersSecond);
-            labelSecond.Print(setting, parametersSecond);
+            setting = GetPrinterSetting();
+            if (setting != null)
+            {
+                labelSecond.Print(setting, parametersSecond);
+                labelSecond.Print(setting, parametersSecond);
+                labelSecond.Print(setting, parametersSecond);
+                labelSecond.Print(setting, parametersSecond);
+            }
 
             #region 富士康卡板A4纸张
             //设置新纸张大小

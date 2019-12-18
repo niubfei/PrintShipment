@@ -446,11 +446,25 @@ namespace LabelPrint
             {
                 case PACK_MODE.Pack:
                     labelFrist.Print(setting, parametersFrist);
+
+                    dlg = new PrintDialog();
+                    if (dlg.ShowDialog() != DialogResult.OK)
+                    {
+                        return;
+                    }
+                    setting = dlg.PrinterSettings;
                     labelSecond.Print(setting, parametersSecond);
                     break;
                 case PACK_MODE.Carton:
                     labelFrist.Print(setting, parametersFrist);
                     labelFrist.Print(setting, parametersFrist);
+
+                    dlg = new PrintDialog();
+                    if (dlg.ShowDialog() != DialogResult.OK)
+                    {
+                        return;
+                    }
+                    setting = dlg.PrinterSettings;
                     labelSecond.Print(setting, parametersSecond);
                     labelSecond.Print(setting, parametersSecond);
                     break;
@@ -459,6 +473,13 @@ namespace LabelPrint
                     labelFrist.Print(setting, parametersFrist);
                     labelFrist.Print(setting, parametersFrist);
                     labelFrist.Print(setting, parametersFrist);
+
+                    dlg = new PrintDialog();
+                    if (dlg.ShowDialog() != DialogResult.OK)
+                    {
+                        return;
+                    }
+                    setting = dlg.PrinterSettings;
                     labelSecond.Print(setting, parametersSecond);
                     labelSecond.Print(setting, parametersSecond);
                     labelSecond.Print(setting, parametersSecond);
@@ -534,6 +555,7 @@ namespace LabelPrint
                 return;
             }
         }
+
         private void reprint3()
         {
             if (lstItems.Items.Count < Convert.ToInt32(txtTotal.Text))
