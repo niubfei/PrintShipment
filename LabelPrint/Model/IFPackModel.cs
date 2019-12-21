@@ -92,37 +92,50 @@ namespace LabelPrint.Model
 
             ClearItems();
         }
+        protected string GetCodeDate_old()
+        {
+            DateTime day = Parent.DatePicker.Value;
+            string year = string.Format("{0:yyyy}", day).Substring(3);
+            GregorianCalendar gc = new GregorianCalendar();
+            string week = string.Format("{0:d2}", gc.GetWeekOfYear(day, CalendarWeekRule.FirstDay, DayOfWeek.Sunday));
+            return string.Format("{0}{1}{2}", year, week, (int)day.DayOfWeek + 1);
+        }
 
         /// <summary>
         /// 计算编码中日期的值
         /// </summary>
         /// <returns></returns>
-        protected string GetCodeDate()
+        protected string GetCodeDate( bool isOld)
         {
-            //DateTime day = Parent.DatePicker.Value;
-            //string year = string.Format("{0:yyyy}", day).Substring(3);
-            //GregorianCalendar gc = new GregorianCalendar();
-            //string week = string.Format("{0:d2}", gc.GetWeekOfYear(day, CalendarWeekRule.FirstDay, DayOfWeek.Sunday));
-            //return string.Format("{0}{1}{2}", year, week, (int)day.DayOfWeek + 1);
-
-            string CodeDate = DateTime.Today.ToString("yyyyMdd");
-            if (CodeDate.Length==8)
+            if (isOld)
             {
-                string key=CodeDate.Substring(4,2);
-                switch (key)
-                {
-                    case "10":
-                        CodeDate = DateTime.Today.ToString("yyyyAdd");
-                        break;
-                    case "11":
-                        CodeDate = DateTime.Today.ToString("yyyyBdd");
-                        break;
-                    case "12":
-                        CodeDate = DateTime.Today.ToString("yyyyCdd");
-                        break;
-                }
+                DateTime day = Parent.DatePicker.Value;
+                string year = string.Format("{0:yyyy}", day).Substring(3);
+                GregorianCalendar gc = new GregorianCalendar();
+                string week = string.Format("{0:d2}", gc.GetWeekOfYear(day, CalendarWeekRule.FirstDay, DayOfWeek.Sunday));
+                return string.Format("{0}{1}{2}", year, week, (int)day.DayOfWeek + 1);
             }
-            return CodeDate;
+            else
+            {
+                string CodeDate = DateTime.Today.ToString("yyyyMdd");
+                if (CodeDate.Length == 8)
+                {
+                    string key = CodeDate.Substring(4, 2);
+                    switch (key)
+                    {
+                        case "10":
+                            CodeDate = DateTime.Today.ToString("yyyyAdd");
+                            break;
+                        case "11":
+                            CodeDate = DateTime.Today.ToString("yyyyBdd");
+                            break;
+                        case "12":
+                            CodeDate = DateTime.Today.ToString("yyyyCdd");
+                            break;
+                    }
+                }
+                return CodeDate;
+            }
         }
 
         /// <summary>
@@ -258,7 +271,7 @@ namespace LabelPrint.Model
         /// 从窗口获得标签数据
         /// </summary>
         /// <returns></returns>
-        protected PrintLabelData GetLabelData()
+        protected PrintLabelData GetLabelData(bool isOld)
         {
             PrintLabelData data = new PrintLabelData();
             data.PCode = Parent.PNoEdit.Text;
@@ -266,7 +279,7 @@ namespace LabelPrint.Model
             {
                 data.CCode.Add(item.SubItems[1].Text);
             }
-            data.DataCode = GetCodeDate();
+            data.DataCode = GetCodeDate(isOld);
             //修改日期20180518
             data.Date = GetDate();
             data.Quantity = Convert.ToInt32(Parent.QTYEdit.Text);
