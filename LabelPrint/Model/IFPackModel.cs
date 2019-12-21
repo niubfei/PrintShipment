@@ -379,6 +379,8 @@ namespace LabelPrint.Model
                 }
             }
             lotSum = 0;
+            //49
+            parameters.Add(LabelPrintGlobal.g_Config.Mfr);
             //end
             return parameters;
             

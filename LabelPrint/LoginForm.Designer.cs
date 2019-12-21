@@ -51,6 +51,7 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(365, 33);
             this.txtUserName.TabIndex = 1;
+            this.txtUserName.Text = "20181115110";
             // 
             // lbPasswd
             // 
@@ -68,6 +69,7 @@
             this.txtPasswd.PasswordChar = '*';
             this.txtPasswd.Size = new System.Drawing.Size(365, 33);
             this.txtPasswd.TabIndex = 2;
+            this.txtPasswd.Text = "test";
             // 
             // btLogin
             // 

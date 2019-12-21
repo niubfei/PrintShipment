@@ -228,12 +228,5 @@ namespace LabelPrint
 			invoice.logingname = login.LoginUser;
 			invoice.Show();
 		}
-
-        private void BtNewFXZZ_Click(object sender, EventArgs e)
-        {
-            NewFXZZ fm = new NewFXZZ();
-            fm.Database = DatabaseHelper;
-            fm.ShowDialog();
-        }
     }
 }

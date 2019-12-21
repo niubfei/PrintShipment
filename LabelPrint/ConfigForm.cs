@@ -46,6 +46,7 @@ namespace LabelPrint
             txtLc.Text = LabelPrintGlobal.g_Config.lc;
             txtBacth.Text = LabelPrintGlobal.g_Config.batch;
             txtVendorPN.Text = LabelPrintGlobal.g_Config.Vendor_PN;
+            txtMfr.Text = LabelPrintGlobal.g_Config.Mfr;
 
             txtQtyTrays.Text = string.Format("{0}", LabelPrintGlobal.g_Config.PackTrays);
             txtQTYPacks.Text = string.Format("{0}", LabelPrintGlobal.g_Config.CartonPack);
@@ -68,6 +69,7 @@ namespace LabelPrint
             LabelPrintGlobal.g_Config.lc = txtLc.Text;
             LabelPrintGlobal.g_Config.batch = txtBacth.Text;
             LabelPrintGlobal.g_Config.Vendor_PN = txtVendorPN.Text;
+            LabelPrintGlobal.g_Config.Mfr= txtMfr.Text;
 
             LabelPrintGlobal.g_Config.PackTrays = Convert.ToInt32(txtQtyTrays.Text);
             LabelPrintGlobal.g_Config.CartonPack = Convert.ToInt32(txtQTYPacks.Text);

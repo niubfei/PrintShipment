@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.splitMain = new System.Windows.Forms.SplitContainer();
-            this.btNewFXZZ = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cboLanguage = new System.Windows.Forms.ComboBox();
@@ -60,7 +59,6 @@
             // 
             // splitMain.Panel1
             // 
-            this.splitMain.Panel1.Controls.Add(this.btNewFXZZ);
             this.splitMain.Panel1.Controls.Add(this.button1);
             this.splitMain.Panel1.Controls.Add(this.label1);
             this.splitMain.Panel1.Controls.Add(this.cboLanguage);
@@ -77,18 +75,6 @@
             this.splitMain.Size = new System.Drawing.Size(1008, 730);
             this.splitMain.SplitterDistance = 90;
             this.splitMain.TabIndex = 0;
-            // 
-            // btNewFXZZ
-            // 
-            this.btNewFXZZ.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btNewFXZZ.Location = new System.Drawing.Point(613, 21);
-            this.btNewFXZZ.Name = "btNewFXZZ";
-            this.btNewFXZZ.Size = new System.Drawing.Size(117, 48);
-            this.btNewFXZZ.TabIndex = 27;
-            this.btNewFXZZ.Text = "新FXZZ";
-            this.btNewFXZZ.UseVisualStyleBackColor = true;
-            this.btNewFXZZ.Visible = false;
-            this.btNewFXZZ.Click += new System.EventHandler(this.BtNewFXZZ_Click);
             // 
             // button1
             // 
@@ -266,7 +252,6 @@
         private System.Windows.Forms.ComboBox cboLanguage;
         private System.Windows.Forms.Button btReprint;
 		private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btNewFXZZ;
     }
 }
 

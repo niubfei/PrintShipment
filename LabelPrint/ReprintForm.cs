@@ -218,6 +218,8 @@ namespace LabelPrint
                 }
             }
             lotSum = 0;
+            //49
+            parameters.Add(LabelPrintGlobal.g_Config.Mfr);
             //end
             return parameters;
         }
@@ -398,48 +400,52 @@ namespace LabelPrint
             //打印第二页信息
             TPCPrintLabel labelSecond = LabelPrintGlobal.g_LabelCreator.GetPrintLabel(label_nameSecond);
             List<string> parametersSecond = MakePrintParameters(m_Mode, data);
+
             #region 修改打印参数
             #region lotNo
-            string lotNo = parametersSecond[14];            
+            string lotNo = parametersSecond[14];
             parametersSecond[14] = lotNo.Substring(0, lotNo.Length - 1);
             #endregion
-            
-            #region dateCode            
-            //将时间格式9013改成2019-01-03            
-            string outputTime = "";
-            string dateCode = parametersSecond[14].Substring(3);
-            string[] code = { dateCode.Substring(0, 1), dateCode.Substring(1, 2), dateCode.Substring(3, 1) };
-            
-            //确定年
-            string today = DateTime.Today.ToString("yyyy");
-            for (int i = 0; i < 10; i++)
+
+
+            parametersSecond[5] = changeDateFormat(parametersSecond[14].Substring(3));
+
+            ///将时间格式9013改成2019-01-03
+            string changeDateFormat(string dateCode)
             {
-                if (today.Substring(3, 1).Equals(code[0]))
+                string outputTime = "";
+                string[] code = { dateCode.Substring(0, 1), dateCode.Substring(1, 2), dateCode.Substring(3, 1) };
+                #region 确定年月日
+                //确定年
+                string today = DateTime.Today.ToString("yyyy");
+                for (int i = 0; i < 10; i++)
                 {
-                    outputTime = today;
+                    if (today.Substring(3, 1).Equals(code[0]))
+                    {
+                        outputTime = today;
+                    }
+                    else
+                    {
+                        today = (Convert.ToInt16(today) - 1).ToString();
+                    }
                 }
-                else
+                //确定月份和日
+                DateTime dtTemp = Convert.ToDateTime(outputTime + "-01-01");
+                GregorianCalendar gc = new GregorianCalendar();
+                for (int i = 0; i < 365; i++)
                 {
-                    today = (Convert.ToInt16(today) - 1).ToString();
+                    int weekOfYear = gc.GetWeekOfYear(dtTemp, CalendarWeekRule.FirstDay, DayOfWeek.Sunday);
+                    int dayOfWeek = (int)dtTemp.DayOfWeek + 1;
+                    if (weekOfYear == Convert.ToInt16(code[1]) && dayOfWeek == Convert.ToInt16(code[2]))
+                    {
+                        outputTime = dtTemp.ToString("yyyy-MM-dd");
+                        break;
+                    }
+                    else { dtTemp = dtTemp.AddDays(1); }
                 }
+                #endregion
+                return outputTime;
             }
-            //确定月份和日
-            DateTime dtTemp = Convert.ToDateTime(outputTime + "-01-01");
-            GregorianCalendar gc = new GregorianCalendar();
-            for (int i = 0; i < 365; i++)
-            {
-                int weekOfYear = gc.GetWeekOfYear(dtTemp, CalendarWeekRule.FirstDay, DayOfWeek.Sunday);
-                int dayOfWeek = (int)dtTemp.DayOfWeek + 1;
-                if (weekOfYear == Convert.ToInt16(code[1]) && dayOfWeek == Convert.ToInt16(code[2]))
-                {
-                    outputTime = dtTemp.ToString("yyyy-MM-dd");
-                    break;
-                }
-                else { dtTemp = dtTemp.AddDays(1); }
-            }
-            
-            parametersSecond[5] = outputTime;
-            #endregion
             #endregion
 
             switch (m_Mode)
@@ -494,7 +500,7 @@ namespace LabelPrint
                     }
                     setting = dlg.PrinterSettings;
 
-                    Print2 print2 = new Print2(txtCode.Text, parametersSecond[7], outputTime, parametersSecond[14]);
+                    Print2 print2 = new Print2(txtCode.Text, parametersSecond[7], parametersSecond[5], parametersSecond[14]);
 
                     DataTable dt = new DataTable();
                     dt.Columns.Add("No.");

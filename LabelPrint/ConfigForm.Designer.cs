@@ -84,6 +84,9 @@
             this.label34 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.txtMfr = new System.Windows.Forms.TextBox();
             this.grpParam.SuspendLayout();
             this.grpUnit.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -91,6 +94,9 @@
             // 
             // grpParam
             // 
+            this.grpParam.Controls.Add(this.label33);
+            this.grpParam.Controls.Add(this.label35);
+            this.grpParam.Controls.Add(this.txtMfr);
             this.grpParam.Controls.Add(this.label31);
             this.grpParam.Controls.Add(this.label29);
             this.grpParam.Controls.Add(this.label28);
@@ -126,7 +132,7 @@
             this.grpParam.Controls.Add(this.label1);
             this.grpParam.Location = new System.Drawing.Point(6, 7);
             this.grpParam.Name = "grpParam";
-            this.grpParam.Size = new System.Drawing.Size(666, 491);
+            this.grpParam.Size = new System.Drawing.Size(666, 535);
             this.grpParam.TabIndex = 0;
             this.grpParam.TabStop = false;
             this.grpParam.Text = "Constant";
@@ -468,9 +474,9 @@
             this.grpUnit.Controls.Add(this.label12);
             this.grpUnit.Controls.Add(this.label8);
             this.grpUnit.Controls.Add(this.label6);
-            this.grpUnit.Location = new System.Drawing.Point(6, 513);
+            this.grpUnit.Location = new System.Drawing.Point(6, 548);
             this.grpUnit.Name = "grpUnit";
-            this.grpUnit.Size = new System.Drawing.Size(309, 191);
+            this.grpUnit.Size = new System.Drawing.Size(309, 176);
             this.grpUnit.TabIndex = 1;
             this.grpUnit.TabStop = false;
             this.grpUnit.Text = "Conversion";
@@ -588,7 +594,7 @@
             // 
             // btOK
             // 
-            this.btOK.Location = new System.Drawing.Point(59, 710);
+            this.btOK.Location = new System.Drawing.Point(58, 730);
             this.btOK.Name = "btOK";
             this.btOK.Size = new System.Drawing.Size(136, 44);
             this.btOK.TabIndex = 10;
@@ -598,7 +604,7 @@
             // 
             // btCancel
             // 
-            this.btCancel.Location = new System.Drawing.Point(451, 710);
+            this.btCancel.Location = new System.Drawing.Point(452, 730);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(136, 44);
             this.btCancel.TabIndex = 11;
@@ -614,9 +620,9 @@
             this.groupBox1.Controls.Add(this.label34);
             this.groupBox1.Controls.Add(this.label36);
             this.groupBox1.Controls.Add(this.label40);
-            this.groupBox1.Location = new System.Drawing.Point(351, 513);
+            this.groupBox1.Location = new System.Drawing.Point(351, 548);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(309, 191);
+            this.groupBox1.Size = new System.Drawing.Size(309, 176);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CheckModuleBin";
@@ -679,6 +685,35 @@
             this.label40.Size = new System.Drawing.Size(72, 25);
             this.label40.TabIndex = 0;
             this.label40.Text = "Switch";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label33.ForeColor = System.Drawing.Color.Red;
+            this.label33.Location = new System.Drawing.Point(555, 500);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(68, 17);
+            this.label33.TabIndex = 17;
+            this.label33.Text = "半角英数字";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.ForeColor = System.Drawing.Color.Blue;
+            this.label35.Location = new System.Drawing.Point(11, 493);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(91, 25);
+            this.label35.TabIndex = 16;
+            this.label35.Text = "Mfr P/N:";
+            // 
+            // txtMfr
+            // 
+            this.txtMfr.Location = new System.Drawing.Point(188, 490);
+            this.txtMfr.MaxLength = 10;
+            this.txtMfr.Name = "txtMfr";
+            this.txtMfr.Size = new System.Drawing.Size(361, 33);
+            this.txtMfr.TabIndex = 15;
             // 
             // ConfigForm
             // 
@@ -766,5 +801,8 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox txtMfr;
     }
 }

@@ -141,17 +141,7 @@ namespace TPCBarcode.LabelPrint
         {
             Graphics g = e.Graphics;
             g.TranslateTransform(m_MarginWidth, m_MarginWidth);
-            //Image imgBarcode = Image.FromFile(@"C:\Users\yyx19\Desktop\测试图片\RoHS.png");
-            //g.DrawImage(imgBarcode, new Point(150, 13));
-            //imgBarcode = Image.FromFile(@"C:\Users\yyx19\Desktop\测试图片\HF.png");
-            //g.DrawImage(imgBarcode, new Point(150, 66));
-
             PrintLabel(g);
-            ////使用Rectangle定义椭圆的边界，位置在（30,30）宽150，高70
-            //Rectangle Rec = new Rectangle(50, 20, 30, 14);
-            ////使用DrawEllipse绘制椭圆
-            //g.DrawEllipse(new Pen(Color.Black), Rec);
-
             g.TranslateTransform(-m_MarginWidth, -m_MarginWidth);
             e.HasMorePages = false;
         }
