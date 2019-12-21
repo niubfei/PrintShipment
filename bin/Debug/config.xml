@@ -14,16 +14,16 @@
     <vendor_pn>N/A</vendor_pn>
   </constant>
   <conversion>
-    <pack-tray>1</pack-tray>
-    <carton-pack>1</carton-pack>
-    <pallet-carton>1</pallet-carton>
+    <pack-tray>13</pack-tray>
+    <carton-pack>2</carton-pack>
+    <pallet-carton>48</pallet-carton>
   </conversion>
   <checkModuleBin>
-    <switch>OFF</switch>
+    <switch>ON</switch>    
     <bin>HD2G</bin>
   </checkModuleBin>
   <newFXZZ>
-    <Mfr>TESTOK233</Mfr>
+    <Mfr>233</Mfr>
     <C>11111111111111111</C>
   </newFXZZ>
 </configuration>

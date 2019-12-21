@@ -138,29 +138,11 @@
     <Compile Include="Model\PackModel.cs" />
     <Compile Include="Model\PalletModel.cs" />
     <Compile Include="Model\PrintLabelData.cs" />
-    <Compile Include="NewFXZZConfig.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NewFXZZConfig.Designer.cs">
-      <DependentUpon>NewFXZZConfig.cs</DependentUpon>
-    </Compile>
     <Compile Include="PackingForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PackingForm.Designer.cs">
       <DependentUpon>PackingForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Print3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Print3.Designer.cs">
-      <DependentUpon>Print3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Print1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Print1.Designer.cs">
-      <DependentUpon>Print1.cs</DependentUpon>
     </Compile>
     <Compile Include="Print2.cs">
       <SubType>Form</SubType>
@@ -170,12 +152,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="NewFXZZ.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NewFXZZ.Designer.cs">
-      <DependentUpon>NewFXZZ.cs</DependentUpon>
-    </Compile>
     <Compile Include="ReprintForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,17 +173,8 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewFXZZConfig.resx">
-      <DependentUpon>NewFXZZConfig.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PackingForm.resx">
       <DependentUpon>PackingForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Print3.resx">
-      <DependentUpon>Print3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Print1.resx">
-      <DependentUpon>Print1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Print2.resx">
       <DependentUpon>Print2.cs</DependentUpon>
@@ -222,9 +189,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="NewFXZZ.resx">
-      <DependentUpon>NewFXZZ.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ReprintForm.resx">
       <DependentUpon>ReprintForm.cs</DependentUpon>
     </EmbeddedResource>

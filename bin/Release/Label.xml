@@ -1945,10 +1945,10 @@
     </item>
     
     <!--Mfr P/N-->
-    <item text="Mfr P/N:$$1" state="dynamic" image="false" offset="0,0" position="0,36" size="12,5">
+    <item text="Mfr P/N:$$49" state="dynamic" image="false" offset="0,0" position="0,36" size="12,5">
       <font face="verdana" size="8" />
     </item>
-    <item text="$$1" state="dynamic" image="true" offset="0,0" position="0,40" size="55,8">
+    <item text="$$49" state="dynamic" image="true" offset="0,0" position="0,40" size="55,8">
       <code>code128</code>
       <size>65,10</size>
     </item>

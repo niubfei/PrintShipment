@@ -23,7 +23,7 @@
     <bin>HD2G</bin>
   </checkModuleBin>
   <newFXZZ>
-    <Mfr>233</Mfr>
-    <C>11111111111111111</C>
+    <Mfr>TESTMFR</Mfr>
+    <C>1</C>
   </newFXZZ>
 </configuration>

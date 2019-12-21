@@ -21,3 +21,10 @@ C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\TPCCommon\obj\Debug\TPCCo
 C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\TPCCommon\obj\Debug\TPCCommon.csproj.CopyComplete
 C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\TPCCommon\obj\Debug\TPCCommon.dll
 C:\Users\yyx19\Desktop\星期一改代码\20190729\SFC\TPCCommon\obj\Debug\TPCCommon.pdb
+C:\Users\yyx19\Desktop\PrintShipment\TPCCommon\bin\Debug\TPCCommon.dll
+C:\Users\yyx19\Desktop\PrintShipment\TPCCommon\bin\Debug\TPCCommon.pdb
+C:\Users\yyx19\Desktop\PrintShipment\TPCCommon\bin\Debug\Mono.Security.dll
+C:\Users\yyx19\Desktop\PrintShipment\TPCCommon\bin\Debug\Npgsql.dll
+C:\Users\yyx19\Desktop\PrintShipment\TPCCommon\obj\Debug\TPCCommon.csproj.CopyComplete
+C:\Users\yyx19\Desktop\PrintShipment\TPCCommon\obj\Debug\TPCCommon.dll
+C:\Users\yyx19\Desktop\PrintShipment\TPCCommon\obj\Debug\TPCCommon.pdb

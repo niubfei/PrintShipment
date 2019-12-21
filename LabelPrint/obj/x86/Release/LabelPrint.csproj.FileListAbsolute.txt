@@ -322,13 +322,9 @@ C:\Users\yyx19\Desktop\PrintShipment\LabelPrint\obj\x86\Release\LabelPrint.cspro
 C:\Users\yyx19\Desktop\PrintShipment\LabelPrint\obj\x86\Release\LabelPrint.ConfigForm.resources
 C:\Users\yyx19\Desktop\PrintShipment\LabelPrint\obj\x86\Release\LabelPrint.LoginForm.resources
 C:\Users\yyx19\Desktop\PrintShipment\LabelPrint\obj\x86\Release\LabelPrint.MainForm.resources
-C:\Users\yyx19\Desktop\PrintShipment\LabelPrint\obj\x86\Release\LabelPrint.NewFXZZConfig.resources
 C:\Users\yyx19\Desktop\PrintShipment\LabelPrint\obj\x86\Release\LabelPrint.PackingForm.resources
-C:\Users\yyx19\Desktop\PrintShipment\LabelPrint\obj\x86\Release\LabelPrint.Print3.resources
-C:\Users\yyx19\Desktop\PrintShipment\LabelPrint\obj\x86\Release\LabelPrint.Print1.resources
 C:\Users\yyx19\Desktop\PrintShipment\LabelPrint\obj\x86\Release\LabelPrint.Print2.resources
 C:\Users\yyx19\Desktop\PrintShipment\LabelPrint\obj\x86\Release\LabelPrint.Properties.Resources.resources
-C:\Users\yyx19\Desktop\PrintShipment\LabelPrint\obj\x86\Release\LabelPrint.NewFXZZ.resources
 C:\Users\yyx19\Desktop\PrintShipment\LabelPrint\obj\x86\Release\LabelPrint.ReprintForm.resources
 C:\Users\yyx19\Desktop\PrintShipment\LabelPrint\obj\x86\Release\LabelPrint.UnpackForm.resources
 C:\Users\yyx19\Desktop\PrintShipment\LabelPrint\obj\x86\Release\LabelPrint.csproj.GenerateResource.cache
