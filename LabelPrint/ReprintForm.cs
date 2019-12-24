@@ -322,8 +322,8 @@ namespace LabelPrint
                     break;
                 case PACK_MODE.Carton:
                     labelFrist.Print(setting, parametersFrist);
-                    labelFrist.Print(setting, parametersFrist);
-                    labelSecond.Print(setting, parametersSecond);
+                    //labelFrist.Print(setting, parametersFrist);
+                    //labelSecond.Print(setting, parametersSecond);
                     labelSecond.Print(setting, parametersSecond);
                     break;
                 case PACK_MODE.Pallet:

@@ -166,12 +166,12 @@ namespace LabelPrint.Model
             //打印第一页信息
             TPCPrintLabel labelFristPage = LabelPrintGlobal.g_LabelCreator.GetPrintLabel("carton");
             List<string> parametersFristPage = MakePrintParameters(PACK_MODE.Carton, GetLabelData(true));
-            labelFristPage.Print(setting, parametersFristPage);
+            //labelFristPage.Print(setting, parametersFristPage);
             labelFristPage.Print(setting, parametersFristPage);
             //打印第二页信息
             TPCPrintLabel labelSecondPage = LabelPrintGlobal.g_LabelCreator.GetPrintLabel("carton_pega");
             List<string> parametersSecondPage = MakePrintParameters(PACK_MODE.Carton, GetLabelData(false));
-            labelSecondPage.Print(setting, parametersSecondPage);
+            //labelSecondPage.Print(setting, parametersSecondPage);
             labelSecondPage.Print(setting, parametersSecondPage);
 
             //这里需要写入pnt_mng表
