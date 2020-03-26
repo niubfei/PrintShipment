@@ -1927,6 +1927,11 @@
       <size>65,10</size>
     </item>
     
+    <!-- REV -->
+    <item text="Rev:$$3" state="dynamic" image="false" offset="0,0" position="50,7" size="67,5">
+      <font face="verdana" size="8" />
+    </item>
+    
     <!--QTY-->
     <item text="QTY:$$8" state="dynamic" image="false" offset="0,0" position="0,18" size="67,8">
       <font face="verdana" size="8" />

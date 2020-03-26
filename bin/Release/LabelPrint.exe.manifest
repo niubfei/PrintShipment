@@ -4,7 +4,7 @@
   <description asmv2:iconFile="barcode.ico" asmv2:publisher="Technopro China" co.v1:suiteName="LabelPrint" asmv2:product="LabelPrint" asmv2:supportUrl="http://172.27.42.15:9600/" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="LabelPrint" version="2.0.1224.1130" language="neutral" processorArchitecture="x86" />
+    <assemblyIdentity name="LabelPrint" version="2.2020.326.900" language="neutral" processorArchitecture="x86" />
     <commandLine file="LabelPrint.exe" parameters="" />
   </entryPoint>
   <co.v1:useManifestForTrust xmlns="urn:schemas-microsoft-com:asm.v1" />
@@ -45,13 +45,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LabelPrint.exe" size="167424">
-      <assemblyIdentity name="LabelPrint" version="2.0.1224.1130" language="neutral" processorArchitecture="x86" />
+      <assemblyIdentity name="LabelPrint" version="2.2020.326.900" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>42UvBGfnBmdOHzBjxVfi7OYiMNmcAYdrWDQCP08GWAo=</dsig:DigestValue>
+        <dsig:DigestValue>lOKF76SeDDKtKRFq0hhHtFj1wC0+0AuJ/AKkZmPODJI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -87,7 +87,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>w7f02mmBDaRhvyislhuIIF/Tlm+Ns227gnZYZm8GdOE=</dsig:DigestValue>
+        <dsig:DigestValue>t82BWHK63v05N4hs84s67iofGpv0c+16TrFkI1XOO4E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -111,7 +111,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wSHDNCCliVdQ94l+gRmOs6F0ORoezon+lXcMsUEqTOU=</dsig:DigestValue>
+        <dsig:DigestValue>Fr0PjakbSw93KUC2h6oLtPrgl+/sFGtmfwII21uilWs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -123,7 +123,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>v7tpRj7Cu9rb7fChsz0k0481DxaHts9QHCXVKf8/P0A=</dsig:DigestValue>
+        <dsig:DigestValue>4cuFMPk98m2m/QS0ubaxduXTDFfIVHS4Cy/zE7Md17c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -166,13 +166,13 @@
       <dsig:DigestValue>5fpoCxunZnVFje5XM3N7BCtUUiMhs690PhspcUxOSqM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Label.xml" size="87342">
+  <file name="Label.xml" size="87517">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>0yVr3RyRlU10mY2bIH0ssT8yJ6K0ivVoQomBHihiFs0=</dsig:DigestValue>
+      <dsig:DigestValue>hPoNVzMoP8kqG3nkAPVz6DN0HOVicvfbzSDsBbLVk10=</dsig:DigestValue>
     </hash>
   </file>
   <file name="LabelPrint.exe.config" size="848">
