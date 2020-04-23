@@ -1,10 +1,3 @@
-C:\Users\yyx19\Desktop\PrintShipment\bin\Release\example.config
-C:\Users\yyx19\Desktop\PrintShipment\bin\Release\TPCBarcode.dll
-C:\Users\yyx19\Desktop\PrintShipment\bin\Release\TPCBarcode.pdb
-C:\Users\yyx19\Desktop\PrintShipment\TPCBarcode\obj\Release\TPCBarcode.csproj.CopyComplete
-C:\Users\yyx19\Desktop\PrintShipment\TPCBarcode\obj\Release\TPCBarcode.dll
-C:\Users\yyx19\Desktop\PrintShipment\TPCBarcode\obj\Release\TPCBarcode.pdb
-C:\Users\yyx19\Desktop\PrintShipment\TPCBarcode\obj\Release\TPCBarcode.csprojAssemblyReference.cache
 C:\Users\yyx19\Desktop\git\PrintShipment\bin\Release\example.config
 C:\Users\yyx19\Desktop\git\PrintShipment\bin\Release\TPCBarcode.dll
 C:\Users\yyx19\Desktop\git\PrintShipment\bin\Release\TPCBarcode.pdb
@@ -13,3 +6,11 @@ C:\Users\yyx19\Desktop\git\PrintShipment\TPCBarcode\obj\Release\TPCBarcode.cspro
 C:\Users\yyx19\Desktop\git\PrintShipment\TPCBarcode\obj\Release\TPCBarcode.csproj.CopyComplete
 C:\Users\yyx19\Desktop\git\PrintShipment\TPCBarcode\obj\Release\TPCBarcode.dll
 C:\Users\yyx19\Desktop\git\PrintShipment\TPCBarcode\obj\Release\TPCBarcode.pdb
+C:\Users\yyx19\Desktop\PrintShipment\bin\Release\example.config
+C:\Users\yyx19\Desktop\PrintShipment\bin\Release\TPCBarcode.dll
+C:\Users\yyx19\Desktop\PrintShipment\bin\Release\TPCBarcode.pdb
+C:\Users\yyx19\Desktop\PrintShipment\TPCBarcode\obj\Release\TPCBarcode.csprojAssemblyReference.cache
+C:\Users\yyx19\Desktop\PrintShipment\TPCBarcode\obj\Release\TPCBarcode.csproj.CoreCompileInputs.cache
+C:\Users\yyx19\Desktop\PrintShipment\TPCBarcode\obj\Release\TPCBarcode.csproj.CopyComplete
+C:\Users\yyx19\Desktop\PrintShipment\TPCBarcode\obj\Release\TPCBarcode.dll
+C:\Users\yyx19\Desktop\PrintShipment\TPCBarcode\obj\Release\TPCBarcode.pdb

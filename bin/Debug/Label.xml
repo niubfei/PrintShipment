@@ -95,7 +95,7 @@
     <item text="$$12" state="dynamic" image="true" offset="0,72" position="18,-1" size="67,12" border="left|bottom|right">
       <font face="verdana" size="8" />
       <code>codeQR</code>
-      <size>12,12</size>
+      <size>46,46</size>
     </item>
   </label>
 
@@ -734,7 +734,7 @@
     <item text="$$12" state="dynamic" image="true" offset="0,72" position="18,-1" size="67,12" border="left|bottom|right">
       <font face="verdana" size="8" />
       <code>codeQR</code>
-      <size>12,12</size>
+      <size>46,46</size>
     </item>
   </label>
 
@@ -1373,7 +1373,7 @@
     <item text="$$12" state="dynamic" image="true" offset="0,72" position="18,-1" size="67,12" border="left|bottom|right">
       <font face="verdana" size="8" />
       <code>codeQR</code>
-      <size>12,12</size>
+      <size>46,46</size>
     </item>
   </label>
 
@@ -1966,11 +1966,10 @@
       <code>code128</code>
       <size>65,10</size>
     </item>
-    <!-- ID 2DCode image size不作用-->
-    <item text="$$2,$$8,$$1,$$6,$$15,$$10" state="dynamic" image="true" offset="0,0" position="50,54" size="67,12">
+    <item text="$$2,$$8,$$1,$$6,$$15,$$10" state="dynamic" image="true" offset="0,0" position="47,53" size="67,10">
       <font face="verdana" size="8" />
       <code>codeQR</code>
-      <size>30,30</size>
+      <size>77,77</size>
     </item>
     
     <!--PKG ID-->

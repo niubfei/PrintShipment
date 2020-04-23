@@ -71,7 +71,9 @@ namespace LabelPrint
             Brush b = new SolidBrush(Color.Black);
             g.DrawString("Pallet Detail", new Font("宋体", 30f), b, new Point(275, 10));
             g.DrawString(ID, new Font("宋体", 15f), b, new Point(320, 60));
-            g.DrawImage(BarcodeHelper.QRcode(QRcode, 100,100), new Point(700, 30));
+            Image img = BarcodeHelper.QRcode(QRcode, 200, 200);
+            img = BarcodeHelper.pictureProcess(img,88,88);
+            g.DrawImage(img, new Point(700, 30));
 
             int x1 = 30, y2 = 150, xAdd2 = 200, yAdd2 = 20;
             g.DrawString("No.", f, b, new Point(x1 + xAdd2 * 0, y2));

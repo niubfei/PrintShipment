@@ -7,14 +7,14 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="LabelPrint.exe.manifest" size="10881">
+    <dependentAssembly dependencyType="install" codebase="LabelPrint.exe.manifest" size="10885">
       <assemblyIdentity name="LabelPrint.exe" version="2.0.0807.1931" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>I03rX2q2l97J51Olpf19ODoKWP+82G6RQWKiBOPz5gI=</dsig:DigestValue>
+        <dsig:DigestValue>wcVp7PC/Jb3nVvhrN9wtwoY97mo8BsBlOXjFd84nmW0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

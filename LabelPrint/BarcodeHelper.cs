@@ -32,8 +32,9 @@ namespace LabelPrint
             writer.Format = BarcodeFormat.QR_CODE;
             QrCodeEncodingOptions options = new QrCodeEncodingOptions()
             {
-                DisableECI = true,//设置内容编码
-                CharacterSet = "UTF-8",  //设置二维码的宽度和高度
+                DisableECI = true,
+                CharacterSet = "UTF-8",//设置内容编码
+                //设置二维码的宽度和高度
                 Width = width,
                 Height = height,
                 Margin = 1//设置二维码的边距,单位不是固定像素
@@ -138,6 +139,55 @@ namespace LabelPrint
                 }
             }
             return resMatrix;
+        }
+
+        public static Image pictureProcess(Image sourceImage, int targetWidth, int targetHeight)
+        {
+            int width;//图片最终的宽
+            int height;//图片最终的高
+            try
+            {
+                System.Drawing.Imaging.ImageFormat format = sourceImage.RawFormat;
+                Bitmap targetPicture = new Bitmap(targetWidth, targetHeight);
+                Graphics g = Graphics.FromImage(targetPicture);
+                g.Clear(Color.White);
+
+                //计算缩放图片的大小
+                if (sourceImage.Width > targetWidth && sourceImage.Height <= targetHeight)
+                {
+                    width = targetWidth;
+                    height = (width * sourceImage.Height) / sourceImage.Width;
+                }
+                else if (sourceImage.Width <= targetWidth && sourceImage.Height > targetHeight)
+                {
+                    height = targetHeight;
+                    width = (height * sourceImage.Width) / sourceImage.Height;
+                }
+                else if (sourceImage.Width <= targetWidth && sourceImage.Height <= targetHeight)
+                {
+                    width = sourceImage.Width;
+                    height = sourceImage.Height;
+                }
+                else
+                {
+                    width = targetWidth;
+                    height = (width * sourceImage.Height) / sourceImage.Width;
+                    if (height > targetHeight)
+                    {
+                        height = targetHeight;
+                        width = (height * sourceImage.Width) / sourceImage.Height;
+                    }
+                }
+                g.DrawImage(sourceImage, (targetWidth - width) / 2, (targetHeight - height) / 2, width, height);
+                sourceImage.Dispose();
+
+                return targetPicture;
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return null;
         }
     }
 }

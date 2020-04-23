@@ -3,7 +3,7 @@
   <constant>
     <pegatoron_pn>04AH-034Q0AC</pegatoron_pn>
     <apn>610-00171</apn>
-    <rev>AB</rev>
+    <rev>08</rev>
     <config>N/A</config>
     <desc>ASSY,ARC,NIDEC,X936</desc>
     <stage>JDMP</stage>
@@ -15,11 +15,11 @@
   </constant>
   <conversion>
     <pack-tray>1</pack-tray>
-    <carton-pack>2</carton-pack>
-    <pallet-carton>48</pallet-carton>
+    <carton-pack>1</carton-pack>
+    <pallet-carton>1</pallet-carton>
   </conversion>
   <checkModuleBin>
-    <switch>ON</switch>
+    <switch>OFF</switch>
     <bin>HD2G</bin>
   </checkModuleBin>
   <newFXZZ>
