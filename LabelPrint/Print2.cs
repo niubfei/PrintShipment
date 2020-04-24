@@ -73,9 +73,9 @@ namespace LabelPrint
             g.DrawString(ID, new Font("宋体", 15f), b, new Point(320, 60));
             Image img = BarcodeHelper.QRcode(QRcode, 200, 200);
             img = BarcodeHelper.pictureProcess(img,88,88);
-            g.DrawImage(img, new Point(700, 30));
+            g.DrawImage(img, new Point(650, 30));
 
-            int x1 = 30, y2 = 150, xAdd2 = 200, yAdd2 = 20;
+            int x1 = 30, y2 = 150, xAdd2 = 170, yAdd2 = 20;
             g.DrawString("No.", f, b, new Point(x1 + xAdd2 * 0, y2));
             g.DrawString("箱号", f, b, new Point(x1 + xAdd2 * 1, y2));
             g.DrawString("料号", f, b, new Point(x1 + xAdd2 * 2, y2));
@@ -101,7 +101,7 @@ namespace LabelPrint
             //}
             #endregion
 
-            int x2 = 70, y1 = 100, xAdd1 = 190, yAdd1 = 20;
+            int x2 = 70, y1 = 100, xAdd1 = 170, yAdd1 = 20;
             g.DrawString("Item", f, b, new Point(x2 + xAdd1 * 0, y1));
             g.DrawString("料号", f, b, new Point(x2 + xAdd1 * 1, y1));
             g.DrawString("大箱数量", f, b, new Point(x2 + xAdd1 * 2, y1));

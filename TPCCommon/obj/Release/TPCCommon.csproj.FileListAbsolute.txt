@@ -21,3 +21,10 @@ C:\Users\yyx19\Desktop\PrintShipment\TPCCommon\obj\Release\TPCCommon.csproj.Core
 C:\Users\yyx19\Desktop\PrintShipment\TPCCommon\obj\Release\TPCCommon.csproj.CopyComplete
 C:\Users\yyx19\Desktop\PrintShipment\TPCCommon\obj\Release\TPCCommon.dll
 C:\Users\yyx19\Desktop\PrintShipment\TPCCommon\obj\Release\TPCCommon.pdb
+C:\Users\yyx19\Desktop\git\PrintShipment - 副本\bin\Release\TPCCommon.dll
+C:\Users\yyx19\Desktop\git\PrintShipment - 副本\bin\Release\TPCCommon.pdb
+C:\Users\yyx19\Desktop\git\PrintShipment - 副本\TPCCommon\obj\Release\TPCCommon.csprojAssemblyReference.cache
+C:\Users\yyx19\Desktop\git\PrintShipment - 副本\TPCCommon\obj\Release\TPCCommon.csproj.CoreCompileInputs.cache
+C:\Users\yyx19\Desktop\git\PrintShipment - 副本\TPCCommon\obj\Release\TPCCommon.csproj.CopyComplete
+C:\Users\yyx19\Desktop\git\PrintShipment - 副本\TPCCommon\obj\Release\TPCCommon.dll
+C:\Users\yyx19\Desktop\git\PrintShipment - 副本\TPCCommon\obj\Release\TPCCommon.pdb
