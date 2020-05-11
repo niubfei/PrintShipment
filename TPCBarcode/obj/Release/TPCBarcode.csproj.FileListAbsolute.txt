@@ -14,3 +14,11 @@ C:\Users\yyx19\Desktop\PrintShipment\TPCBarcode\obj\Release\TPCBarcode.csproj.Co
 C:\Users\yyx19\Desktop\PrintShipment\TPCBarcode\obj\Release\TPCBarcode.csproj.CopyComplete
 C:\Users\yyx19\Desktop\PrintShipment\TPCBarcode\obj\Release\TPCBarcode.dll
 C:\Users\yyx19\Desktop\PrintShipment\TPCBarcode\obj\Release\TPCBarcode.pdb
+D:\code\PrintShipment\bin\Release\example.config
+D:\code\PrintShipment\bin\Release\TPCBarcode.dll
+D:\code\PrintShipment\bin\Release\TPCBarcode.pdb
+D:\code\PrintShipment\TPCBarcode\obj\Release\TPCBarcode.csproj.CoreCompileInputs.cache
+D:\code\PrintShipment\TPCBarcode\obj\Release\TPCBarcode.csproj.CopyComplete
+D:\code\PrintShipment\TPCBarcode\obj\Release\TPCBarcode.dll
+D:\code\PrintShipment\TPCBarcode\obj\Release\TPCBarcode.pdb
+D:\code\PrintShipment\TPCBarcode\obj\Release\TPCBarcode.csprojAssemblyReference.cache

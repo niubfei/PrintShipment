@@ -71,7 +71,7 @@ namespace LabelPrint
             Brush b = new SolidBrush(Color.Black);
             g.DrawString("Pallet Detail", new Font("宋体", 30f), b, new Point(275, 10));
             g.DrawString(ID, new Font("宋体", 15f), b, new Point(320, 60));
-            TPCBarcode.Common.Code.CodeQR pic = new TPCBarcode.Common.Code.CodeQR();
+            TPCBarcode.Common.Code.CodeQR_2cm pic = new TPCBarcode.Common.Code.CodeQR_2cm();
             pic.Width = pic.Height = 77;//2cm*2cm的二维码
             Image img = pic.Create(QRcode);
             g.DrawImage(img, new Point(650, 30));

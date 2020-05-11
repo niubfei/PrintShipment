@@ -1966,9 +1966,9 @@
       <code>code128</code>
       <size>65,10</size>
     </item>
-    <item text="$$2,$$8,$$1,$$6,$$15,$$10" state="dynamic" image="true" offset="0,0" position="43,34" size="67,10">
+    <item text="$$2,$$8,$$1,$$6,$$15,$$10" state="dynamic" image="true" offset="0,0" position="42,37" size="67,10">
       <font face="verdana" size="8" />
-      <code>codeQR</code>
+      <code>codeQR_2cm</code>
       <size>77,77</size>
     </item>
     

@@ -37,3 +37,11 @@ C:\Users\yyx19\Desktop\PrintShipment\TPCCommon\obj\Debug\TPCCommon.csproj.CoreCo
 C:\Users\yyx19\Desktop\PrintShipment\TPCCommon\obj\Debug\TPCCommon.csproj.CopyComplete
 C:\Users\yyx19\Desktop\PrintShipment\TPCCommon\obj\Debug\TPCCommon.dll
 C:\Users\yyx19\Desktop\PrintShipment\TPCCommon\obj\Debug\TPCCommon.pdb
+D:\code\PrintShipment\TPCCommon\bin\Debug\TPCCommon.dll
+D:\code\PrintShipment\TPCCommon\bin\Debug\TPCCommon.pdb
+D:\code\PrintShipment\TPCCommon\bin\Debug\Mono.Security.dll
+D:\code\PrintShipment\TPCCommon\bin\Debug\Npgsql.dll
+D:\code\PrintShipment\TPCCommon\obj\Debug\TPCCommon.csproj.CoreCompileInputs.cache
+D:\code\PrintShipment\TPCCommon\obj\Debug\TPCCommon.csproj.CopyComplete
+D:\code\PrintShipment\TPCCommon\obj\Debug\TPCCommon.dll
+D:\code\PrintShipment\TPCCommon\obj\Debug\TPCCommon.pdb

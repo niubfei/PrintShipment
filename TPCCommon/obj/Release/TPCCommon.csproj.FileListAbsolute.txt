@@ -28,3 +28,9 @@ C:\Users\yyx19\Desktop\git\PrintShipment\TPCCommon\obj\Release\TPCCommon.csproj.
 C:\Users\yyx19\Desktop\git\PrintShipment\TPCCommon\obj\Release\TPCCommon.csproj.CopyComplete
 C:\Users\yyx19\Desktop\git\PrintShipment\TPCCommon\obj\Release\TPCCommon.dll
 C:\Users\yyx19\Desktop\git\PrintShipment\TPCCommon\obj\Release\TPCCommon.pdb
+D:\code\PrintShipment\bin\Release\TPCCommon.dll
+D:\code\PrintShipment\bin\Release\TPCCommon.pdb
+D:\code\PrintShipment\TPCCommon\obj\Release\TPCCommon.csproj.CoreCompileInputs.cache
+D:\code\PrintShipment\TPCCommon\obj\Release\TPCCommon.csproj.CopyComplete
+D:\code\PrintShipment\TPCCommon\obj\Release\TPCCommon.dll
+D:\code\PrintShipment\TPCCommon\obj\Release\TPCCommon.pdb

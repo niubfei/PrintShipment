@@ -173,3 +173,13 @@ C:\Users\yyx19\Desktop\PrintShipment\OUT\obj\Debug\OUT.csproj.CoreCompileInputs.
 C:\Users\yyx19\Desktop\PrintShipment\OUT\obj\Debug\OUT.csproj.CopyComplete
 C:\Users\yyx19\Desktop\PrintShipment\OUT\obj\Debug\OUT.exe
 C:\Users\yyx19\Desktop\PrintShipment\OUT\obj\Debug\OUT.pdb
+D:\code\PrintShipment\bin\Debug\OUT.exe.config
+D:\code\PrintShipment\bin\Debug\OUT.exe
+D:\code\PrintShipment\bin\Debug\OUT.pdb
+D:\code\PrintShipment\OUT\obj\Debug\OUT.Form_Invoice.resources
+D:\code\PrintShipment\OUT\obj\Debug\OUT.Properties.Resources.resources
+D:\code\PrintShipment\OUT\obj\Debug\OUT.csproj.GenerateResource.cache
+D:\code\PrintShipment\OUT\obj\Debug\OUT.csproj.CoreCompileInputs.cache
+D:\code\PrintShipment\OUT\obj\Debug\OUT.csproj.CopyComplete
+D:\code\PrintShipment\OUT\obj\Debug\OUT.exe
+D:\code\PrintShipment\OUT\obj\Debug\OUT.pdb

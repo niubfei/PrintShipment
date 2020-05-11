@@ -27,3 +27,10 @@ C:\Users\yyx19\Desktop\git\PrintShipment\TPCBarcode\obj\Debug\TPCBarcode.csproj.
 C:\Users\yyx19\Desktop\git\PrintShipment\TPCBarcode\obj\Debug\TPCBarcode.csproj.CopyComplete
 C:\Users\yyx19\Desktop\git\PrintShipment\TPCBarcode\obj\Debug\TPCBarcode.dll
 C:\Users\yyx19\Desktop\git\PrintShipment\TPCBarcode\obj\Debug\TPCBarcode.pdb
+D:\code\PrintShipment\bin\Debug\example.config
+D:\code\PrintShipment\bin\Debug\TPCBarcode.dll
+D:\code\PrintShipment\bin\Debug\TPCBarcode.pdb
+D:\code\PrintShipment\TPCBarcode\obj\Debug\TPCBarcode.csproj.CoreCompileInputs.cache
+D:\code\PrintShipment\TPCBarcode\obj\Debug\TPCBarcode.csproj.CopyComplete
+D:\code\PrintShipment\TPCBarcode\obj\Debug\TPCBarcode.dll
+D:\code\PrintShipment\TPCBarcode\obj\Debug\TPCBarcode.pdb

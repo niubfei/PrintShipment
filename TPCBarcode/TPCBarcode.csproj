@@ -47,6 +47,7 @@
     <Compile Include="Common\BarcodeFactory.cs" />
     <Compile Include="Common\Code\Code128.cs" />
     <Compile Include="Common\Code\Code39.cs" />
+    <Compile Include="Common\Code\CodeQR_2cm.cs" />
     <Compile Include="Common\Code\CodeQR.cs" />
     <Compile Include="Common\Code\CodeQRMini.cs" />
     <Compile Include="Common\GDIAPI.cs" />

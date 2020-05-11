@@ -146,3 +146,13 @@ C:\Users\yyx19\Desktop\git\PrintShipment\OUT\obj\Release\OUT.csproj.CoreCompileI
 C:\Users\yyx19\Desktop\git\PrintShipment\OUT\obj\Release\OUT.csproj.CopyComplete
 C:\Users\yyx19\Desktop\git\PrintShipment\OUT\obj\Release\OUT.exe
 C:\Users\yyx19\Desktop\git\PrintShipment\OUT\obj\Release\OUT.pdb
+D:\code\PrintShipment\bin\Release\OUT.exe.config
+D:\code\PrintShipment\bin\Release\OUT.exe
+D:\code\PrintShipment\bin\Release\OUT.pdb
+D:\code\PrintShipment\OUT\obj\Release\OUT.Form_Invoice.resources
+D:\code\PrintShipment\OUT\obj\Release\OUT.Properties.Resources.resources
+D:\code\PrintShipment\OUT\obj\Release\OUT.csproj.GenerateResource.cache
+D:\code\PrintShipment\OUT\obj\Release\OUT.csproj.CoreCompileInputs.cache
+D:\code\PrintShipment\OUT\obj\Release\OUT.csproj.CopyComplete
+D:\code\PrintShipment\OUT\obj\Release\OUT.exe
+D:\code\PrintShipment\OUT\obj\Release\OUT.pdb

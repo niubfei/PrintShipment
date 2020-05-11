@@ -127,6 +127,10 @@ namespace TPCBarcode.LabelPrint
                                 {
                                     item.Barcode = BarcodeFactory.CreateBarcode(BarcodeType.Code_QR_Mini);
                                 }
+                                else if (nodCode.InnerText.Equals("codeQR_2cm"))
+                                {
+                                    item.Barcode = BarcodeFactory.CreateBarcode(BarcodeType.Code_QR_2cm);
+                                }
                             }
                             else
                             {
