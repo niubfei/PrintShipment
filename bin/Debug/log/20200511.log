@@ -1,4 +1,0 @@
-[INF] 2020-05-11 14:42:12 === Create database NIDEC category:PostgreSQL
-[INF] 2020-05-11 14:42:18 === Open database OK.
-[INF] 2020-05-11 14:42:18 === Execute SQL:select user_id, user_name, pass, u_role from t_user where user_id = @user
-[INF] 2020-05-11 14:42:18 === 		Parameters:{ParamName:@user, DbType:AnsiString, Value:20181115110. }

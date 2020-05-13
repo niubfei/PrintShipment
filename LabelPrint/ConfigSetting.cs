@@ -405,6 +405,14 @@ namespace LabelPrint
                     nod = nodConstant.AppendChild(doc.CreateElement("batch"));
                 }
                 nod.InnerText = m_batch;
+
+                //Batch
+                nod = nodConstant.SelectSingleNode("vendor_pn");
+                if (nod == null)
+                {
+                    nod = nodConstant.AppendChild(doc.CreateElement("vendor_pn"));
+                }
+                nod.InnerText = m_Vendor_PN;
                 #endregion
 
                 #region Unit Conersion
