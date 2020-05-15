@@ -34,6 +34,10 @@ namespace LabelPrint
         }
 
         #region 开放公共控件属性
+        public CheckBox PFXZZFormat
+        {
+            get { return cheFXZZ; }
+        }
         public Label PNoLabel
         {
             get { return lbPNo; }

@@ -4,7 +4,7 @@
   <description asmv2:iconFile="barcode.ico" asmv2:publisher="Technopro China" co.v1:suiteName="LabelPrint" asmv2:product="LabelPrint" asmv2:supportUrl="http://172.27.42.15:9600/" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="LabelPrint" version="2.2020.512.1330" language="neutral" processorArchitecture="x86" />
+    <assemblyIdentity name="LabelPrint" version="2.2020.515.1530" language="neutral" processorArchitecture="x86" />
     <commandLine file="LabelPrint.exe" parameters="" />
   </entryPoint>
   <co.v1:useManifestForTrust xmlns="urn:schemas-microsoft-com:asm.v1" />
@@ -44,14 +44,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LabelPrint.exe" size="176128">
-      <assemblyIdentity name="LabelPrint" version="2.2020.512.1330" language="neutral" processorArchitecture="x86" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LabelPrint.exe" size="177152">
+      <assemblyIdentity name="LabelPrint" version="2.2020.515.1530" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>khqPB2bP7U1/2Bnxev/prJ39ObfaUjMDd5zs9damqmA=</dsig:DigestValue>
+        <dsig:DigestValue>Wr8xe0W4Ci/5ZkUF6d5QhhVFEhNtIqlvIjjW9dXo2wE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -87,7 +87,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NGsLro1Iw0+0I5/xL9O9O+cUw3qGtO00RMKah7LJJcw=</dsig:DigestValue>
+        <dsig:DigestValue>WrTREudi3w60AVuR3BN8iK1rRszXXptyVCb4Sgepems=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -123,7 +123,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>CHE25G8Qhu7B2WlRTc0MUCrCcvzQpXsO9CKKh908JC4=</dsig:DigestValue>
+        <dsig:DigestValue>QKuwHqFpSyOJ8EPDHTpYfeM5Tr5kgQfD4fc06VELAlw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

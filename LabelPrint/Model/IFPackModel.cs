@@ -105,9 +105,9 @@ namespace LabelPrint.Model
         /// 计算编码中日期的值
         /// </summary>
         /// <returns></returns>
-        protected string GetCodeDate( bool isOld)
+        protected string GetCodeDate( int type)
         {
-            if (isOld)
+            if (type == 1)
             {
                 DateTime day = Parent.DatePicker.Value;
                 string year = string.Format("{0:yyyy}", day).Substring(3);
@@ -115,7 +115,7 @@ namespace LabelPrint.Model
                 string week = string.Format("{0:d2}", gc.GetWeekOfYear(day, CalendarWeekRule.FirstDay, DayOfWeek.Sunday));
                 return string.Format("{0}{1}{2}", year, week, (int)day.DayOfWeek + 1);
             }
-            else
+            else if (type == 2)
             {
                 string CodeDate = DateTime.Today.ToString("yyyyMdd");
                 if (CodeDate.Length == 8)
@@ -136,6 +136,16 @@ namespace LabelPrint.Model
                 }
                 return CodeDate;
             }
+            else if (type == 3)
+            {
+                DateTime CodeDate = DateTime.Today;
+                string year = CodeDate.ToString("yyyy");
+                GregorianCalendar gc = new GregorianCalendar();
+                string week = string.Format("{0:d2}", gc.GetWeekOfYear(CodeDate, CalendarWeekRule.FirstDay, DayOfWeek.Sunday));
+                return string.Format("{0}W{1}", year, week);
+            }
+            else
+                return "";
         }
 
         /// <summary>
@@ -271,7 +281,7 @@ namespace LabelPrint.Model
         /// 从窗口获得标签数据
         /// </summary>
         /// <returns></returns>
-        protected PrintLabelData GetLabelData(bool isOld)
+        protected PrintLabelData GetLabelData(int type)
         {
             PrintLabelData data = new PrintLabelData();
             data.PCode = Parent.PNoEdit.Text;
@@ -279,7 +289,7 @@ namespace LabelPrint.Model
             {
                 data.CCode.Add(item.SubItems[1].Text);
             }
-            data.DataCode = GetCodeDate(isOld);
+            data.DataCode = GetCodeDate(type);
             //修改日期20180518
             data.Date = GetDate();
             data.Quantity = Convert.ToInt32(Parent.QTYEdit.Text);

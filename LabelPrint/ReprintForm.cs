@@ -402,13 +402,10 @@ namespace LabelPrint
             List<string> parametersSecond = MakePrintParameters(m_Mode, data);
 
             #region 修改打印参数
-            #region lotNo
-            string lotNo = parametersSecond[14];
-            parametersSecond[14] = lotNo.Substring(0, lotNo.Length - 1);
-            #endregion
-
-
-            parametersSecond[5] = changeDateFormat(parametersSecond[14].Substring(3));
+            //富士康"Date Code"
+            parametersSecond[5] = changeDateFormat(parametersSecond[14].Substring(3, 4));
+            //富士康"Lot No"固定为NA+YY（年）WW（周）
+            parametersSecond[14] = "NA" + parametersSecond[14].Substring(0, parametersSecond[14].Length - 1);
 
             ///将时间格式9013改成2019-01-03
             string changeDateFormat(string dateCode)

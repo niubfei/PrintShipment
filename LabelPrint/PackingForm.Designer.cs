@@ -48,6 +48,7 @@
             this.txtPNo = new System.Windows.Forms.TextBox();
             this.btPrintLabelNew = new System.Windows.Forms.Button();
             this.btPrintLabel3 = new System.Windows.Forms.Button();
+            this.cheFXZZ = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btPrintLabel
@@ -86,6 +87,7 @@
             this.colPacktime});
             this.lstItems.FullRowSelect = true;
             this.lstItems.GridLines = true;
+            this.lstItems.HideSelection = false;
             this.lstItems.Location = new System.Drawing.Point(12, 107);
             this.lstItems.Name = "lstItems";
             this.lstItems.Size = new System.Drawing.Size(980, 419);
@@ -238,11 +240,25 @@
             this.btPrintLabel3.UseVisualStyleBackColor = true;
             this.btPrintLabel3.Click += new System.EventHandler(this.BtPrintLabel3_Click);
             // 
+            // cheFXZZ
+            // 
+            this.cheFXZZ.AutoSize = true;
+            this.cheFXZZ.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cheFXZZ.Checked = true;
+            this.cheFXZZ.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cheFXZZ.Location = new System.Drawing.Point(6, 34);
+            this.cheFXZZ.Name = "cheFXZZ";
+            this.cheFXZZ.Size = new System.Drawing.Size(115, 29);
+            this.cheFXZZ.TabIndex = 30;
+            this.cheFXZZ.Text = "FXZZ格式";
+            this.cheFXZZ.UseVisualStyleBackColor = true;
+            // 
             // PackingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1003, 592);
+            this.Controls.Add(this.cheFXZZ);
             this.Controls.Add(this.btPrintLabel3);
             this.Controls.Add(this.btPrintLabelNew);
             this.Controls.Add(this.btPrintLabel);
@@ -295,5 +311,6 @@
         private System.Windows.Forms.TextBox txtPNo;
         private System.Windows.Forms.Button btPrintLabelNew;
         private System.Windows.Forms.Button btPrintLabel3;
+        private System.Windows.Forms.CheckBox cheFXZZ;
     }
 }
