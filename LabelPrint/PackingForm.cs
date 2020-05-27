@@ -293,6 +293,12 @@ namespace LabelPrint
                 return;
             }
 
+            if (!"123456789ABC".Contains(txtPNo.Text.Substring(10, 1)))
+            {
+                MessageBox.Show("该ID格式错误", "ID格式错误", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             //检查明细的状态，如果为1则已经打印，不能在这里打印了
             if (lstItems.Tag != null)
             {
@@ -403,6 +409,12 @@ namespace LabelPrint
                 return;
             }
 
+            if (txtPNo.Text.Substring(10, 1) != "W")
+            {
+                MessageBox.Show("该ID格式错误", "ID格式错误",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                return;
+            }
+
             //检查明细的状态，如果为1则已经打印，不能在这里打印了
             if (lstItems.Tag != null)
             {
@@ -438,6 +450,12 @@ namespace LabelPrint
             if (lstItems.Items.Count < Convert.ToInt32(txtTotal.Text))
             {
                 MessageBox.Show(LabelPrintGlobal.ShowWarningMessage("NOT_FULL_QUANTITY_ERROR"), "ERROR", MessageBoxButtons.OK);
+                return;
+            }
+
+            if (!"123456789ABC".Contains(txtPNo.Text.Substring(10, 1)))
+            {
+                MessageBox.Show("该ID格式错误", "ID格式错误", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

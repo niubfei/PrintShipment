@@ -1941,12 +1941,12 @@
       <size>30,10</size>
     </item>
     <!--Lot No-->
-    <item text="Lot No:$$15" state="dynamic" image="false" offset="0,0" position="35,18" size="12,5">
+    <item text="Lot No:$$15" state="dynamic" image="false" offset="0,0" position="30,18" size="12,5">
       <font face="verdana" size="8" />
     </item>
-    <item text="$$15" state="dynamic" image="true" offset="0,0" position="35,22" size="55,8">
+    <item text="$$15" state="dynamic" image="true" offset="0,0" position="30,22" size="55,8">
       <code>code128</code>
-      <size>30,10</size>
+      <size>65,10</size>
     </item>
     
     <!--Mfr P/N-->

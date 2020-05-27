@@ -183,3 +183,13 @@ D:\code\PrintShipment\OUT\obj\Debug\OUT.csproj.CoreCompileInputs.cache
 D:\code\PrintShipment\OUT\obj\Debug\OUT.csproj.CopyComplete
 D:\code\PrintShipment\OUT\obj\Debug\OUT.exe
 D:\code\PrintShipment\OUT\obj\Debug\OUT.pdb
+D:\code\internet\PrintShipment\bin\Debug\OUT.exe.config
+D:\code\internet\PrintShipment\bin\Debug\OUT.exe
+D:\code\internet\PrintShipment\bin\Debug\OUT.pdb
+D:\code\internet\PrintShipment\OUT\obj\Debug\OUT.Form_Invoice.resources
+D:\code\internet\PrintShipment\OUT\obj\Debug\OUT.Properties.Resources.resources
+D:\code\internet\PrintShipment\OUT\obj\Debug\OUT.csproj.GenerateResource.cache
+D:\code\internet\PrintShipment\OUT\obj\Debug\OUT.csproj.CoreCompileInputs.cache
+D:\code\internet\PrintShipment\OUT\obj\Debug\OUT.csproj.CopyComplete
+D:\code\internet\PrintShipment\OUT\obj\Debug\OUT.exe
+D:\code\internet\PrintShipment\OUT\obj\Debug\OUT.pdb
