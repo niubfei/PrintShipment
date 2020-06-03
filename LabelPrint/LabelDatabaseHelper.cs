@@ -952,7 +952,7 @@ namespace LabelPrint
             }
             //更新pnt_mng
             string pcode = items[0].PCode;
-            string pack_name = items[0].Name;
+            string pack_name = items[0].Name.Replace("pnt_","");
             string mngSql = string.Format("insert into pnt_mng values ('{0}', '{1}', 'c', now(), {2}, '{3}', 2, '')", pcode, pack_name, items.Count, username);
             sqls.Add(mngSql);
 
@@ -1177,5 +1177,19 @@ namespace LabelPrint
             return result;
         }
         #endregion
+
+        public TPCResult<string> ChangePackID(string a_old_pack_id,string a_user,string a_vendor,string a_sitecode,string a_date)
+        {
+            //存储过程参数
+            List<DbParameter> parameters = new List<DbParameter>();
+            parameters.Add(new DbParameter("@old_pack_id", DbType.AnsiString, a_old_pack_id));
+            parameters.Add(new DbParameter("@user", DbType.AnsiString, a_user));
+            parameters.Add(new DbParameter("@vendor", DbType.AnsiString, a_vendor));
+            parameters.Add(new DbParameter("@sitecode", DbType.AnsiString, a_sitecode));
+            parameters.Add(new DbParameter("@date", DbType.AnsiString, a_date));
+            //执行存储过程
+            TPCResult<string> ret = Database.ExecuteSP("fn_change_pack_id", parameters);
+            return ret;
+        }
     }
 }

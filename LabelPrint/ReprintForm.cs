@@ -666,6 +666,63 @@ namespace LabelPrint
                 MessageBox.Show(ret.Message);
                 return;
             }
-        }       
+        }
+
+        private void txtChangePackID_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Return)
+            {
+                if (txtChangePackID.Text.Length != 18)
+                {
+                    MessageBox.Show("该包ID不是18位","格式错误",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    return;
+                }
+                bool isFXZZ = txtChangePackID.Text.Substring(10, 1) == "W";
+                int type = isFXZZ ? 2 : 3;
+                TPCResult<string> result = Database.ChangePackID(txtChangePackID.Text, Program.LoginUser, LabelPrintGlobal.g_Config.Vendor, LabelPrintGlobal.g_Config.SiteCode, GetCodeDate(type));
+                if (result.State == RESULT_STATE.NG)
+                {
+                    MessageBox.Show(result.Message);
+                    return;
+                }
+                txtCode.Text = result.Value.ToString();
+                txtCode_KeyDown(sender, e);
+            }
+        }
+
+        string GetCodeDate(int type)
+        {
+            if (type == 2)
+            {
+                string CodeDate = DateTime.Today.ToString("yyyyMdd");
+                if (CodeDate.Length == 8)
+                {
+                    string key = CodeDate.Substring(4, 2);
+                    switch (key)
+                    {
+                        case "10":
+                            CodeDate = DateTime.Today.ToString("yyyyAdd");
+                            break;
+                        case "11":
+                            CodeDate = DateTime.Today.ToString("yyyyBdd");
+                            break;
+                        case "12":
+                            CodeDate = DateTime.Today.ToString("yyyyCdd");
+                            break;
+                    }
+                }
+                return CodeDate;
+            }
+            else if (type == 3)
+            {
+                DateTime CodeDate = DateTime.Today;
+                string year = CodeDate.ToString("yyyy");
+                GregorianCalendar gc = new GregorianCalendar();
+                string week = string.Format("{0:d2}", gc.GetWeekOfYear(CodeDate, CalendarWeekRule.FirstDay, DayOfWeek.Sunday));
+                return string.Format("{0}W{1}", year, week);
+            }
+            else
+                return "";
+        }
     }
 }

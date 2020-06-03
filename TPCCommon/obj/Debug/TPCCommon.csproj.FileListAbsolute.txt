@@ -53,3 +53,4 @@ D:\code\internet\PrintShipment\TPCCommon\obj\Debug\TPCCommon.csproj.CoreCompileI
 D:\code\internet\PrintShipment\TPCCommon\obj\Debug\TPCCommon.csproj.CopyComplete
 D:\code\internet\PrintShipment\TPCCommon\obj\Debug\TPCCommon.dll
 D:\code\internet\PrintShipment\TPCCommon\obj\Debug\TPCCommon.pdb
+D:\code\internet\PrintShipment\TPCCommon\obj\Debug\TPCCommon.csprojAssemblyReference.cache

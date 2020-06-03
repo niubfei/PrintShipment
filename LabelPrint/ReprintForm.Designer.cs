@@ -44,12 +44,14 @@
             this.btReprintNew = new System.Windows.Forms.Button();
             this.btReprint3 = new System.Windows.Forms.Button();
             this.btReprint = new System.Windows.Forms.Button();
+            this.txtChangePackID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbScan
             // 
             this.lbScan.AutoSize = true;
-            this.lbScan.Location = new System.Drawing.Point(7, 20);
+            this.lbScan.Location = new System.Drawing.Point(7, 40);
             this.lbScan.Name = "lbScan";
             this.lbScan.Size = new System.Drawing.Size(90, 21);
             this.lbScan.TabIndex = 0;
@@ -59,7 +61,7 @@
             // 
             this.txtCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.txtCode.ForeColor = System.Drawing.Color.Blue;
-            this.txtCode.Location = new System.Drawing.Point(103, 18);
+            this.txtCode.Location = new System.Drawing.Point(103, 37);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(355, 29);
             this.txtCode.TabIndex = 1;
@@ -191,11 +193,32 @@
             this.btReprint.UseVisualStyleBackColor = true;
             this.btReprint.Click += new System.EventHandler(this.btReprint_Click);
             // 
+            // txtChangePackID
+            // 
+            this.txtChangePackID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.txtChangePackID.ForeColor = System.Drawing.Color.Blue;
+            this.txtChangePackID.Location = new System.Drawing.Point(103, 5);
+            this.txtChangePackID.Name = "txtChangePackID";
+            this.txtChangePackID.Size = new System.Drawing.Size(355, 29);
+            this.txtChangePackID.TabIndex = 27;
+            this.txtChangePackID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtChangePackID_KeyDown);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 21);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "包号转换：";
+            // 
             // ReprintForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(788, 526);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtChangePackID);
             this.Controls.Add(this.btReprint3);
             this.Controls.Add(this.btClose);
             this.Controls.Add(this.btReprintNew);
@@ -238,5 +261,7 @@
         private System.Windows.Forms.Button btReprintNew;
         private System.Windows.Forms.Button btReprint3;
         private System.Windows.Forms.Button btReprint;
+        private System.Windows.Forms.TextBox txtChangePackID;
+        private System.Windows.Forms.Label label1;
     }
 }
