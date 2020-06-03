@@ -13,12 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testor", "Testor\Testor.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OUT", "OUT\OUT.csproj", "{1205C0A9-F8CD-4671-8D1F-2C919192B17F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FCA5AF71-93BC-4F82-A22A-2973FBE50D2F}"
-	ProjectSection(SolutionItems) = preProject
-		Database.txt = Database.txt
-		Update.txt = Update.txt
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
