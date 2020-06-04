@@ -2,7 +2,3 @@ update
 	20190528	PackingForm三个卡页加入了核对bin的功能
 	在新界面NewFXZZ删除了要满了（装载个数等于总数）才可以打印
 	打印标签的datecode将时间格式9013改成2019-01-03
-
-remark
-	//< param name = "status" > 状态:0 = BEGIN; 1 = COMPLETED; 2 = CANCELED </ param >
-	//public TPCResult<bool> SetManagerData(PACK_MODE mode, string id, string user, int qty, PACK_ACTION action, PACK_STATUS status)
