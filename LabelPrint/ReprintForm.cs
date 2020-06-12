@@ -426,25 +426,23 @@ namespace LabelPrint
                     labelFrist.Print(setting, parametersFrist);
 
                     dlg = new PrintDialog();
-                    if (dlg.ShowDialog() != DialogResult.OK)
+                    if (dlg.ShowDialog() == DialogResult.OK)
                     {
-                        return;
+                        setting = dlg.PrinterSettings;
+                        labelSecond.Print(setting, parametersSecond);
                     }
-                    setting = dlg.PrinterSettings;
-                    labelSecond.Print(setting, parametersSecond);
                     break;
                 case PACK_MODE.Carton:
                     labelFrist.Print(setting, parametersFrist);
                     labelFrist.Print(setting, parametersFrist);
 
                     dlg = new PrintDialog();
-                    if (dlg.ShowDialog() != DialogResult.OK)
+                    if (dlg.ShowDialog() == DialogResult.OK)
                     {
-                        return;
+                        setting = dlg.PrinterSettings;
+                        labelSecond.Print(setting, parametersSecond);
+                        labelSecond.Print(setting, parametersSecond);
                     }
-                    setting = dlg.PrinterSettings;
-                    labelSecond.Print(setting, parametersSecond);
-                    labelSecond.Print(setting, parametersSecond);
                     break;
                 case PACK_MODE.Pallet:
                     labelFrist.Print(setting, parametersFrist);
@@ -453,60 +451,58 @@ namespace LabelPrint
                     labelFrist.Print(setting, parametersFrist);
 
                     dlg = new PrintDialog();
-                    if (dlg.ShowDialog() != DialogResult.OK)
+                    if (dlg.ShowDialog() == DialogResult.OK)
                     {
-                        return;
+                        setting = dlg.PrinterSettings;
+                        labelSecond.Print(setting, parametersSecond);
+                        labelSecond.Print(setting, parametersSecond);
+                        labelSecond.Print(setting, parametersSecond);
+                        labelSecond.Print(setting, parametersSecond);
                     }
-                    setting = dlg.PrinterSettings;
-                    labelSecond.Print(setting, parametersSecond);
-                    labelSecond.Print(setting, parametersSecond);
-                    labelSecond.Print(setting, parametersSecond);
-                    labelSecond.Print(setting, parametersSecond);
 
                     #region 富士康卡板A4纸张
                     //设置新纸张大小
                     dlg = new PrintDialog();
-                    if (dlg.ShowDialog() != DialogResult.OK)
+                    if (dlg.ShowDialog() == DialogResult.OK)
                     {
-                        return;
-                    }
-                    setting = dlg.PrinterSettings;
+                        setting = dlg.PrinterSettings;
 
-                    Print2 print2 = new Print2(txtCode.Text, parametersSecond[7], parametersSecond[5], parametersSecond[14]);
+                        Print2 print2 = new Print2(txtCode.Text, parametersSecond[7], parametersSecond[5], parametersSecond[14]);
 
-                    DataTable dt = new DataTable();
-                    dt.Columns.Add("No.");
-                    dt.Columns.Add("箱号");
-                    dt.Columns.Add("料号");
-                    dt.Columns.Add("数量");
-                    int i = 0;
-                    //每行写上被包括的子标签数量等
-                    TPCResult<List<List<string>>> items = null;
-                    foreach (ListViewItem var in lstItems.Items)
-                    {
-                        string id = var.SubItems[1].Text;
-                        if (!queryInfo(id,ref items))
+                        DataTable dt = new DataTable();
+                        dt.Columns.Add("No.");
+                        dt.Columns.Add("箱号");
+                        dt.Columns.Add("料号");
+                        dt.Columns.Add("数量");
+                        int i = 0;
+                        //每行写上被包括的子标签数量等
+                        TPCResult<List<List<string>>> items = null;
+                        foreach (ListViewItem var in lstItems.Items)
+                        {
+                            string id = var.SubItems[1].Text;
+                            if (!queryInfo(id, ref items))
+                                return;
+                            if (items.Value.Count == 0)
+                                continue;
+                            DataRow dr = dt.NewRow();
+                            dr["No."] = (++i).ToString();
+                            dr["箱号"] = id;
+                            dr["料号"] = LabelPrintGlobal.g_Config.APN;
+                            dr["数量"] = items.Value[0][0].ToString();
+                            dt.Rows.Add(dr);
+                        }
+
+
+
+                        print2.ImportDataTable(dt);
+
+                        if (print2.BtnPrint_Click(setting))
+                        {
+                            print2.Dispose();
                             return;
-                        if (items.Value.Count == 0)
-                            continue;
-                        DataRow dr = dt.NewRow();
-                        dr["No."] = (++i).ToString();
-                        dr["箱号"] = id;
-                        dr["料号"] = LabelPrintGlobal.g_Config.APN;
-                        dr["数量"] = items.Value[0][0].ToString();
-                        dt.Rows.Add(dr);
-                    }
-
-                   
-
-                    print2.ImportDataTable(dt);
-
-                    if (print2.BtnPrint_Click(setting))
-                    {
+                        }
                         print2.Dispose();
-                        return;
                     }
-                    print2.Dispose();
                     #endregion
                     break;
             }
@@ -608,53 +604,52 @@ namespace LabelPrint
                     #region 富士康卡板A4纸张
                     //设置新纸张大小
                     dlg = new PrintDialog();
-                    if (dlg.ShowDialog() != DialogResult.OK)
+                    if (dlg.ShowDialog() == DialogResult.OK)
                     {
-                        return;
-                    }
-                    setting = dlg.PrinterSettings;
+                        setting = dlg.PrinterSettings;
 
-                    #region 修改打印参数
-                    //富士康"Date Code"
-                    parametersSecond[5] = changeDateFormat(parametersSecond[14].Substring(3, 4));
-                    //富士康"Lot No"固定为NA+YY（年）WW（周）
-                    parametersSecond[14] = parametersSecond[14].Substring(0, parametersSecond[14].Length - 1);
-                    #endregion
-                    Print2 print2 = new Print2(txtCode.Text, parametersSecond[7], parametersSecond[5], parametersSecond[14]);
+                        #region 修改打印参数
+                        //富士康"Date Code"
+                        parametersSecond[5] = changeDateFormat(parametersSecond[14].Substring(3, 4));
+                        //富士康"Lot No"固定为NA+YY（年）WW（周）
+                        parametersSecond[14] = parametersSecond[14].Substring(0, parametersSecond[14].Length - 1);
+                        #endregion
+                        Print2 print2 = new Print2(txtCode.Text, parametersSecond[7], parametersSecond[5], parametersSecond[14]);
 
-                    DataTable dt = new DataTable();
-                    dt.Columns.Add("No.");
-                    dt.Columns.Add("箱号");
-                    dt.Columns.Add("料号");
-                    dt.Columns.Add("数量");
-                    int i = 0;
-                    //每行写上被包括的子标签数量等
-                    TPCResult<List<List<string>>> items = null;
-                    foreach (ListViewItem var in lstItems.Items)
-                    {
-                        string id = var.SubItems[1].Text;
-                        if (!queryInfo(id,ref items))
+                        DataTable dt = new DataTable();
+                        dt.Columns.Add("No.");
+                        dt.Columns.Add("箱号");
+                        dt.Columns.Add("料号");
+                        dt.Columns.Add("数量");
+                        int i = 0;
+                        //每行写上被包括的子标签数量等
+                        TPCResult<List<List<string>>> items = null;
+                        foreach (ListViewItem var in lstItems.Items)
+                        {
+                            string id = var.SubItems[1].Text;
+                            if (!queryInfo(id, ref items))
+                                return;
+                            if (items.Value.Count == 0)
+                                continue;
+                            DataRow dr = dt.NewRow();
+                            dr["No."] = (++i).ToString();
+                            dr["箱号"] = id;
+                            dr["料号"] = LabelPrintGlobal.g_Config.APN;
+                            dr["数量"] = items.Value[0][0].ToString();
+                            dt.Rows.Add(dr);
+                        }
+
+
+
+                        print2.ImportDataTable(dt);
+
+                        if (print2.BtnPrint_Click(setting))
+                        {
+                            print2.Dispose();
                             return;
-                        if (items.Value.Count == 0)
-                            continue;
-                        DataRow dr = dt.NewRow();
-                        dr["No."] = (++i).ToString();
-                        dr["箱号"] = id;
-                        dr["料号"] = LabelPrintGlobal.g_Config.APN;
-                        dr["数量"] = items.Value[0][0].ToString();
-                        dt.Rows.Add(dr);
-                    }
-
-
-
-                    print2.ImportDataTable(dt);
-
-                    if (print2.BtnPrint_Click(setting))
-                    {
+                        }
                         print2.Dispose();
-                        return;
                     }
-                    print2.Dispose();
                     #endregion
                     break;
             }

@@ -238,40 +238,38 @@ namespace LabelPrint.Model
             #region 富士康卡板A4纸张
             //设置新纸张大小
             PrinterSettings setting2 = GetPrinterSetting();
-            if (setting2 == null)
+            if (setting2 != null)
             {
-                return result;
+                Print2 print2 = new Print2(Parent.PNoEdit.Text, parametersSecond[7], parametersSecond[5], parametersSecond[14]);
+
+                DataTable dt = new DataTable();
+                dt.Columns.Add("No.");
+                dt.Columns.Add("箱号");
+                dt.Columns.Add("料号");
+                dt.Columns.Add("数量");
+                int ii = 0;
+                //每行写上被包括的子标签数量等
+                TPCResult<List<List<string>>> items2 = null;
+                foreach (ListViewItem var in Parent.ItemsListView.Items)
+                {
+                    string id = var.SubItems[1].Text;
+                    if (!queryInfo(id,ref items2))
+                        return result;
+                    if (items2.Value.Count == 0)
+                        continue;
+                    DataRow dr = dt.NewRow();
+                    dr["No."] = (++ii).ToString();
+                    dr["箱号"] = id;
+                    dr["料号"] = LabelPrintGlobal.g_Config.APN;
+                    dr["数量"] = items2.Value[0][0].ToString();
+                    dt.Rows.Add(dr);
+                }
+
+                print2.ImportDataTable(dt);
+
+                print2.BtnPrint_Click(setting2);
+                print2.Dispose();
             }
-            
-            Print2 print2 = new Print2(Parent.PNoEdit.Text, parametersSecond[7], parametersSecond[5], parametersSecond[14]);
-
-            DataTable dt = new DataTable();
-            dt.Columns.Add("No.");
-            dt.Columns.Add("箱号");
-            dt.Columns.Add("料号");
-            dt.Columns.Add("数量");
-            int ii = 0;
-            //每行写上被包括的子标签数量等
-            TPCResult<List<List<string>>> items2 = null;
-            foreach (ListViewItem var in Parent.ItemsListView.Items)
-            {
-                string id = var.SubItems[1].Text;
-                if (!queryInfo(id,ref items2))
-                    return result;
-                if (items2.Value.Count == 0)
-                    continue;
-                DataRow dr = dt.NewRow();
-                dr["No."] = (++ii).ToString();
-                dr["箱号"] = id;
-                dr["料号"] = LabelPrintGlobal.g_Config.APN;
-                dr["数量"] = items2.Value[0][0].ToString();
-                dt.Rows.Add(dr);
-            }
-
-            print2.ImportDataTable(dt);
-
-            print2.BtnPrint_Click(setting2);
-            print2.Dispose();
             #endregion
             
             //这里需要写入pnt_mng表
@@ -324,39 +322,38 @@ namespace LabelPrint.Model
             #region 富士康卡板A4纸张
             //设置新纸张大小
             PrinterSettings setting2 = GetPrinterSetting();
-            if (setting2 == null)
+            if (setting2 != null)
             {
-                return result;
+                Print2 print2 = new Print2(Parent.PNoEdit.Text, parametersSecond[7], parametersSecond[5], parametersSecond[14]);
+
+                DataTable dt = new DataTable();
+                dt.Columns.Add("No.");
+                dt.Columns.Add("箱号");
+                dt.Columns.Add("料号");
+                dt.Columns.Add("数量");
+                int ii = 0;
+                //每行写上被包括的子标签数量等
+                TPCResult<List<List<string>>> items2 = null;
+                foreach (ListViewItem var in Parent.ItemsListView.Items)
+                {
+                    string id = var.SubItems[1].Text;
+                    if (!queryInfo(id, ref items2))
+                        return result;
+                    if (items2.Value.Count == 0)
+                        continue;
+                    DataRow dr = dt.NewRow();
+                    dr["No."] = (++ii).ToString();
+                    dr["箱号"] = id;
+                    dr["料号"] = LabelPrintGlobal.g_Config.APN;
+                    dr["数量"] = items2.Value[0][0].ToString();
+                    dt.Rows.Add(dr);
+                }
+
+                print2.ImportDataTable(dt);
+
+                print2.BtnPrint_Click(setting2);
+                print2.Dispose();
             }
-            Print2 print2 = new Print2(Parent.PNoEdit.Text, parametersSecond[7], parametersSecond[5], parametersSecond[14]);
-
-            DataTable dt = new DataTable();
-            dt.Columns.Add("No.");
-            dt.Columns.Add("箱号");
-            dt.Columns.Add("料号");
-            dt.Columns.Add("数量");
-            int ii = 0;
-            //每行写上被包括的子标签数量等
-            TPCResult<List<List<string>>> items2 = null;
-            foreach (ListViewItem var in Parent.ItemsListView.Items)
-            {
-                string id = var.SubItems[1].Text;
-                if (!queryInfo(id, ref items2))
-                    return result;
-                if (items2.Value.Count == 0)
-                    continue;
-                DataRow dr = dt.NewRow();
-                dr["No."] = (++ii).ToString();
-                dr["箱号"] = id;
-                dr["料号"] = LabelPrintGlobal.g_Config.APN;
-                dr["数量"] = items2.Value[0][0].ToString();
-                dt.Rows.Add(dr);
-            }
-
-            print2.ImportDataTable(dt);
-
-            print2.BtnPrint_Click(setting2);
-            print2.Dispose();
             #endregion
 
             //这里需要写入pnt_mng表
