@@ -219,49 +219,13 @@ namespace LabelPrint.Model
             //选择性打印第二页信息
             TPCPrintLabel labelSecond = LabelPrintGlobal.g_LabelCreator.GetPrintLabel("fxzz_additional");
             List<string> parametersSecond = MakePrintParameters(PACK_MODE.Pallet, GetLabelData(2));
+
             #region 修改打印参数
-            #region dateCode            
-            //将时间格式9013改成2019-01-03            
-            string outputTime = "";
-            string dateCode = parametersSecond[14].Substring(3, 4);
-            string[] code = { dateCode.Substring(0, 1), dateCode.Substring(1, 2), dateCode.Substring(3, 1) };
-
-            //确定年
-            string today = DateTime.Today.ToString("yyyy");
-            
-            for (int i = 0; i < 10; i++)
-            {
-                if (today.Substring(3, 1).Equals(code[0]))
-                {
-                    outputTime = today;
-                    break;
-                }
-                else
-                {
-                    today = (Convert.ToInt16(today) - 1).ToString();
-                }
-            }
-            //确定月份和日
-            DateTime dtTemp = Convert.ToDateTime(outputTime + "-01-01");
-            GregorianCalendar gc = new GregorianCalendar();
-            for (int i = 0; i < 365; i++)
-            {
-                int weekOfYear = gc.GetWeekOfYear(dtTemp, CalendarWeekRule.FirstDay, DayOfWeek.Sunday);
-                int dayOfWeek = (int)dtTemp.DayOfWeek + 1;
-                if (weekOfYear == Convert.ToInt16(code[1]) && dayOfWeek == Convert.ToInt16(code[2]))
-                {
-                    outputTime = dtTemp.ToString("yyyy-MM-dd");
-                    break;
-                }
-                else { dtTemp = dtTemp.AddDays(1); }
-            }
-
-            parametersSecond[5] = outputTime;
-            #endregion
-            #region 富士康"Lot No"改为NA+lot号
+            parametersSecond[5] = changeDateFormat(parametersSecond[14].Substring(3, 4));
+            //富士康"Lot No"改为NA+lot号
             parametersSecond[14] = "NA" + parametersSecond[14].Substring(0, parametersSecond[14].Length - 1);
             #endregion
-            #endregion
+
             setting = GetPrinterSetting();
             if (setting != null)
             {
@@ -273,16 +237,13 @@ namespace LabelPrint.Model
 
             #region 富士康卡板A4纸张
             //设置新纸张大小
-
             PrinterSettings setting2 = GetPrinterSetting();
             if (setting2 == null)
             {
                 return result;
             }
-
-
-
-            Print2 print2 = new Print2(Parent.PNoEdit.Text, parametersSecond[7], outputTime, parametersSecond[14]);
+            
+            Print2 print2 = new Print2(Parent.PNoEdit.Text, parametersSecond[7], parametersSecond[5], parametersSecond[14]);
 
             DataTable dt = new DataTable();
             dt.Columns.Add("No.");
@@ -292,21 +253,10 @@ namespace LabelPrint.Model
             int ii = 0;
             //每行写上被包括的子标签数量等
             TPCResult<List<List<string>>> items2 = null;
-            bool queryInfo(string ID)
-            {
-                items2 = null;
-                items2 = Database.GetFXZZ_Data(ID);
-                if (items2.State == RESULT_STATE.NG)
-                {
-                    MessageBox.Show(items2.Message);
-                    return false;
-                }
-                return true;
-            }
             foreach (ListViewItem var in Parent.ItemsListView.Items)
             {
                 string id = var.SubItems[1].Text;
-                if (!queryInfo(id))
+                if (!queryInfo(id,ref items2))
                     return result;
                 if (items2.Value.Count == 0)
                     continue;
@@ -323,9 +273,7 @@ namespace LabelPrint.Model
             print2.BtnPrint_Click(setting2);
             print2.Dispose();
             #endregion
-
-
-
+            
             //这里需要写入pnt_mng表
             result = Database.SetManagerData(PACK_MODE.Pallet, Parent.PNoEdit.Text, Program.LoginUser,
                                             Convert.ToInt32(Parent.QTYEdit.Text), PACK_ACTION.Register,
@@ -367,6 +315,50 @@ namespace LabelPrint.Model
             labelSecond.Print(setting, parametersSecond);
             labelSecond.Print(setting, parametersSecond);
 
+            #region 修改打印参数
+            parametersSecond[5] = changeDateFormat(parametersSecond[14].Substring(3, 4));
+            //富士康"Lot No"改为NA+lot号
+            parametersSecond[14] = parametersSecond[14].Substring(0, parametersSecond[14].Length - 1);
+            #endregion
+
+            #region 富士康卡板A4纸张
+            //设置新纸张大小
+            PrinterSettings setting2 = GetPrinterSetting();
+            if (setting2 == null)
+            {
+                return result;
+            }
+            Print2 print2 = new Print2(Parent.PNoEdit.Text, parametersSecond[7], parametersSecond[5], parametersSecond[14]);
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("No.");
+            dt.Columns.Add("箱号");
+            dt.Columns.Add("料号");
+            dt.Columns.Add("数量");
+            int ii = 0;
+            //每行写上被包括的子标签数量等
+            TPCResult<List<List<string>>> items2 = null;
+            foreach (ListViewItem var in Parent.ItemsListView.Items)
+            {
+                string id = var.SubItems[1].Text;
+                if (!queryInfo(id, ref items2))
+                    return result;
+                if (items2.Value.Count == 0)
+                    continue;
+                DataRow dr = dt.NewRow();
+                dr["No."] = (++ii).ToString();
+                dr["箱号"] = id;
+                dr["料号"] = LabelPrintGlobal.g_Config.APN;
+                dr["数量"] = items2.Value[0][0].ToString();
+                dt.Rows.Add(dr);
+            }
+
+            print2.ImportDataTable(dt);
+
+            print2.BtnPrint_Click(setting2);
+            print2.Dispose();
+            #endregion
+
             //这里需要写入pnt_mng表
             result = Database.SetManagerData(PACK_MODE.Pallet, Parent.PNoEdit.Text, Program.LoginUser,
                                             Convert.ToInt32(Parent.QTYEdit.Text), PACK_ACTION.Register,
@@ -388,6 +380,56 @@ namespace LabelPrint.Model
                 return false;
             }
             return result.Value;
+        }
+
+        //dateCode将时间格式9013改成2019-01-03
+        string changeDateFormat(string dateCode)
+        {
+            string outputTime = "";
+            string[] code = { dateCode.Substring(0, 1), dateCode.Substring(1, 2), dateCode.Substring(3, 1) };
+            #region 确定年月日
+            //确定年
+            string today = DateTime.Today.ToString("yyyy");
+            for (int i = 0; i < 10; i++)
+            {
+                if (today.Substring(3, 1).Equals(code[0]))
+                {
+                    outputTime = today;
+                }
+                else
+                {
+                    today = (Convert.ToInt16(today) - 1).ToString();
+                }
+            }
+            //确定月份和日
+            DateTime dtTemp = Convert.ToDateTime(outputTime + "-01-01");
+            GregorianCalendar gc = new GregorianCalendar();
+            for (int i = 0; i < 365; i++)
+            {
+                int weekOfYear = gc.GetWeekOfYear(dtTemp, CalendarWeekRule.FirstDay, DayOfWeek.Sunday);
+                int dayOfWeek = (int)dtTemp.DayOfWeek + 1;
+                if (weekOfYear == Convert.ToInt16(code[1]) && dayOfWeek == Convert.ToInt16(code[2]))
+                {
+                    outputTime = dtTemp.ToString("yyyy-MM-dd");
+                    break;
+                }
+                else { dtTemp = dtTemp.AddDays(1); }
+            }
+            #endregion
+            return outputTime;
+        }
+
+        bool queryInfo(string ID, ref TPCResult<List<List<string>>> items)
+        {
+            items = null;
+            //m_Mode = PACK_MODE.Pack;
+            items = Database.GetFXZZ_Data(ID);
+            if (items.State == RESULT_STATE.NG)
+            {
+                MessageBox.Show(items.Message);
+                return false;
+            }
+            return true;
         }
     }
 }

@@ -1978,7 +1978,7 @@
     </item>
     <item text="$$10" state="dynamic" image="true" offset="0,0" position="0,76" size="67,10">
       <code>code128</code>
-      <size>65,10</size>
+      <size>80,10</size>
     </item>
   </label>
 </labels>

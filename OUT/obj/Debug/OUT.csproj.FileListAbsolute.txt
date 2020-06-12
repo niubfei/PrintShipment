@@ -193,4 +193,3 @@ D:\code\internet\PrintShipment\OUT\obj\Debug\OUT.csproj.CoreCompileInputs.cache
 D:\code\internet\PrintShipment\OUT\obj\Debug\OUT.csproj.CopyComplete
 D:\code\internet\PrintShipment\OUT\obj\Debug\OUT.exe
 D:\code\internet\PrintShipment\OUT\obj\Debug\OUT.pdb
-D:\code\internet\PrintShipment\OUT\obj\Debug\OUT.csprojAssemblyReference.cache
