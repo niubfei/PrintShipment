@@ -34,3 +34,10 @@ D:\code\PrintShipment\TPCBarcode\obj\Debug\TPCBarcode.csproj.CoreCompileInputs.c
 D:\code\PrintShipment\TPCBarcode\obj\Debug\TPCBarcode.csproj.CopyComplete
 D:\code\PrintShipment\TPCBarcode\obj\Debug\TPCBarcode.dll
 D:\code\PrintShipment\TPCBarcode\obj\Debug\TPCBarcode.pdb
+D:\code\internet\PrintShipment\bin\Debug\example.config
+D:\code\internet\PrintShipment\bin\Debug\TPCBarcode.dll
+D:\code\internet\PrintShipment\bin\Debug\TPCBarcode.pdb
+D:\code\internet\PrintShipment\TPCBarcode\obj\Debug\TPCBarcode.csproj.CoreCompileInputs.cache
+D:\code\internet\PrintShipment\TPCBarcode\obj\Debug\TPCBarcode.csproj.CopyComplete
+D:\code\internet\PrintShipment\TPCBarcode\obj\Debug\TPCBarcode.dll
+D:\code\internet\PrintShipment\TPCBarcode\obj\Debug\TPCBarcode.pdb

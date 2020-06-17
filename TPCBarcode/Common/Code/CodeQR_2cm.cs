@@ -80,62 +80,21 @@ namespace TPCBarcode.Common.Code
         {
             QRCodeEncoder coder = new QRCodeEncoder();
             coder.QRCodeEncodeMode = QRCodeEncoder.ENCODE_MODE.BYTE;
-            coder.QRCodeScale = 2;
-            //coder.QRCodeVersion = 4;最多70个字符
-            coder.QRCodeVersion = 5;//最多100个字符
+            coder.QRCodeScale = 5;
+            //coder.QRCodeVersion = 5;//最多100个字符
+            coder.QRCodeVersion = 0;
             Image img = coder.Encode(text);
-            //if (img.Width != (int)Width || img.Height != (int)Height)
-            //    img = pictureProcess(img, (int)Width, (int)Height);
+            img = pictureZoomOut(img, (int)Width, (int)Height);
             return img;
         }
-
-        Image pictureProcess(Image sourceImage, int targetWidth, int targetHeight)
+        
+        Image pictureZoomOut(Image sourceImage, int targetWidth, int targetHeight)
         {
-            int width;//图片最终的宽
-            int height;//图片最终的高
-            try
-            {
-                System.Drawing.Imaging.ImageFormat format = sourceImage.RawFormat;
-                Bitmap targetPicture = new Bitmap(targetWidth, targetHeight);
-                Graphics g = Graphics.FromImage(targetPicture);
-                g.Clear(Color.White);
-
-                //计算缩放图片的大小
-                if (sourceImage.Width > targetWidth && sourceImage.Height <= targetHeight)
-                {
-                    width = targetWidth;
-                    height = (width * sourceImage.Height) / sourceImage.Width;
-                }
-                else if (sourceImage.Width <= targetWidth && sourceImage.Height > targetHeight)
-                {
-                    height = targetHeight;
-                    width = (height * sourceImage.Width) / sourceImage.Height;
-                }
-                else if (sourceImage.Width <= targetWidth && sourceImage.Height <= targetHeight)
-                {
-                    width = sourceImage.Width;
-                    height = sourceImage.Height;
-                }
-                else
-                {
-                    width = targetWidth;
-                    height = (width * sourceImage.Height) / sourceImage.Width;
-                    if (height > targetHeight)
-                    {
-                        height = targetHeight;
-                        width = (height * sourceImage.Width) / sourceImage.Height;
-                    }
-                }
-                g.DrawImage(sourceImage, (targetWidth - width) / 2, (targetHeight - height) / 2, width, height);
-                sourceImage.Dispose();
-
-                return targetPicture;
-            }
-            catch (Exception ex)
-            {
-
-            }
-            return null;
+            int size = targetWidth > targetHeight ? targetWidth : targetHeight;
+            Bitmap targetPicture = new Bitmap(targetWidth, targetHeight);
+            Graphics g = Graphics.FromImage(targetPicture);
+            g.DrawImage(sourceImage, 0, 0, size, size);
+            return targetPicture;
         }
     }
 }

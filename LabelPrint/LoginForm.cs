@@ -31,7 +31,7 @@ namespace LabelPrint
 
         private void btLogin_Click(object sender, EventArgs e)
         {
-			m_LoginUser = txtUserName.Text;
+            m_LoginUser = txtUserName.Text;
             if (!CheckLogin())
             {
                 return;

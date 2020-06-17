@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.IO;
+using System.Reflection;
+using System.Xml.Linq;
+
 namespace LabelPrint
 {
     public partial class Print2 : Form
@@ -72,7 +76,18 @@ namespace LabelPrint
             g.DrawString("Pallet Detail", new Font("宋体", 30f), b, new Point(275, 10));
             g.DrawString(ID, new Font("宋体", 15f), b, new Point(320, 60));
             TPCBarcode.Common.Code.CodeQR_2cm pic = new TPCBarcode.Common.Code.CodeQR_2cm();
-            pic.Width = pic.Height = 77;//2cm*2cm的二维码
+
+            #region 读xml二维码的size
+            string xmlPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\label.xml";
+            XDocument doc = XDocument.Load(xmlPath);
+            var data = (from a in (from n in doc.Root.Elements("label") where n.Attribute("name").Value == "fxzz_additional" select n).Elements("item")
+                        where a.Attribute("text").Value == "$$2,$$8,$$49,$$6,$$15,$$10"
+                        select a.Element("size").Value).ToList();
+            int size = Convert.ToUInt16(data[0].Split(',').Max());
+            //pic.Width = pic.Height = 77;//2cm*2cm的二维码
+            pic.Width = pic.Height = size;
+            #endregion
+            
             Image img = pic.Create(QRcode);
             g.DrawImage(img, new Point(650, 30));
 
