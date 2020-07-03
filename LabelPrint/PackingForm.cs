@@ -204,41 +204,56 @@ namespace LabelPrint
         {
             if (e.KeyCode == Keys.Return)
             {
-                #region 20190522增加针对KK04输入箱号的bin检查
-                string code0 = txtCNo.Text;
-                if (LabelPrintGlobal.g_Config.Switch.Equals("ON"))//配置文件开关时"ON"时启用
-                {
-                    //string mode = code0.Substring(13, 1);
-                    //if (mode == "P")
-                    //{
-                        TPCResult<DataTable> checkBin = m_Model.CheckBin( code0);
-                        if (checkBin.State == RESULT_STATE.NG)
-                        {
-                            MessageBox.Show(checkBin.Message);
-                            return;
-                        }
-                        string bin= LabelPrintGlobal.g_Config.Bin;//配置文件bin的对比
-                    //检查bin是否ok
-                        if (checkBin.Value.Rows.Count != 1 || checkBin.Value.Rows[0][0].ToString() != bin)
-                        {
-                            MessageBox.Show("该箱存在马达Bin不匹配","马达Bin检查：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-                    //MessageBox.Show(checkBin.Value.Rows[0][0].ToString());
-                }
-                #endregion
-
-
-                string code = CNoEdit.Text;
+                #region 验证
+                #region 控件检查
                 //这里增加限制，如果父项条码没有预约，则不允许扫描
                 if (txtPNo.Text.Length == 0)
                 {
                     MessageBox.Show(LabelPrintGlobal.ShowWarningMessage("NO_PARENT_SCAN_ERROR"), "WARNNING", MessageBoxButtons.OK);
                     return;
                 }
+                if (txtCNo.Text.Length == 0)
+                {
+                    MessageBox.Show("不可以输入空值", "WARNNING", MessageBoxButtons.OK);
+                    return;
+                }
+                #endregion
+                #region 比较父项和子项的No.格式一致。例如富士康的标签只能进富士康
+                PACK_MODE mode = (PACK_MODE)((TabControl)Parent.Parent).SelectedIndex;
+                if (mode == PACK_MODE.Carton || mode == PACK_MODE.Pallet)
+                {
+                    bool isFXZZ_P = txtPNo.Text.Substring(10, 1) == "W";
+                    bool isFXZZ_C = txtCNo.Text.Substring(10, 1) == "W";
+                    if (isFXZZ_P != isFXZZ_C)
+                    {
+                        MessageBox.Show("两个No.号的格式不相同，请检查", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+                #endregion
+                #region 20190522增加针对KK04输入箱号的bin检查
+                string code0 = txtCNo.Text;
+                if (LabelPrintGlobal.g_Config.Switch.Equals("ON"))//配置文件开关时"ON"时启用
+                {
+                    TPCResult<DataTable> checkBin = m_Model.CheckBin(code0);
+                    if (checkBin.State == RESULT_STATE.NG)
+                    {
+                        MessageBox.Show(checkBin.Message);
+                        return;
+                    }
+                    string bin = LabelPrintGlobal.g_Config.Bin;//配置文件bin的对比
+                    //检查bin是否ok
+                    if (checkBin.Value.Rows.Count != 1 || checkBin.Value.Rows[0][0].ToString() != bin)
+                    {
+                        MessageBox.Show("该箱存在马达Bin不匹配", "马达Bin检查：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+                #endregion
+                #endregion
 
                 //回车键，这里默认条码扫描后自带回车键
-                TPCResult<bool> result = m_Model.ScanCCode(code);
+                TPCResult<bool> result = m_Model.ScanCCode(CNoEdit.Text);
                 if (result.State == RESULT_STATE.NG)
                 {
                     MessageBox.Show(result.Message);
