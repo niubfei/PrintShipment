@@ -46,6 +46,7 @@
             this.lbQty = new System.Windows.Forms.Label();
             this.rdoSingle = new System.Windows.Forms.RadioButton();
             this.rdoDeepCancel = new System.Windows.Forms.RadioButton();
+            this.rdoModuleCancel = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // lbUnpackCode
@@ -76,6 +77,7 @@
             this.colStatus});
             this.lstUnpackItems.FullRowSelect = true;
             this.lstUnpackItems.GridLines = true;
+            this.lstUnpackItems.HideSelection = false;
             this.lstUnpackItems.Location = new System.Drawing.Point(6, 83);
             this.lstUnpackItems.Name = "lstUnpackItems";
             this.lstUnpackItems.Size = new System.Drawing.Size(831, 407);
@@ -195,7 +197,7 @@
             // 
             this.rdoSingle.AutoSize = true;
             this.rdoSingle.Checked = true;
-            this.rdoSingle.Location = new System.Drawing.Point(548, 6);
+            this.rdoSingle.Location = new System.Drawing.Point(505, 6);
             this.rdoSingle.Name = "rdoSingle";
             this.rdoSingle.Size = new System.Drawing.Size(106, 29);
             this.rdoSingle.TabIndex = 25;
@@ -206,18 +208,29 @@
             // rdoDeepCancel
             // 
             this.rdoDeepCancel.AutoSize = true;
-            this.rdoDeepCancel.Location = new System.Drawing.Point(651, 6);
+            this.rdoDeepCancel.Location = new System.Drawing.Point(618, 6);
             this.rdoDeepCancel.Name = "rdoDeepCancel";
             this.rdoDeepCancel.Size = new System.Drawing.Size(106, 29);
             this.rdoDeepCancel.TabIndex = 25;
             this.rdoDeepCancel.Text = "深度拆包";
             this.rdoDeepCancel.UseVisualStyleBackColor = true;
             // 
+            // rdoModuleCancel
+            // 
+            this.rdoModuleCancel.AutoSize = true;
+            this.rdoModuleCancel.Location = new System.Drawing.Point(731, 6);
+            this.rdoModuleCancel.Name = "rdoModuleCancel";
+            this.rdoModuleCancel.Size = new System.Drawing.Size(106, 29);
+            this.rdoModuleCancel.TabIndex = 25;
+            this.rdoModuleCancel.Text = "返检拆包";
+            this.rdoModuleCancel.UseVisualStyleBackColor = true;
+            // 
             // UnpackForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(841, 576);
+            this.Controls.Add(this.rdoModuleCancel);
             this.Controls.Add(this.rdoDeepCancel);
             this.Controls.Add(this.rdoSingle);
             this.Controls.Add(this.txtTotal);
@@ -263,5 +276,6 @@
         private System.Windows.Forms.Label lbQty;
         private System.Windows.Forms.RadioButton rdoSingle;
         private System.Windows.Forms.RadioButton rdoDeepCancel;
+        private System.Windows.Forms.RadioButton rdoModuleCancel;
     }
 }

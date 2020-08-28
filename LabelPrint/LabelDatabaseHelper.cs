@@ -967,7 +967,7 @@ namespace LabelPrint
         /// <param name="items"></param>
         /// <param name="username"></param>
         /// <returns></returns>
-        public TPCResult<bool> UnpackItemByDeep(List<CItem> items, string username)
+        public TPCResult<bool> UnpackItemByDeep(List<CItem> items, string username, string fnName)
         {
             TPCResult<bool> result = new TPCResult<bool>();
             foreach (CItem item in items)
@@ -995,7 +995,7 @@ namespace LabelPrint
                 parameters.Add(new DbParameter("@qty", DbType.Int32, qty));
                 parameters.Add(new DbParameter("@user", DbType.AnsiString, username));
 
-                TPCResult<string> ret = Database.ExecuteSP("fn_deep_unpack", parameters);
+                TPCResult<string> ret = Database.ExecuteSP(fnName, parameters);
                 if (ret.State == RESULT_STATE.NG)
                 {
                     result.Message = ret.Message;
@@ -1012,7 +1012,7 @@ namespace LabelPrint
         /// <param name="code"></param>
         /// <param name="username"></param>
         /// <returns></returns>
-        public TPCResult<bool> UnpackItemByDeep(string mode, string code, string username)
+        public TPCResult<bool> UnpackItemByDeep(string mode, string code, string username, string fnName)
         {
             TPCResult<bool> result = new TPCResult<bool>();
             
@@ -1030,7 +1030,7 @@ namespace LabelPrint
             parameters.Add(new DbParameter("@qty", DbType.Int32, qty));
             parameters.Add(new DbParameter("@user", DbType.AnsiString, username));
 
-            TPCResult<string> ret = Database.ExecuteSP("fn_deep_unpack", parameters);
+            TPCResult<string> ret = Database.ExecuteSP(fnName, parameters);
             if (ret.State == RESULT_STATE.NG)
             {
                 result.Message = ret.Message;

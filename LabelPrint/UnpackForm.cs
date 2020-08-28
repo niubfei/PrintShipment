@@ -111,12 +111,7 @@ namespace LabelPrint
             }
             
         }
-
-        protected bool IsDeepCancel()
-        {
-            return rdoDeepCancel.Checked;
-        }
-
+        
         private void btClose_Click(object sender, EventArgs e)
         {
             Close();
@@ -144,7 +139,7 @@ namespace LabelPrint
         /// <returns></returns>
         private string GetModeFromTableName(string name)
         {
-            if (name.ToLower().Equals("png_pack"))
+            if (name.ToLower().Equals("pnt_pack"))
                 return "pack";
             else if (name.ToLower().Equals("pnt_carton"))
                 return "carton";
@@ -160,7 +155,7 @@ namespace LabelPrint
             if (!CheckUnpack())
                 return;
 
-            if (IsDeepCancel())
+            if (rdoDeepCancel.Checked || rdoModuleCancel.Checked)
             {
                 if (MessageBox.Show(LabelPrintGlobal.ShowWarningMessage("DEEP_CANCELED_WARNNING"), "Warnning", MessageBoxButtons.YesNo) == DialogResult.No)
                 {
@@ -173,17 +168,28 @@ namespace LabelPrint
             {
                 string name = items[0].Name;
                 string mode = GetModeFromTableName(name);
-                if (IsDeepCancel())
+                if (rdoSingle.Checked)
+                {
+                    //单层拆包
+                    TPCResult<bool> result = Database.UnpackItemsBySingle(items, Program.LoginUser);
+                    if (result.State == RESULT_STATE.NG)
+                    {
+                        MessageBox.Show(result.Message);
+                        return;
+                    }
+                }
+                else if (rdoDeepCancel.Checked || rdoModuleCancel.Checked)
                 {
                     TPCResult<bool> result = null;
+                    string fnName = rdoDeepCancel.Checked ? "fn_deep_unpack" : "fn_deep_unpack_to_module";
                     //深度拆包 
                     if (is_all_cancel)
                     {
-                        result = Database.UnpackItemByDeep(mode, txtUnpackCode.Text, Program.LoginUser);
+                        result = Database.UnpackItemByDeep(mode, txtUnpackCode.Text, Program.LoginUser, fnName);
                     }
                     else
                     {
-                        result = Database.UnpackItemByDeep(items, Program.LoginUser);
+                        result = Database.UnpackItemByDeep(items, Program.LoginUser, fnName);
                     }
                     if (result.State == RESULT_STATE.NG)
                     {
@@ -193,13 +199,8 @@ namespace LabelPrint
                 }
                 else
                 {
-                    //单层拆包
-                    TPCResult<bool> result = Database.UnpackItemsBySingle(items, Program.LoginUser);
-                    if (result.State == RESULT_STATE.NG)
-                    {
-                        MessageBox.Show(result.Message);
-                        return;
-                    }
+                    MessageBox.Show("No radioButton checked", "ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    return;
                 }
                 MessageBox.Show(LabelPrintGlobal.ShowWarningMessage("COMPLETED_UNPACK_INFO"));
                 Close();
